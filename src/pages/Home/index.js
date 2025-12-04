@@ -1,5 +1,7 @@
 import Header from "../../components/Header";
 import Banner from "../../components/Banner";
+import FeatureHighlights from "../../components/Feature";
+
 
 
 export default function Home() {
@@ -15,6 +17,7 @@ export default function Home() {
                 buttonLink="/promotion"
                 image="https://royce.vn/wp-content/uploads/2019/12/H8-550x550.jpg"
             />
+            <FeatureHighlights />
         </div>
     );
 }

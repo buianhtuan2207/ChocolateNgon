@@ -5,10 +5,10 @@ $font-primary: 'Poppins', sans-serif;
 $color-primary: #fff;
 
 body{
-  width: 1280px;
+  width: 100%;
 }
 .header {
-  width: 100%;
+  width: auto;
   padding: 15px 40px;
   background: $bg-dark;
   display: flex;

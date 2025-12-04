@@ -3,12 +3,15 @@ $hover: #ffcc80;
 $dark: #3e2723;
 $text: #2c1810;
 
+body{
+  width: 100%;
+}
 .banner {
-  width: 1360px;
+  width: auto;
   overflow: hidden;
 
   &__container {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 84px 0 20px;
     display: flex;

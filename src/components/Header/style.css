@@ -1,9 +1,9 @@
 body {
-  width: 1280px;
+  width: 100%;
 }
 
 .header {
-  width: 100%;
+  width: auto;
   padding: 15px 40px;
   background: #3e2723;
   display: flex;
