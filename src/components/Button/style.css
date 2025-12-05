@@ -1,4 +1,4 @@
-.btn {
+.c-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -8,49 +8,43 @@
   border-radius: 50px;
   font-weight: 700;
   font-size: 16px;
-  text-decoration: none;
   cursor: pointer;
-  transition: all 0.35s ease;
+  transition: 0.35s;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  text-decoration: none;
 }
-.btn--primary {
+.c-btn--primary {
   background: #d35400;
   color: white;
-  box-shadow: 0 6px 20px rgba(211, 84, 0, 0.3);
 }
-.btn--primary:hover {
-  background: #e74c3c;
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(231, 76, 60, 0.4);
+.c-btn--primary:hover {
+  background: var(--bg-dard);
+  transform: scale(1.05);
 }
-.btn--secondary {
+.c-btn--secondary {
   background: #3e2723;
   color: white;
 }
-.btn--outline {
-  background: transparent;
+.c-btn--outline {
+  border: 2px solid #d35400;
   color: #d35400;
-  border: 2.5px solid #d35400;
+  background: transparent;
 }
-.btn--outline:hover {
+.c-btn--outline:hover {
   background: #d35400;
   color: white;
 }
-.btn--small {
+.c-btn--small {
   padding: 10px 24px;
   font-size: 14px;
 }
-.btn--medium {
+.c-btn--medium {
   padding: 14px 32px;
   font-size: 16px;
 }
-.btn--large {
+.c-btn--large {
   padding: 18px 44px;
   font-size: 18px;
-}
-.btn:active {
-  transform: translateY(-1px);
 }
 
 /*# sourceMappingURL=style.css.map */

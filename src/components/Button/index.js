@@ -10,7 +10,8 @@ export default function Button({
                                    ...props
                                }) {
     // Tạo class động
-    const classes = `btn btn--${variant} btn--${size} ${className}`.trim();
+    const classes = `c-btn c-btn--${variant} c-btn--${size} ${className}`.trim();
+
 
     // Nếu có href → render thẻ <a>, không thì render <button>
     return href ? (

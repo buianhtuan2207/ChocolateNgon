@@ -61,31 +61,6 @@ body{
     margin-top: 20px;
   }
 
-  // Nút bấm đẹp (không cần Button component)
-  &__btn {
-    display: inline-block;
-    padding: 16px 40px;
-    background: $primary;
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
-    text-transform: uppercase;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 8px 25px rgba(211, 84, 0, 0.3);
-    transition: all 0.4s ease;
-
-    &:hover {
-      background: #e74c3c;
-      transform: translateY(-5px);
-      box-shadow: 0 15px 35px rgba(231, 76, 60, 0.4);
-    }
-
-    &:active {
-      transform: translateY(-2px);
-    }
-  }
-
   &__img {
     flex: 1;
     text-align: right;

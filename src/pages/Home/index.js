@@ -18,6 +18,7 @@ export default function Home() {
                 image="https://royce.vn/wp-content/uploads/2019/12/H8-550x550.jpg"
             />
             <FeatureHighlights />
+
         </div>
     );
 }
