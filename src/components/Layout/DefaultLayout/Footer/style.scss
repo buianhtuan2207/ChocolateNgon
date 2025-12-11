@@ -1,0 +1,50 @@
+.footer {
+  background-color: var(--bg-dard); /* Nâu socola */
+  font-size: 15px;
+
+  .footer-title {
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #F9C784; /* Vàng nhạt nổi bật */
+  }
+
+  .footer-logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #F9C784;
+  }
+
+  .footer-list {
+    list-style: none;
+    padding: 0;
+
+    li {
+      margin-bottom: 8px;
+
+      a {
+        color: #ffffffcc;
+        text-decoration: none;
+
+        &:hover {
+          color: #F9C784;
+        }
+      }
+    }
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    transition: 0.3s;
+
+    &:hover {
+      color: #F9C784;
+    }
+  }
+
+  .footer-bottom {
+    background-color: #3E2723; /* Nâu đậm */
+    color: #ffffffcc;
+  }
+}

@@ -1,0 +1,44 @@
+@charset "UTF-8";
+.footer {
+  background-color: var(--bg-dard); /* Nâu socola */
+  font-size: 15px;
+}
+.footer .footer-title {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #F9C784; /* Vàng nhạt nổi bật */
+}
+.footer .footer-logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #F9C784;
+}
+.footer .footer-list {
+  list-style: none;
+  padding: 0;
+}
+.footer .footer-list li {
+  margin-bottom: 8px;
+}
+.footer .footer-list li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+.footer .footer-list li a:hover {
+  color: #F9C784;
+}
+.footer .social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: white;
+  transition: 0.3s;
+}
+.footer .social-icons a:hover {
+  color: #F9C784;
+}
+.footer .footer-bottom {
+  background-color: #3E2723; /* Nâu đậm */
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*# sourceMappingURL=style.css.map */
