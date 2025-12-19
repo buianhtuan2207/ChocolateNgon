@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "chocolate-ngon",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -45,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "typescript": "^5.9.3"
