@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner";
 import FeatureHighlights from "../../components/Feature";
 import CardProduct from "../../components/CardProduct";
+import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import './style.scss';
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
             <FeatureHighlights />
             <div className="container">
                 <div className="home-content">
-                    <CardProduct/>
+                    <FeaturedProducts/>
                 </div>
             </div>
         </>
