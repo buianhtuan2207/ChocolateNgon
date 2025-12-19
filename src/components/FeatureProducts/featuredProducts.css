@@ -1,0 +1,10 @@
+section h2 {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  border-bottom: 3px solid var(--bg-dard);
+}
+
+/*# sourceMappingURL=featuredProducts.css.map */
