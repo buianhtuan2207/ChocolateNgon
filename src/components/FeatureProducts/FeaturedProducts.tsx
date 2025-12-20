@@ -1,5 +1,5 @@
 import CardProduct from "../CardProduct";
-import "./featuredProducts.scss"
+import "./style.scss"
 const FeaturedProducts = () => {
     return (
         <section>
