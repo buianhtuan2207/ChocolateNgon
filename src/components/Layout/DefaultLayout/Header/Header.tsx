@@ -1,6 +1,7 @@
 import React from 'react';
 import './style.scss';
 import Icon from '../../../Icons/Icon';
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
@@ -23,7 +24,9 @@ export default function Header() {
 
                 <div className="icon-box d-flex gap-3">
                     <Icon icon="shopping-cart" className="icons" />
-                    <Icon icon="user" className="icons" />
+                    <Link to="/login" className="icon-link">
+                        <Icon icon="user" className="icons" />
+                    </Link>
                 </div>
             </div>
         </header>

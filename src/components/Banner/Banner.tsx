@@ -14,6 +14,7 @@ export default function Banner({ type = "hero", subtitle, title, description, bu
                         <Button
                             variant="primary"
                             size="large"
+                            icons
                             href={buttonLink || "#"}>
                             {buttonText || "Mua ngay"}
                         </Button>

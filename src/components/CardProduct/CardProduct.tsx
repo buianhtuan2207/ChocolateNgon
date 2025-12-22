@@ -39,6 +39,7 @@ export default function CardProduct({
                             <Button
                                 variant="primary"
                                 size="small"
+                                icons
                                 href={buttonLink}>
                                 {buttonText}
                             </Button>
