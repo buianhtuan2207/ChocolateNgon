@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   width: 100%;
 }
@@ -76,21 +77,24 @@ body {
   font-size: 20px;
 }
 .banner--promo {
-  background: linear-gradient(rgba(62, 39, 35, 0.92), rgba(62, 39, 35, 0.92)), url("https://images.unsplash.com/photo-1606910354695-71d6c70d0b67?w=1600") center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.9));
   color: white;
-  padding: 120px 0;
-  text-align: center;
+  padding: 0;
 }
 .banner--promo .banner__container {
-  flex-direction: column;
-  gap: 32px;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
 }
-.banner--promo .banner__img {
-  text-align: center;
-  order: -1;
+.banner--promo .banner__content {
+  max-width: 520px;
 }
 .banner--promo .banner__title {
-  font-size: 56px;
+  font-size: 48px;
   color: white;
 }
 .banner--promo .banner__title span {
@@ -98,22 +102,81 @@ body {
 }
 .banner--promo .banner__desc {
   color: #fff;
-  font-size: 24px;
+  font-size: 18px;
   opacity: 0.95;
 }
+.banner--promo .banner__img {
+  text-align: right;
+}
+.banner--promo .banner__img img {
+  max-height: 360px;
+  object-fit: contain;
+}
 .banner--small {
-  background: #fff8f0;
+  width: 500px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
   border-radius: 24px;
-  padding: 60px 40px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  /* container phủ toàn khung */
 }
 .banner--small .banner__container {
-  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
+.banner--small {
+  /* Ảnh làm background – NẰM SAU */
+}
+.banner--small .banner__img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.banner--small .banner__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banner--small {
+  /* Overlay */
+}
+.banner--small::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.banner--small {
+  /* Text */
+}
+.banner--small .banner__content {
+  position: relative;
+  z-index: 2;
+  max-width: 90%;
+}
 .banner--small .banner__title {
-  font-size: 40px;
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+}
+.banner--small .banner__title span {
+  color: #ffcc80;
+}
+.banner--small .banner__desc {
+  color: #f1f1f1;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.banner--small .banner__action {
+  margin-top: 12px;
 }
 .banner--reverse .banner__container {
   flex-direction: row-reverse;

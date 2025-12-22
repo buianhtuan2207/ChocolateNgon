@@ -86,6 +86,7 @@ $primary: #fff;
       color: $primary;
       font-size: 20px;
       transition: 0.25s;
+      cursor: pointer;
 
       &:hover {
         color: $hover;

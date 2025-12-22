@@ -90,33 +90,123 @@ body{
 
   // PROMO BANNER
   &--promo {
-    background: linear-gradient(rgba(62,39,35,0.92), rgba(62,39,35,0.92)),
-    url('https://images.unsplash.com/photo-1606910354695-71d6c70d0b67?w=1600') center/cover;
-    color: white;
-    padding: 120px 0;
-    text-align: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
 
-    .banner__container { flex-direction: column; gap: 32px; }
-    .banner__img { text-align: center; order: -1; }
+    background: linear-gradient(
+                    rgba(62,39,35,0.9),
+                    rgba(62,39,35,0.9)
+    );
+
+    color: white;
+    padding: 0;
+
+    .banner__container {
+      height: 100%;
+      flex-direction: row;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .banner__content {
+      max-width: 520px;
+    }
 
     .banner__title {
-      font-size: 56px;
+      font-size: 48px;
       color: white;
-      span { color: $hover; }
+
+      span {
+        color: $hover;
+      }
     }
-    .banner__desc { color: #fff; font-size: 24px; opacity: 0.95; }
+
+    .banner__desc {
+      color: #fff;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .banner__img {
+      text-align: right;
+
+      img {
+        max-height: 360px;
+        object-fit: contain;
+      }
+    }
   }
 
   // SMALL BANNER
   &--small {
-    background: #fff8f0;
+    width: 500px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
     border-radius: 24px;
-    padding: 60px 40px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 
-    .banner__container { flex-direction: column; text-align: center; }
-    .banner__title { font-size: 40px; }
+    /* container phủ toàn khung */
+    .banner__container {
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    /* Ảnh làm background – NẰM SAU */
+    .banner__img {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    /* Overlay */
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      z-index: 1;
+    }
+
+    /* Text */
+    .banner__content {
+      position: relative;
+      z-index: 2;
+      max-width: 90%;
+    }
+
+    .banner__title {
+      font-size: 32px;
+      font-weight: 800;
+      color: #fff;
+
+      span {
+        color: $hover;
+      }
+    }
+
+    .banner__desc {
+      color: #f1f1f1;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .banner__action {
+      margin-top: 12px;
+    }
   }
 
   // Đảo ngược (hình bên trái)

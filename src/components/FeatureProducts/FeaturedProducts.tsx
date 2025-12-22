@@ -1,15 +1,23 @@
 import React from "react";
-import CardProduct from "../CardProduct/CardProduct"; // Nhớ sửa đường dẫn import
+import CardProduct from "../CardProduct/CardProduct";
 import { PRODUCTS } from "../../data/products";
-import "./style.scss"
+import "./style.scss";
 
-const FeaturedProducts = () => {
-    // Thay vì filter isHot, ta dùng slice để lấy 8 sản phẩm đầu tiên
-    const featuredList = PRODUCTS.slice(0, 8);
+const FeaturedProducts = ({
+                              title = "Sản phẩm nổi bật",
+                              limit = 8,
+                              centerTitle = true
+                          }) => {
+    const featuredList = PRODUCTS.slice(0, limit);
 
     return (
-        <section className="py-5">
-            <h2 className="text-center mb-4 fw-bold">Sản phẩm nổi bật</h2>
+        <section className="featured-products py-5">
+            {title && (
+                <h2 className="text">
+                    {title}
+                </h2>
+            )}
+
             <CardProduct data={featuredList} />
         </section>
     );
