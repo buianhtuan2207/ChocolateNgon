@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner/Banner";
 import FeatureHighlights from "../../components/Feature/Feature";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
-import './style.scss';
+import './home.scss';
 
 export default function Home() {
     return(

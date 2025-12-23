@@ -4,6 +4,8 @@ import Icon from '../../../Icons/Icon';
 import { Link } from "react-router-dom";
 
 export default function Header() {
+    const user = JSON.parse(localStorage.getItem("user") || "null");
+
     return (
         <header className="header shadow-sm">
             <div className="container d-flex justify-content-between align-items-center py-2">
@@ -24,9 +26,13 @@ export default function Header() {
 
                 <div className="icon-box d-flex gap-3">
                     <Icon icon="shopping-cart" className="icons" />
-                    <Link to="/login" className="icon-link">
-                        <Icon icon="user" className="icons" />
-                    </Link>
+                    {user ? (
+                        <span>Xin chào {user.name}</span>
+                    ) : (
+                        <Link to="/login">
+                            <Icon icon="user" className="icons" />
+                        </Link>
+                    )}
                 </div>
             </div>
         </header>

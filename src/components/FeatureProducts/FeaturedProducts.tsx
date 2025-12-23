@@ -1,7 +1,7 @@
 import React from "react";
 import CardProduct from "../CardProduct/CardProduct";
 import { PRODUCTS } from "../../data/products";
-import "./style.scss";
+import "./featureProducts.scss";
 
 const FeaturedProducts = ({
                               title = "Sản phẩm nổi bật",

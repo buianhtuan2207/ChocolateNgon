@@ -111,35 +111,17 @@ form.inputGroup {
 }
 
 /* ===== Main Button ===== */
-.c-btn {
-  border-radius: 999px;
+.login-submit-btn {
+  width: 100%;
   height: 48px;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.05em;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  text-decoration: none;
-  border: none;
+  background-color: #111827;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 15px;
 }
-.c-btn__icon {
-  display: inline-flex;
-  align-items: center;
-  font-size: 16px;
-}
-.c-btn--primary {
-  background: #6b4032;
-  color: #ffffff;
-}
-.c-btn--primary:hover {
-  background: #5a3428;
-}
-.c-btn--text {
-  background: transparent;
-  color: #c0563a;
+.login-submit-btn:hover {
+  background-color: #000;
 }
 
 /* ===== Divider ===== */
@@ -196,4 +178,4 @@ form.inputGroup {
   text-decoration: underline;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=login.css.map */

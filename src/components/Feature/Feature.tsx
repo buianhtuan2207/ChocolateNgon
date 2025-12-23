@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./feature.scss";
 
 const features = [
     { img: "/assets/img/category/classic.png", title: "Giá tốt nhất", desc: "Cam kết giá luôn rẻ nhất thị trường" },

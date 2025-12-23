@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
-import './style.scss';
+import './banner.scss';
 
 export default function Banner({ type = "hero", subtitle, title, description, buttonText, buttonLink, image }) {
     return (
