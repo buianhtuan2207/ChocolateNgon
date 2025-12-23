@@ -1,0 +1,43 @@
+.inputGroup {
+  margin-bottom: 16px;
+}
+.inputGroup label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  display: block;
+  margin-bottom: 6px;
+}
+.inputGroup .inputWrapper {
+  position: relative;
+}
+.inputGroup .inputWrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+}
+.inputGroup .inputWrapper input:focus {
+  border-color: #6b4b3e;
+}
+.inputGroup .inputWrapper .icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  cursor: pointer;
+}
+.inputGroup.has-error input {
+  border-color: #e74c3c;
+}
+.inputGroup.has-error .error-text {
+  color: #e74c3c;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+/*# sourceMappingURL=inputField.css.map */

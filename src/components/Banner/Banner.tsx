@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../Button/Button';
-import './style.scss';
+import './banner.scss';
 
 export default function Banner({ type = "hero", subtitle, title, description, buttonText, buttonLink, image }) {
     return (
@@ -14,6 +14,7 @@ export default function Banner({ type = "hero", subtitle, title, description, bu
                         <Button
                             variant="primary"
                             size="large"
+                            icons
                             href={buttonLink || "#"}>
                             {buttonText || "Mua ngay"}
                         </Button>
