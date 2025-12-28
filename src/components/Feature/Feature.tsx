@@ -1,4 +1,4 @@
-import React from "react";
+    import React from "react";
 import "./feature.scss";
 
 const features = [
@@ -30,4 +30,6 @@ export default function FeatureHighlights() {
             </div>
         </section>
     );
+
+
 }
