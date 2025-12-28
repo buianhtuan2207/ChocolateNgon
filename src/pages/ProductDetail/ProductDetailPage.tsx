@@ -1,3 +1,4 @@
+// src/pages/ProductDetail/ProductDetailPage.tsx
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PRODUCTS } from "../../data/products";
@@ -5,7 +6,7 @@ import { PRODUCT_DETAILS, ProductDetail } from "../../data/productDetails";
 import Button from "../../components/Button/Button";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import FeatureItem from "../../components/FeatureItem/FeatureItem";
-import "./productDetail.scss";
+import "./productDetails.scss";
 
 const ProductDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -36,7 +37,9 @@ const ProductDetailPage: React.FC = () => {
 
     const subtitle = detail?.subtitle;
     const images: string[] = detail?.images || [fallbackImage];
-    const features = detail?.features || [];
+
+    // FIX CHÍNH XÁC: Khai báo kiểu rõ ràng cho features – hết lỗi đỏ ở icon, title, desc
+    const features: { icon: string; title: string; desc: string }[] = detail?.features || [];
 
     const handleAddToCart = () => {
         console.log(`Đã thêm ${quantity} x "${title}" vào giỏ hàng`);
@@ -78,7 +81,6 @@ const ProductDetailPage: React.FC = () => {
                         </h1>
 
                         <div className="product-rating">
-                            {/* Bạn có thể thêm rating sao thật sau */}
                             <span>★★★★★</span> <span className="review-count">138 đánh giá</span> <span className="category-tag">CỔ ĐIỂN</span>
                         </div>
 

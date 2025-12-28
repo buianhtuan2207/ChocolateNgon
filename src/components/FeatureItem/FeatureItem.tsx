@@ -1,28 +1,20 @@
-//components/FeatureItem/FeatureItem.tsx
-
+// src/components/FeatureItem/FeatureItem.tsx
 import React from "react";
-import CardProduct from "../CardProduct/CardProduct";
-import { PRODUCTS } from "../../data/products";
-import "./featureProducts.scss";
 
-const FeaturedProducts = ({
-                              title = "Sản phẩm nổi bật",
-                              limit = 8,
-                              centerTitle = true
-                          }) => {
-    const featuredList = PRODUCTS.slice(0, limit);
+interface FeatureItemProps {
+    icon: string;
+    title: string;
+    desc: string;
+}
 
+const FeatureItem: React.FC<FeatureItemProps> = ({ icon, title, desc }) => {
     return (
-        <section className="featured-products py-5">
-            {title && (
-                <h2 className="text">
-                    {title}
-                </h2>
-            )}
-
-            <CardProduct data={featuredList} />
-        </section>
+        <div className="text-center py-8">
+            <div className="text-6xl mb-6">{icon}</div>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800">{title}</h3>
+            <p className="text-gray-600 leading-relaxed px-6">{desc}</p>
+        </div>
     );
 };
 
-export default FeaturedProducts;
+export default FeatureItem;

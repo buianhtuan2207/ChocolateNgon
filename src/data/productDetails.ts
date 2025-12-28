@@ -1,9 +1,12 @@
+// src/data/productDetails.ts
+
 import { PRODUCTS } from "./products";
+
 
 export interface ProductDetail {
     id: number;
     subtitle?: string;
-    images: string[];                    // Mảng nhiều ảnh cho gallery
+    images: string[];
     features: {
         icon: string;
         title: string;
@@ -79,6 +82,4 @@ export const PRODUCT_DETAILS: ProductDetail[] = [
             { icon: "👑", title: "Thượng hạng", desc: "Dành cho tín đồ socola đen" }
         ]
     }
-    // Thêm cho các id khác nếu cần
 ];
-
