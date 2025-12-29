@@ -1,109 +1,113 @@
 $bg-dark: #5d4037;
 $hover: #ffcc80;
-$font-primary: 'Poppins', sans-serif;
 $primary: #fff;
 
 .header {
   background: $bg-dark;
-  padding: 24px 0;
-  color: $primary;
-  font-family: $font-primary;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
   .header-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 20px;
+    width: 100%;
   }
 
-  /* Logo */
-  .logo {
-    font-size: 28px;
-    font-weight: 900;
-    margin: 0;
-    cursor: pointer;
-    transition: 0.3s;
-
-    &:hover {
-      color: $hover;
-      transform: scale(1.05);
+  /* Sửa lỗi logo bị gạch chân xanh */
+  .logo-link {
+    text-decoration: none !important;
+    .logo {
+      color: $primary;
+      font-size: 36px;
+      font-weight: 900;
+      margin: 0;
+      transition: 0.3s;
+      &:hover { color: $hover; }
     }
   }
 
-  /* Menu */
+  /* Menu căn chỉnh lại khoảng cách */
   .menu {
     display: flex;
-    gap: 30px;
-
+    gap: 24px;
     a {
       color: $primary;
       text-decoration: none;
-      font-size: 17px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       transition: 0.3s;
-
-      &:hover {
-        color: $hover;
-      }
+      &:hover { color: $hover; }
     }
   }
 
-  /* Search box */
-  .search-box {
-    position: relative;
+  /* Ô tìm kiếm: Sửa nút thô trong ảnh */
+  .search-container {
     display: flex;
     align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2px 5px 2px 15px;
+    flex: 0 1 300px; /* Độ rộng vừa phải */
 
     input {
-      width: 260px;
-      height: 38px;
-      border-radius: 20px;
       border: none;
-      padding: 0 40px 0 16px;
-      font-size: 15px;
       outline: none;
+      width: 100%;
+      height: 36px;
+      font-size: 14px;
+      background: transparent;
     }
 
-    .icon-search {
-      position: absolute;
-      right: 12px;
+    .search-btn {
+      background: transparent;
+      border: none;
       color: #333;
+      padding: 5px 10px;
       cursor: pointer;
-      transition: 0.25s;
-
-      &:hover {
-        color: $hover;
-      }
+      display: flex;
+      align-items: center;
+      &:hover { color: $bg-dark; }
     }
   }
 
-  /* User + Cart icons */
-  .icon-box {
+  /* Nhóm Icon bên phải */
+  .icon-group {
     display: flex;
-    gap: 18px;
+    align-items: center;
+    gap: 15px;
 
-    .icons {
+    .icon-link {
       color: $primary;
+      text-decoration: none;
       font-size: 20px;
-      transition: 0.25s;
+      position: relative;
       cursor: pointer;
+      display: flex;
+      align-items: center;
 
-      &:hover {
-        color: $hover;
+      &:hover { color: $hover; }
+
+      .count-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: $hover;
+        color: $bg-dark;
+        font-size: 10px;
+        font-weight: bold;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
     }
-  }
-}
-
-/* Responsive */
-@media (max-width: 992px) {
-  .search-box input {
-    width: 180px;
-  }
-}
-
-@media (max-width: 576px) {
-  .search-box {
-    display: none;
   }
 }

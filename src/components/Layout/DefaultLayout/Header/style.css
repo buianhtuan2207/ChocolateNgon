@@ -1,100 +1,118 @@
+@charset "UTF-8";
 .header {
   background: #5d4037;
-  padding: 24px 0;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 .header .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
+  width: 100%;
 }
 .header {
-  /* Logo */
+  /* Sửa lỗi logo bị gạch chân xanh */
 }
-.header .logo {
-  font-size: 28px;
+.header .logo-link {
+  text-decoration: none !important;
+}
+.header .logo-link .logo {
+  color: #fff;
+  font-size: 36px;
   font-weight: 900;
   margin: 0;
-  cursor: pointer;
   transition: 0.3s;
 }
-.header .logo:hover {
+.header .logo-link .logo:hover {
   color: #ffcc80;
-  transform: scale(1.05);
 }
 .header {
-  /* Menu */
+  /* Menu căn chỉnh lại khoảng cách */
 }
 .header .menu {
   display: flex;
-  gap: 30px;
+  gap: 24px;
 }
 .header .menu a {
   color: #fff;
   text-decoration: none;
-  font-size: 17px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 700;
   transition: 0.3s;
 }
 .header .menu a:hover {
   color: #ffcc80;
 }
 .header {
-  /* Search box */
+  /* Ô tìm kiếm: Sửa nút thô trong ảnh */
 }
-.header .search-box {
-  position: relative;
+.header .search-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  padding: 2px 5px 2px 15px;
+  flex: 0 1 300px; /* Độ rộng vừa phải */
+}
+.header .search-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 36px;
+  font-size: 14px;
+  background: transparent;
+}
+.header .search-container .search-btn {
+  background: transparent;
+  border: none;
+  color: #333;
+  padding: 5px 10px;
+  cursor: pointer;
   display: flex;
   align-items: center;
 }
-.header .search-box input {
-  width: 260px;
-  height: 38px;
-  border-radius: 20px;
-  border: none;
-  padding: 0 40px 0 16px;
-  font-size: 15px;
-  outline: none;
-}
-.header .search-box .icon-search {
-  position: absolute;
-  right: 12px;
-  color: #333;
-  cursor: pointer;
-  transition: 0.25s;
-}
-.header .search-box .icon-search:hover {
-  color: #ffcc80;
+.header .search-container .search-btn:hover {
+  color: #5d4037;
 }
 .header {
-  /* User + Cart icons */
+  /* Nhóm Icon bên phải */
 }
-.header .icon-box {
+.header .icon-group {
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 15px;
 }
-.header .icon-box .icons {
+.header .icon-group .icon-link {
   color: #fff;
+  text-decoration: none;
   font-size: 20px;
-  transition: 0.25s;
+  position: relative;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
-.header .icon-box .icons:hover {
+.header .icon-group .icon-link:hover {
   color: #ffcc80;
 }
-
-/* Responsive */
-@media (max-width: 992px) {
-  .search-box input {
-    width: 180px;
-  }
+.header .icon-group .icon-link .count-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ffcc80;
+  color: #5d4037;
+  font-size: 10px;
+  font-weight: bold;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@media (max-width: 576px) {
-  .search-box {
-    display: none;
-  }
-}
 
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=style.css.map */
