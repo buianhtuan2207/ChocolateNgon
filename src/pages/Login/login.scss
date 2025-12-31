@@ -1,0 +1,197 @@
+/* ===== Background ===== */
+.login-wrapper {
+  min-height: 100vh;
+  background: #f7f1ec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Card ===== */
+.login-card {
+  width: 420px;
+  background: #ffffff;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Title ===== */
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #4b2e2e;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #8b7e74;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+/* ===== Form ===== */
+form.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ===== Input ===== */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: #7a6a60;
+    text-transform: uppercase;
+  }
+
+  .inputWrapper {
+    position: relative;
+
+    input {
+      width: 100%;
+      height: 46px;
+      border-radius: 10px;
+      border: 1px solid #e4dcd6;
+      padding: 0 42px 0 14px;
+      font-size: 14px;
+      color: #3f2a2a;
+
+      &:focus {
+        outline: none;
+        border-color: #8b5e4b;
+      }
+    }
+
+    .icon {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #b8a99e;
+    }
+  }
+}
+
+/* ===== Remember & Forgot ===== */
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -6px;
+
+  .inputGroup {
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+
+    label {
+      font-size: 13px;
+      text-transform: none;
+      font-weight: 400;
+      color: #7a6a60;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  .c-btn--text {
+    font-size: 13px;
+    color: #c0563a;
+    padding: 0;
+    background: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ===== Main Button ===== */
+.login-submit-btn {
+  width: 100%;
+  height: 48px;
+  background-color: #111827;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  font-size: 15px;
+
+  &:hover {
+    background-color: #000;
+  }
+}
+
+/* ===== Divider ===== */
+.divider {
+  margin: 28px 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  color: #b8a99e;
+  letter-spacing: 0.05em;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee4dc;
+  }
+
+  span {
+    padding: 0 12px;
+  }
+}
+
+/* ===== Social ===== */
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 18px;
+
+  .c-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e4dcd6;
+    color: #6b4032;
+    padding: 0;
+
+    &:hover {
+      background: #f7f1ec;
+    }
+  }
+}
+
+/* ===== Register ===== */
+.register {
+  text-align: center;
+  font-size: 13px;
+  color: #8b7e74;
+
+  span {
+    color: #c0563a;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

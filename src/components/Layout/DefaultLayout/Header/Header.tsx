@@ -1,70 +1,50 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom'; // Import thư viện Router
 import './style.scss';
-import Icon from '../../../../components/Icons/Icon'; // Import Icon (đường dẫn tương đối từ cấu trúc thư mục của bạn)
+import Icon from '../../../Icons/Icon';
+import UserMenu from "../../../UserMenu/UserMenu";
+import { Link } from "react-router-dom";
 
 export default function Header() {
+    const user = JSON.parse(localStorage.getItem("user") || "null");
+
     return (
         <header className="header shadow-sm">
-            <div className="container d-flex justify-content-between align-items-center py-2">
-
-                {/* Logo dùng Link để về trang chủ không bị load lại trang */}
-                <Link to="/" className="logo text-decoration-none">
-                    SocolaShop
+            <div className="container header-inner">
+                {/* Logo */}
+                <Link to="/" className="logo-link">
+                    <h2 className="logo">SocolaShop</h2>
                 </Link>
 
-                {/* Menu dùng NavLink để có trạng thái active */}
-                <nav className="menu d-none d-md-flex gap-4">
-                    <NavLink
-                        to="/"
-                        className={({ isActive }) => isActive ? "active" : ""}
-                        end // Thêm end để chỉ active khi đúng chính xác là trang chủ
-                    >
-                        Home
-                    </NavLink>
-
-                    <NavLink
-                        to="/products"
-                        className={({ isActive }) => isActive ? "active" : ""}
-                    >
-                        Products
-                    </NavLink>
-
-                    <NavLink
-                        to="/promotions"
-                        className={({ isActive }) => isActive ? "active" : ""}
-                    >
-                        Promotions
-                    </NavLink>
-
-                    <NavLink
-                        to="/about"
-                        className={({ isActive }) => isActive ? "active" : ""}
-                    >
-                        About
-                    </NavLink>
-
-                    <NavLink
-                        to="/contact"
-                        className={({ isActive }) => isActive ? "active" : ""}
-                    >
-                        Contact
-                    </NavLink>
+                {/* Nav Menu */}
+                <nav className="menu d-none d-lg-flex">
+                    <Link to="/">Home</Link>
+                    <Link to="#">Products</Link>
+                    <Link to="#">Promotions</Link>
+                    <Link to="#">About</Link>
                 </nav>
 
-                <div className="search-box">
-                    <input type="text" placeholder="Search product..." />
-                    <Icon icon="search" className="icon-search" />
+                {/* Search Box - Gộp khối */}
+                <div className="search-container">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+                    <button className="search-btn">
+                        <Icon icon="search" />
+                    </button>
                 </div>
 
-                <div className="icon-box d-flex gap-3">
-                    <div className="position-relative cursor-pointer">
-                        <Icon icon="shopping-cart" className="icons" />
-                        <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style={{fontSize: '0.6rem'}}>
-                            2
-                        </span>
+                {/* Icons Group */}
+                <div className="icon-group">
+                    <UserMenu
+                        isLoggedIn={!!user}
+                        username={user?.name}
+                    />
+                    <Link to="/wishlist" className="icon-link">
+                        <Icon icon="heart" />
+                        <span className="count-badge">0</span>
+                    </Link>
+                    <div className="icon-link">
+                        <Icon icon="shopping-cart" />
+                        <span className="count-badge">0</span>
                     </div>
-                    <Icon icon="user" className="icons cursor-pointer" />
                 </div>
             </div>
         </header>

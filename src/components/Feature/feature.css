@@ -1,6 +1,7 @@
 .feature-highlights {
   padding: 40px 0;
   background: #d35400;
+  cursor: pointer;
   justify-content: center;
 }
 .feature-highlights .container {
@@ -49,4 +50,4 @@
   line-height: 1.4;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=feature.css.map */

@@ -1,22 +1,23 @@
 import React from "react";
-import "./style.scss"; 
+import "./button.scss";
 
 export default function Button({
                                    children,
-                                   variant = "primary",   // primary | secondary | outline | text | danger
-                                   size = "medium",       // small | medium | large
+                                   variant = "primary",
+                                   size = "medium",
                                    className = "",
-                                   href = "",
+                                   href,
                                    ...props
                                }) {
-    // Tạo class động
-    const classes = `c-btn c-btn--${variant} c-btn--${size} ${className}`.trim();
+    const classes = `c-btn c-btn--${variant} ${size ? `c-btn--${size}` : ""} ${className}`.trim();
 
-
-    // Nếu có href → render thẻ <a>, không thì render <button>
     return href ? (
-        <a href={href} className={classes} {...props}>{children}</a>
+        <a href={href} className={classes} {...props}>
+            {children}
+        </a>
     ) : (
-        <button type="button" className={classes} {...props}>{children}</button>
+        <button type="button" className={classes} {...props}>
+            {children}
+        </button>
     );
 }

@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.user-menu-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.user-menu-container .user-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+.user-menu-container .user-chip .name {
+  color: #fff;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.user-menu-container .user-chip .user-icon {
+  color: #fff !important;
+}
+.user-menu-container {
+  /* Định vị Menu thả xuống để không làm biến dạng Header */
+}
+.user-menu-container .user-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 180px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  z-index: 1000;
+  /* Mặc định ẩn đi */
+  display: none;
+}
+.user-menu-container .user-dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #333 !important;
+  text-decoration: none !important;
+  font-size: 14px;
+  transition: 0.2s;
+}
+.user-menu-container .user-dropdown-menu a:hover {
+  background: #f5f5f5;
+  color: #5d4037 !important;
+}
+.user-menu-container .user-dropdown-menu a.logout-btn {
+  color: #d32f2f !important;
+  border-top: 1px solid #eee;
+}
+.user-menu-container {
+  /* Hiển thị khi hover vào container */
+}
+.user-menu-container:hover .user-dropdown-menu {
+  display: block;
+}
+.user-menu-container:hover .user-chip {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/*# sourceMappingURL=userMenu.css.map */

@@ -1,0 +1,58 @@
+.wishlist-page {
+  padding: 60px 0 80px;
+  background-color: #faf7f3;
+}
+
+.wishlist-header {
+  margin-bottom: 60px;
+}
+.wishlist-header .wishlist-subtitle {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: #d46a28;
+  margin-bottom: 12px;
+}
+.wishlist-header .wishlist-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.wishlist-header .wishlist-desc {
+  font-size: 15px;
+  color: #8b7d72;
+  line-height: 1.8;
+}
+
+.wishlist-footer {
+  margin-top: 80px;
+}
+.wishlist-footer .continue-btn {
+  padding: 12px 28px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.wishlist-footer .continue-btn:hover {
+  background-color: #111;
+  color: #fff;
+}
+.wishlist-footer .help-text {
+  margin-top: 16px;
+  font-size: 13px;
+  color: #8b7d72;
+}
+.wishlist-footer .help-text a {
+  color: #d46a28;
+  text-decoration: underline;
+}
+.wishlist-footer .help-text a:hover {
+  opacity: 0.8;
+}
+
+/*# sourceMappingURL=wishlist.css.map */

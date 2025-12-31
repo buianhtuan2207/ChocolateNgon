@@ -9,6 +9,7 @@ export interface Product {
     image: string;
     category: 'dark' | 'milk' | 'nut' | 'fruit'; // Gợi ý các loại danh mục
     isHot?: boolean; // Đánh dấu sản phẩm nổi bật (tùy chọn)
+    isWish?: boolean;
 }
 
 // 2. Danh sách sản phẩm (đã thêm ID và Category)
@@ -20,7 +21,8 @@ export const PRODUCTS: Product[] = [
         price: 1200000,
         image: "/assets/img/category/ML.png",
         category: "dark",
-        isHot: true // Sản phẩm này sẽ hiện ở mục nổi bật
+        isHot: true, // Sản phẩm này sẽ hiện ở mục nổi bật
+        isWish: true
     },
     {
         id: 2,
@@ -28,7 +30,8 @@ export const PRODUCTS: Product[] = [
         description: "Ngọt nhẹ, mịn và thơm béo.",
         price: 950000,
         image: "/assets/img/products/socola-vien.png",
-        category: "milk"
+        category: "milk",
+        isWish: true
     },
     {
         id: 3,
@@ -54,7 +57,8 @@ export const PRODUCTS: Product[] = [
         description: "Hương vị đậm đà, nguyên chất từ cacao.",
         price: 1200000,
         image: "/assets/img/category/ML.png",
-        category: "dark"
+        category: "dark",
+        isWish: true
     },
     {
         id: 6,

@@ -1,144 +1,116 @@
-/* Khai báo biến màu */
-$bg-header: #5d4037;  // Màu nâu đậm chủ đạo
-$text-color: #fff;    // Màu chữ trắng
-$hover-color: #ffcc80; // Màu cam nhạt khi hover/active
-$font-main: 'Playfair Display', serif; // Font chữ sang trọng (nếu có) hoặc để mặc định
+$bg-dark: #5d4037;
+$hover: #ffcc80;
+$primary: #fff;
 
 .header {
-  background-color: $bg-header;
-  padding: 15px 0;
-  font-family: $font-main, sans-serif;
-  color: $text-color;
-  position: sticky; /* Ghim header lên đầu khi cuộn */
+  background: $bg-dark;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  position: sticky;
   top: 0;
   z-index: 1000;
 
-  /* Style cho Logo */
-  .logo {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: $text-color;
-    margin: 0;
-    transition: transform 0.3s ease;
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+  }
 
-    &:hover {
-      color: $hover-color;
-      transform: scale(1.05);
+  /* Sửa lỗi logo bị gạch chân xanh */
+  .logo-link {
+    text-decoration: none !important;
+    .logo {
+      color: $primary;
+      font-size: 36px;
+      font-weight: 900;
+      margin: 0;
+      transition: 0.3s;
+      &:hover { color: $hover; }
     }
   }
 
-  /* Style cho Menu */
+  /* Menu căn chỉnh lại khoảng cách */
   .menu {
+    display: flex;
+    gap: 24px;
     a {
-      color: rgba(255, 255, 255, 0.8); // Màu trắng mờ
+      color: $primary;
       text-decoration: none;
-      font-size: 1rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 5px 0;
-      position: relative;
-      transition: all 0.3s ease;
-
-      /* Hiệu ứng gạch chân khi hover */
-      &::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: $hover-color;
-        transition: width 0.3s ease;
-      }
-
-      &:hover {
-        color: $hover-color;
-        &::after {
-          width: 100%;
-        }
-      }
-
-      /* Trạng thái Active (Đang ở trang đó) */
-      &.active {
-        color: $hover-color;
-        font-weight: 700;
-        &::after {
-          width: 100%;
-        }
-      }
+      font-size: 18px;
+      font-weight: 700;
+      transition: 0.3s;
+      &:hover { color: $hover; }
     }
   }
 
-  /* Search Box */
-  .search-box {
-    position: relative;
+  /* Ô tìm kiếm: Sửa nút thô trong ảnh */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 2px 5px 2px 15px;
+    flex: 0 1 300px; /* Độ rộng vừa phải */
 
     input {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 50px;
-      padding: 8px 40px 8px 20px;
-      color: #fff;
+      border: none;
       outline: none;
-      transition: all 0.3s;
-      width: 220px;
-
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 0.9rem;
-      }
-
-      &:focus {
-        background: rgba(255, 255, 255, 0.2);
-        border-color: $hover-color;
-        width: 260px; /* Hiệu ứng giãn ra khi focus */
-      }
+      width: 100%;
+      height: 36px;
+      font-size: 14px;
+      background: transparent;
     }
 
-    .icon-search {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(255, 255, 255, 0.7);
+    .search-btn {
+      background: transparent;
+      border: none;
+      color: #333;
+      padding: 5px 10px;
       cursor: pointer;
-
-      &:hover {
-        color: $hover-color;
-      }
+      display: flex;
+      align-items: center;
+      &:hover { color: $bg-dark; }
     }
   }
 
-  /* Icons Box */
-  .icon-box {
-    .icons {
-      font-size: 1.2rem;
-      color: $text-color;
-      transition: 0.3s;
+  /* Nhóm Icon bên phải */
+  .icon-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-      &:hover {
-        color: $hover-color;
-        transform: translateY(-2px);
-      }
+    .user-icon-only{
+      color: $primary;
     }
-
-    .cursor-pointer {
+    .icon-link {
+      color: $primary;
+      text-decoration: none;
+      font-size: 20px;
+      position: relative;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+
+      &:hover { color: $hover; }
+
+      .count-badge {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        background: $hover;
+        color: $bg-dark;
+        font-size: 10px;
+        font-weight: bold;
+        min-width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
-  }
-}
-
-/* Responsive cơ bản */
-@media (max-width: 992px) {
-  .header .search-box input {
-    width: 150px;
-    &:focus { width: 180px; }
-  }
-}
-
-@media (max-width: 768px) {
-  .header .search-box {
-    display: none; // Ẩn tìm kiếm trên mobile cho gọn
   }
 }

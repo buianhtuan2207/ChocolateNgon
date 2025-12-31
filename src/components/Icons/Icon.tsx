@@ -1,4 +1,4 @@
-// src/components/Icons.tsx  (hoặc src/common/Icons.tsx)
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
@@ -34,7 +34,7 @@ import {
     faFacebookF,
     faInstagram,
     faYoutube,
-    faTiktok,
+    faTiktok, faGoogle,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Thêm tất cả icon vào library một lần duy nhất
@@ -69,6 +69,7 @@ library.add(
     faInstagram,
     faYoutube,
     faTiktok,
+    faGoogle,
 );
 
 // Export default chính là FontAwesomeIcon đã được config sẵn

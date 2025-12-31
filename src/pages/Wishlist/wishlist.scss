@@ -1,0 +1,63 @@
+.wishlist-page {
+  padding: 60px 0 80px;
+  background-color: #faf7f3; // nền kem nhạt
+}
+
+.wishlist-header {
+  margin-bottom: 60px;
+
+  .wishlist-subtitle {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #d46a28; // cam chocolate
+    margin-bottom: 12px;
+  }
+
+  .wishlist-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #111;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .wishlist-desc {
+    font-size: 15px;
+    color: #8b7d72;
+    line-height: 1.8;
+  }
+}
+.wishlist-footer {
+  margin-top: 80px;
+
+  .continue-btn {
+    padding: 12px 28px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #111;
+      color: #fff;
+    }
+  }
+
+  .help-text {
+    margin-top: 16px;
+    font-size: 13px;
+    color: #8b7d72;
+
+    a {
+      color: #d46a28;
+      text-decoration: underline;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

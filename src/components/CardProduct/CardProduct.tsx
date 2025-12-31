@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.scss";
+import "./cartProduct.scss";
 import Button from "../Button/Button";
 import { Product } from "../../data/products"; // Import interface từ file data
 
@@ -39,6 +39,7 @@ export default function CardProduct({
                             <Button
                                 variant="primary"
                                 size="small"
+                                icons
                                 href={buttonLink}>
                                 {buttonText}
                             </Button>
