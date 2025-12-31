@@ -4,16 +4,17 @@ import './filterRadio.scss';
 interface RadioItem {
     id: string;
     label: string;
-    isChecked?: boolean;
     isHighlight?: boolean;
 }
 
 interface FilterRadioProps {
     name: string;
     items: RadioItem[];
+    selectedId?: string; // ID đang chọn
+    onChange: (id: string) => void;
 }
 
-export default function FilterRadio({name, items}: FilterRadioProps) {
+export default function FilterRadio({name, items, selectedId, onChange}: FilterRadioProps) {
     return (
         <div className="filter-radio d-flex flex-column gap-2">
             {items.map((item) => (
@@ -23,7 +24,8 @@ export default function FilterRadio({name, items}: FilterRadioProps) {
                         type="radio"
                         name={name}
                         id={item.id}
-                        defaultChecked={item.isChecked}
+                        checked={selectedId === item.id} // Control component
+                        onChange={() => onChange(item.id)}
                     />
                     <label
                         className={`form-check-label ${item.isHighlight ? 'highlight' : ''}`}

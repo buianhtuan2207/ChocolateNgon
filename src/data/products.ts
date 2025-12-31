@@ -1,6 +1,6 @@
 // src/data/products.ts
 
-// 1. Định nghĩa kiểu dữ liệu cho sản phẩm
+// Định nghĩa kiểu dữ liệu cho sản phẩm
 export interface Product {
     id: number;
     title: string;
@@ -12,7 +12,7 @@ export interface Product {
     isWish?: boolean;
 }
 
-// 2. Danh sách sản phẩm (đã thêm ID và Category)
+// Danh sách sản phẩm (đã thêm ID và Category)
 export const PRODUCTS: Product[] = [
     {
         id: 1,

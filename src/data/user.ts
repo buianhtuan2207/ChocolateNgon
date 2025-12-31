@@ -1,4 +1,4 @@
-// 1. Định nghĩa kiểu dữ liệu User
+// Định nghĩa kiểu dữ liệu User
 export interface User {
     id: number;
     name: string;
@@ -8,7 +8,7 @@ export interface User {
 
 export type PublicUser = Omit<User, "password">;
 
-// 2. Danh sách user fake
+// Danh sách user fake
 export const USERS: User[] = [
     {
         id: 1,
