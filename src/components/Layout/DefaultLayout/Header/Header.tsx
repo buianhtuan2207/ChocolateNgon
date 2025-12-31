@@ -2,7 +2,7 @@ import React from 'react';
 import './header.scss';
 import Icon from '../../../Icons/Icon';
 import UserMenu from "../../../UserMenu/UserMenu";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; // Dùng NavLink để có class 'active' tự động
 
 export default function Header() {
     const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -10,20 +10,20 @@ export default function Header() {
     return (
         <header className="header shadow-sm">
             <div className="container header-inner">
-                {/* Logo */}
+                {/* Logo -> Về trang chủ */}
                 <Link to="/" className="logo-link">
                     <h2 className="logo">SocolaShop</h2>
                 </Link>
 
-                {/* Nav Menu */}
+                {/* Nav Menu -> Điều hướng các trang */}
                 <nav className="menu d-none d-lg-flex">
-                    <Link to="/">Home</Link>
-                    <Link to="#">Products</Link>
-                    <Link to="#">Promotions</Link>
-                    <Link to="#">About</Link>
+                    <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink>
+                    <NavLink to="/product" className={({ isActive }) => isActive ? "active-link" : ""}>Products</NavLink>
+                    <NavLink to="/promotions" className={({ isActive }) => isActive ? "active-link" : ""}>Promotions</NavLink>
+                    <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About</NavLink>
                 </nav>
 
-                {/* Search Box - Gộp khối */}
+                {/* Search Box */}
                 <div className="search-container">
                     <input type="text" placeholder="Tìm kiếm sản phẩm..." />
                     <button className="search-btn">
@@ -37,14 +37,18 @@ export default function Header() {
                         isLoggedIn={!!user}
                         username={user?.name}
                     />
+
+                    {/* Wishlist -> Đến trang yêu thích */}
                     <Link to="/wishlist" className="icon-link">
                         <Icon icon="heart" />
-                        <span className="count-badge">0</span>
+                        <span className="count-badge">2</span> {/* Bạn có thể logic count sau */}
                     </Link>
-                    <div className="icon-link">
+
+                    {/* Cart -> Đến trang giỏ hàng */}
+                    <Link to="/cart" className="icon-link">
                         <Icon icon="shopping-cart" />
                         <span className="count-badge">0</span>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </header>
