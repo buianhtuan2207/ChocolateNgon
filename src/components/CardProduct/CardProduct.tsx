@@ -38,13 +38,12 @@ export default function CardProduct({
                         <div className="card-footer bg-white border-0 d-flex justify-content-between align-items-center">
                             <span className="price fw-bold">{formatVND(p.price)}</span>
 
-                            {/* FIX LỖI Ở ĐÂY */}
                             <Link to={`/product/${p.id}`}>
                                 <Button
                                     variant="primary"
                                     size="small"
                                     icons
-                                    href={undefined} // Truyền undefined để thỏa mãn TypeScript nhưng vẫn render ra button
+                                    href={undefined}
                                 >
                                     {buttonText}
                                 </Button>
