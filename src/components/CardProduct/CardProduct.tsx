@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import "./cartProduct.scss";
 import Button from "../Button/Button";
 import { Product } from "../../data/products";
+import Icon from "../Icons/Icon"; // Import interface từ file data
 
+
+// Định nghĩa props nhận vào danh sách data
 interface CardProductProps {
     data: Product[];
     buttonLink?: string;
@@ -12,9 +15,11 @@ interface CardProductProps {
 
 export default function CardProduct({
                                         data,
+                                        buttonLink = "#",
                                         buttonText = "Mua ngay"
                                     }: CardProductProps) {
 
+    // Hàm format giữ nguyên logic cũ
     const formatVND = (price: number) => {
         return price.toLocaleString("vi-VN") + " ₫";
     };
@@ -22,12 +27,23 @@ export default function CardProduct({
     return (
         <div className="row row-cols-1 row-cols-md-4 g-4">
             {data.map((p) => (
+                // Đổi key từ index sang p.id để tối ưu hiệu năng React
                 <div key={p.id} className="col">
                     <div className="card h-100 shadow-sm product-card">
-                        <Link to={`/product/${p.id}`} className="text-decoration-none">
-                            <img src={p.image} className="card-img-top" alt={p.title} />
-                        </Link>
 
+                        <div className="product-img-wrapper">
+                            <Link to={`/product/${p.id}`} className="text-decoration-none">
+                                <img src={p.image} className="card-img-top" alt={p.title} />
+                            </Link>
+                            <div className="product-actions">
+                                <div className="action-btn">
+                                    <Icon icon="heart" />
+                                </div>
+                                <div className="action-btn">
+                                    <Icon icon="shopping-cart" />
+                                </div>
+                            </div>
+                        </div>
                         <div className="card-body">
                             <Link to={`/product/${p.id}`} className="text-decoration-none text-dark">
                                 <h5 className="card-title fw-bold">{p.title}</h5>

@@ -3,16 +3,86 @@
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
   cursor: pointer;
+  position: relative;
+  background: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .product-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
-.product-card .card-img-top {
+.product-card:hover .product-actions {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+}
+.product-card:hover .product-img-wrapper::after {
+  opacity: 1;
+}
+.product-card {
+  /* ===== IMAGE ===== */
+}
+.product-card .product-img-wrapper {
+  position: relative;
+  line-height: 0;
+}
+.product-card .product-img-wrapper .card-img-top {
   height: 160px;
+  width: 100%;
   object-fit: cover;
+}
+.product-card .product-img-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.product-card {
+  /* ===== ACTION ICONS ===== */
+}
+.product-card .product-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+.product-card .action-btn {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+.product-card .action-btn:hover {
+  background: var(--bg-dark, #5d4037);
+  color: #fff;
+  transform: scale(1.1);
+}
+.product-card .action-btn svg,
+.product-card .action-btn i,
+.product-card .action-btn span {
+  font-size: 16px;
+  color: inherit;
+  display: block;
+}
+.product-card {
+  /* ===== BODY ===== */
 }
 .product-card .card-body {
   padding: 12px 15px;
@@ -28,6 +98,9 @@
   color: #666;
   height: 38px;
   overflow: hidden;
+}
+.product-card {
+  /* ===== FOOTER ===== */
 }
 .product-card .card-footer {
   padding: 12px 15px;
