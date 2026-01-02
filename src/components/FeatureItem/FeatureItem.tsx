@@ -1,4 +1,4 @@
-// src/components/FeatureItem/FeatureItem.tsx
+
 import React from "react";
 
 interface FeatureItemProps {

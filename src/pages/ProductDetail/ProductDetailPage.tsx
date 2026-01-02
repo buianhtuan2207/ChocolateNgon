@@ -104,7 +104,6 @@ const ProductDetailPage: React.FC = () => {
                                 variant="large"
                                 size="large"
                                 onClick={handleAddToCart}
-                                href
                             >
                                 Thêm vào giỏ hàng
                             </Button>

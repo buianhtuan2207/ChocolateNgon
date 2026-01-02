@@ -22,13 +22,10 @@
 .user-menu-container .user-chip .user-icon {
   color: #fff !important;
 }
-.user-menu-container {
-  /* Định vị Menu thả xuống để không làm biến dạng Header */
-}
 .user-menu-container .user-dropdown-menu {
   position: absolute;
   top: 100%;
-  right: 0;
+  left: 0;
   width: 180px;
   background: #fff;
   border-radius: 8px;
@@ -45,14 +42,16 @@
   text-decoration: none !important;
   font-size: 14px;
   transition: 0.2s;
+  border-bottom: 1px solid #eee;
 }
 .user-menu-container .user-dropdown-menu a:hover {
   background: #f5f5f5;
   color: #5d4037 !important;
 }
-.user-menu-container .user-dropdown-menu a.logout-btn {
+.user-menu-container .user-dropdown-menu .logout-btn-link {
   color: #d32f2f !important;
-  border-top: 1px solid #eee;
+  border: none;
+  background: none;
 }
 .user-menu-container {
   /* Hiển thị khi hover vào container */

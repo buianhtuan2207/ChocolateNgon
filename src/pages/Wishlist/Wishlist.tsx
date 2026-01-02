@@ -1,13 +1,13 @@
 import React from "react";
-import {PRODUCTS} from "../../data/products";
 import CardProduct from "../../components/CardProduct/CardProduct";
 import Button from "../../components/Button/Button";
 import "./wishlist.scss"
+import {useWishlist} from "../../context/WishlistContext";
+
 
 
 const Wishlist: React.FC = () => {
-    // Lọc sản phẩm yêu thích
-    const wishlistProducts = PRODUCTS.filter(p => p.isWish);
+    const { wishlist } = useWishlist();
 
     return (
         <div className="container py-4">
@@ -23,9 +23,9 @@ const Wishlist: React.FC = () => {
                     muốn thưởng thức.
                 </p>
             </div>
-            {wishlistProducts.length > 0 ? (
+            {wishlist.length > 0 ? (
                 <CardProduct
-                    data={wishlistProducts}
+                    data={wishlist}
                     buttonText="Mua ngay"
                     buttonLink="/cart"
                 />
@@ -35,14 +35,9 @@ const Wishlist: React.FC = () => {
             <div className="wishlist-footer text-center">
                 <Button
                     className="continue-btn"
-                    href
                 >
                      TIẾP TỤC MUA SẮM
                 </Button>
-
-                <p className="help-text">
-                    Bạn cần giúp đỡ? <a href="/contact">Liên hệ với chúng tôi</a>
-                </p>
             </div>
         </div>
     );

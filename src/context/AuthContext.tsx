@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, ReactNode } from "react";
 import { PublicUser } from "../data/user";
 
 interface AuthState {
@@ -13,10 +13,15 @@ interface AuthContextType extends AuthState {
 
 const AuthContext = createContext<AuthContextType | null>(null);
 
-export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
+export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const [auth, setAuth] = useState<AuthState>(() => {
+        // Kiểm tra xem đã có data trong localStorage chưa
         const saved = localStorage.getItem("auth");
-        return saved ? JSON.parse(saved) : { user: null, token: null };
+        try {
+            return saved ? JSON.parse(saved) : { user: null, token: null };
+        } catch {
+            return { user: null, token: null };
+        }
     });
 
     const login = (data: AuthState) => {
@@ -36,4 +41,8 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     );
 };
 
-export const useAuth = () => useContext(AuthContext)!;
+export const useAuth = () => {
+    const context = useContext(AuthContext);
+    if (!context) throw new Error("useAuth phải được sử dụng trong AuthProvider");
+    return context;
+};

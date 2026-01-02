@@ -7,13 +7,19 @@ import './components/Icons/Icon';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import './global.scss'
+import {WishlistProvider} from "./context/WishlistContext";
+import {AuthProvider} from "./context/AuthContext";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <React.StrictMode>
+        <AuthProvider>
+            <WishlistProvider>
+                <App />
+            </WishlistProvider>
+        </AuthProvider>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

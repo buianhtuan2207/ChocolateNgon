@@ -2,8 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./cartProduct.scss";
 import Button from "../Button/Button";
-import { Product } from "../../data/products";
-import Icon from "../Icons/Icon"; // Import interface từ file data
+import Icon from "../Icons/Icon";
+import {Product} from "../../data/products";
+import {useWishlist} from "../../context/WishlistContext";
+import {useAuth} from "../../context/AuthContext";
+
 
 
 // Định nghĩa props nhận vào danh sách data
@@ -19,10 +22,12 @@ export default function CardProduct({
                                         buttonText = "Mua ngay"
                                     }: CardProductProps) {
 
-    // Hàm format giữ nguyên logic cũ
     const formatVND = (price: number) => {
         return price.toLocaleString("vi-VN") + " ₫";
     };
+    const { toggleWishlist, isInWishlist } = useWishlist();
+    const { user } = useAuth();
+
 
     return (
         <div className="row row-cols-1 row-cols-md-4 g-4">
@@ -36,9 +41,25 @@ export default function CardProduct({
                                 <img src={p.image} className="card-img-top" alt={p.title} />
                             </Link>
                             <div className="product-actions">
-                                <div className="action-btn">
+                                <div
+                                    className={`action-btn wishlist-btn ${
+                                        isInWishlist(p.id) ? "active" : ""
+                                    }`}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        e.stopPropagation();
+
+                                        if (!user) {
+                                            alert("Vui lòng đăng nhập để thêm vào wishlist");
+                                            return;
+                                        }
+
+                                        toggleWishlist(p);
+                                    }}
+                                >
                                     <Icon icon="heart" />
                                 </div>
+
                                 <div className="action-btn">
                                     <Icon icon="shopping-cart" />
                                 </div>
@@ -59,8 +80,6 @@ export default function CardProduct({
                                 <Button
                                     variant="primary"
                                     size="small"
-                                    icons
-                                    href={undefined} // Truyền undefined để thỏa mãn TypeScript nhưng vẫn render ra button
                                 >
                                     {buttonText}
                                 </Button>

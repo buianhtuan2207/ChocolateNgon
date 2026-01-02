@@ -1,20 +1,30 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Icon from "../Icons/Icon";
 import "./userMenu.scss";
+import {useAuth} from "../../context/AuthContext";
 
-export default function UserMenu({ isLoggedIn, username }) {
-    // Hàm xử lý đăng xuất
-    const handleLogout = (e) => {
-        e.preventDefault(); // Ngăn trang bị load lại theo kiểu mặc định của thẻ a
+interface UserMenuProps {
+    isLoggedIn: boolean;
+    username?: string;
+}
 
-        // 1. Xóa thông tin user trong localStorage
-        localStorage.removeItem("user");
+export default function UserMenu({ isLoggedIn, username }: UserMenuProps) {
+    const { logout } = useAuth(); // Lấy hàm logout từ Context
+    const navigate = useNavigate();
 
-        // 2. Chuyển hướng về trang chủ hoặc trang login
-        // Bạn có thể dùng window.location.href để ép trình duyệt load lại toàn bộ
-        // giúp Header cập nhật trạng thái mới nhất ngay lập tức.
-        window.location.href = "/";
+    const handleLogout = (e: React.MouseEvent) => {
+        e.preventDefault(); // Rất quan trọng để không bị nhảy link bậy
+
+        // 1. Thực hiện xóa state trong Context & LocalStorage
+        logout();
+
+        // 2. Ép buộc điều hướng về trang chủ
+        // Sử dụng replace: true để người dùng không thể nhấn "Back" quay lại trạng thái cũ
+        navigate("/", { replace: true });
+
+        // Lưu ý: Nếu bạn vẫn bị đẩy về Login, hãy kiểm tra xem Route "/"
+        // của bạn có đang bị bọc bởi ProtectedRoute hay không.
     };
 
     if (!isLoggedIn) return (
@@ -25,18 +35,26 @@ export default function UserMenu({ isLoggedIn, username }) {
 
     return (
         <div className="user-menu-container">
-            {/* Phần hiển thị tên luôn xuất hiện */}
             <div className="user-chip">
                 <Icon icon="user" className="user-icon" />
-                <span className="name">{username}</span>
+                <span className="name">{username || "User"}</span>
             </div>
 
-            {/* Phần Menu thả xuống - Phải nằm trong div dropdown riêng */}
             <div className="user-dropdown-menu">
                 <Link to="/account">Thông tin tài khoản</Link>
-                <a href="#" className="logout-btn" onClick={handleLogout}>
+                {/* Dùng button hoặc thẻ a đều được, nhưng quan trọng là gọi logout() */}
+                <button
+                    type="button"
+                    className="logout-btn-link"
+                    onClick={handleLogout}
+                    // style={{
+                    //     color: '#d32f2f',
+                    //     border: 'none',
+                    //     background: 'none',
+                    // }}
+                >
                     Đăng xuất
-                </a>
+                </button>
             </div>
         </div>
     );

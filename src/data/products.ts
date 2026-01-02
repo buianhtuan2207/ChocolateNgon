@@ -1,4 +1,3 @@
-// src/data/products.ts
 
 export interface ProductFeature {
     icon: string;
@@ -16,7 +15,6 @@ export interface Product {
     images?: string[]; // Album ảnh (Mới thêm từ detail)
     category: 'dark' | 'milk' | 'nut' | 'fruit';
     isHot?: boolean;
-    isWish?: boolean;
     features?: ProductFeature[]; // Mới thêm từ detail
 }
 
@@ -39,7 +37,6 @@ export const PRODUCTS: Product[] = [
         images: ["/assets/img/category/ML.png", "/assets/img/products/socola-vien.png"],
         category: "dark",
         isHot: true,
-        isWish: true,
         features: defaultFeatures
     },
     {
@@ -51,7 +48,6 @@ export const PRODUCTS: Product[] = [
         image: "/assets/img/products/socola-vien.png",
         images: ["/assets/img/products/socola-vien.png", "/assets/img/category/ML.png"],
         category: "milk",
-        isWish: true,
         features: defaultFeatures
     },
     {
