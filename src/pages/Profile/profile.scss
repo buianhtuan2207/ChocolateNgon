@@ -1,0 +1,24 @@
+.profile-page-wrapper {
+  background-color: #FAF3F0; // background-light
+  min-height: 100vh;
+  padding: 3rem 0;
+
+  .breadcrumb-custom {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #8D6E63;
+    margin-bottom: 2rem;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover { color: #D35400; }
+    }
+
+    .current { color: #D35400; }
+  }
+}

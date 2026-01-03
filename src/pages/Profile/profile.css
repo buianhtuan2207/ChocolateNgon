@@ -1,0 +1,27 @@
+.profile-page-wrapper {
+  background-color: #FAF3F0;
+  min-height: 100vh;
+  padding: 3rem 0;
+}
+.profile-page-wrapper .breadcrumb-custom {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #8D6E63;
+  margin-bottom: 2rem;
+}
+.profile-page-wrapper .breadcrumb-custom a {
+  text-decoration: none;
+  color: inherit;
+}
+.profile-page-wrapper .breadcrumb-custom a:hover {
+  color: #D35400;
+}
+.profile-page-wrapper .breadcrumb-custom .current {
+  color: #D35400;
+}
+
+/*# sourceMappingURL=profile.css.map */

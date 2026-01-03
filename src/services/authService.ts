@@ -1,4 +1,4 @@
-import {USERS, PublicUser} from "../data/user";
+import { USERS, PublicUser } from "../data/user";
 
 export interface LoginResponse {
     user: PublicUser;
@@ -20,7 +20,7 @@ export const fakeLoginApi = (
                 return;
             }
 
-            const {password: _, ...publicUser} = user;
+            const { password: _, ...publicUser } = user;
 
             resolve({
                 user: publicUser,

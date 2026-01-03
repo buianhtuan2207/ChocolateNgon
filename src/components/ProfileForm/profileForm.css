@@ -1,0 +1,200 @@
+@charset "UTF-8";
+.profile-form-wrapper {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.profile-form-wrapper .form-header {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+.profile-form-wrapper .form-header h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+  font-family: "Playfair Display", serif;
+}
+.profile-form-wrapper .form-header p {
+  color: #666;
+  font-size: 14px;
+  margin: 0;
+}
+.profile-form-wrapper .form-body {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 992px) {
+  .profile-form-wrapper .form-body {
+    flex-direction: column-reverse;
+  }
+}
+.profile-form-wrapper {
+  /* CỘT INPUT */
+}
+.profile-form-wrapper .form-inputs {
+  flex: 1;
+}
+.profile-form-wrapper .form-inputs .form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.profile-form-wrapper .form-inputs .form-group.align-top {
+  align-items: flex-start;
+}
+.profile-form-wrapper .form-inputs .form-group.align-top label {
+  margin-top: 10px;
+}
+.profile-form-wrapper .form-inputs .form-group label {
+  width: 140px;
+  flex-shrink: 0;
+  text-align: right;
+  margin-right: 20px;
+  color: #666;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+@media (max-width: 576px) {
+  .profile-form-wrapper .form-inputs .form-group label {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 576px) {
+  .profile-form-wrapper .form-inputs .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.profile-form-wrapper .form-inputs .form-group .static-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.profile-form-wrapper .form-inputs .form-group .input-box {
+  flex: 1;
+  position: relative;
+  width: 100%;
+}
+.profile-form-wrapper .form-inputs .form-group .input-box input, .profile-form-wrapper .form-inputs .form-group .input-box textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+  color: #333;
+}
+.profile-form-wrapper .form-inputs .form-group .input-box input:focus, .profile-form-wrapper .form-inputs .form-group .input-box textarea:focus {
+  border-color: #d35400;
+}
+.profile-form-wrapper .form-inputs .form-group {
+  /* Radio Group */
+}
+.profile-form-wrapper .form-inputs .form-group .radio-group-wrapper {
+  display: flex;
+  gap: 30px;
+  flex: 1;
+}
+.profile-form-wrapper .form-inputs .form-group .radio-group-wrapper .radio-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+}
+.profile-form-wrapper .form-inputs .form-group .radio-group-wrapper .radio-item input {
+  accent-color: #d35400;
+  width: 18px;
+  height: 18px;
+}
+.profile-form-wrapper .form-inputs .form-group {
+  /* Date Selects */
+}
+.profile-form-wrapper .form-inputs .form-group .date-selects {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+}
+.profile-form-wrapper .form-inputs .form-group .date-selects select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  color: #333;
+}
+.profile-form-wrapper .form-inputs .form-action {
+  margin-left: 160px;
+  padding-top: 10px;
+}
+@media (max-width: 576px) {
+  .profile-form-wrapper .form-inputs .form-action {
+    margin-left: 0;
+  }
+}
+.profile-form-wrapper {
+  /* CỘT AVATAR */
+}
+.profile-form-wrapper .form-avatar {
+  width: 280px;
+  border-left: 1px solid #e5e5e5;
+  padding-left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+@media (max-width: 992px) {
+  .profile-form-wrapper .form-avatar {
+    width: 100%;
+    border-left: none;
+    padding-left: 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+  }
+}
+.profile-form-wrapper .form-avatar .avatar-preview {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+.profile-form-wrapper .form-avatar .avatar-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.profile-form-wrapper .form-avatar .btn-choose-img {
+  font-size: 13px;
+  padding: 8px 16px;
+}
+.profile-form-wrapper .form-avatar .avatar-desc {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Class làm mờ nút Save (Nằm ngoài cùng, không lồng vào .profile-form-wrapper) */
+.disabled-btn-wrapper {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+.disabled-btn-wrapper > * {
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=profileForm.css.map */
