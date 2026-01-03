@@ -41,7 +41,7 @@ export default function UserMenu({ isLoggedIn, username }: UserMenuProps) {
             </div>
 
             <div className="user-dropdown-menu">
-                <Link to="/account">Thông tin tài khoản</Link>
+                <Link to="/profile">Thông tin tài khoản</Link>
                 {/* Dùng button hoặc thẻ a đều được, nhưng quan trọng là gọi logout() */}
                 <button
                     type="button"
