@@ -8,6 +8,7 @@ import Profile from "../pages/Profile/Profile";
 import {Navigate} from "react-router-dom";
 import {useAuth} from "../context/AuthContext";
 import Promotion from "../pages/Promotion/promotion";
+import Cart from "../pages/Cart/Cart";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -38,6 +39,7 @@ const publicRoutes: AppRoute[] = [
     {path: "/product/:id", component: ProductDetailPage },
     {path: "/profile", component: Profile },
     {path: "/promotion", component: Promotion },
+    {path: "/cart" , component: Cart},
 ];
 
 const privateRoutes: AppRoute[] = [];
