@@ -1,8 +1,20 @@
 import React from 'react';
+import { useAuth } from '../../context/AuthContext';
 import Button from '../Button/Button';
 import './profileForm.scss';
 
 export default function ProfileForm() {
+    const { user } = useAuth(); // Lấy trực tiếp 'user' từ AuthState (vì bạn đã spread ...auth)
+
+    // Nếu chưa đăng nhập
+    if (!user) {
+        return (
+            <div className="profile-form-wrapper">
+                <p style={{ padding: '20px' }}>Vui lòng đăng nhập để xem thông tin hồ sơ.</p>
+            </div>
+        );
+    }
+
     return (
         <div className="profile-form-wrapper">
             <div className="form-header">
@@ -13,33 +25,33 @@ export default function ProfileForm() {
             <div className="form-body">
                 {/* --- CỘT TRÁI: INPUTS --- */}
                 <div className="form-inputs">
-                    {/* Tên đăng nhập (Static) */}
+                    {/* Tên đăng nhập */}
                     <div className="form-group">
                         <label>Tên đăng nhập</label>
-                        <div className="static-text">nhattruong257</div>
+                        <div className="static-text">{user.name}</div>
                     </div>
 
                     {/* Họ tên */}
                     <div className="form-group">
                         <label>Họ và tên</label>
                         <div className="input-box">
-                            <input type="text" defaultValue="Trần Nhật Trường" />
+                            <input type="text" defaultValue={user.fullName} />
                         </div>
                     </div>
 
-                    {/* Email - Đã xóa nút Thay đổi */}
+                    {/* Email */}
                     <div className="form-group">
                         <label>Email</label>
                         <div className="input-box">
-                            <input type="text" defaultValue="nhattruong@gmail.com" />
+                            <input type="text" defaultValue={user.email} />
                         </div>
                     </div>
 
-                    {/* SĐT - Đã xóa nút Thay đổi */}
+                    {/* SĐT */}
                     <div className="form-group">
                         <label>Số điện thoại</label>
                         <div className="input-box">
-                            <input type="text" defaultValue="0912 345 678" />
+                            <input type="text" defaultValue={user.phone} />
                         </div>
                     </div>
 
@@ -47,33 +59,23 @@ export default function ProfileForm() {
                     <div className="form-group align-top">
                         <label>Địa chỉ</label>
                         <div className="input-box">
-                            <textarea rows={3} defaultValue="12 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh"></textarea>
+                            <textarea rows={3} defaultValue={user.address}></textarea>
                         </div>
                     </div>
 
-                    {/* Giới tính */}
+                    {/* Giới tính - Giả định mặc định vì PublicUser chưa có field này */}
                     <div className="form-group">
                         <label>Giới tính</label>
                         <div className="radio-group-wrapper">
                             <label className="radio-item">
-                                <input type="radio" name="gender" /> <span>Nam</span>
+                                <input type="radio" name="gender" defaultChecked /> <span>Nam</span>
                             </label>
                             <label className="radio-item">
-                                <input type="radio" name="gender" defaultChecked /> <span>Nữ</span>
+                                <input type="radio" name="gender" /> <span>Nữ</span>
                             </label>
                             <label className="radio-item">
                                 <input type="radio" name="gender" /> <span>Khác</span>
                             </label>
-                        </div>
-                    </div>
-
-                    {/* Ngày sinh */}
-                    <div className="form-group">
-                        <label>Ngày sinh</label>
-                        <div className="date-selects">
-                            <select className="form-select"><option>Ngày 15</option></select>
-                            <select className="form-select"><option>Tháng 8</option></select>
-                            <select className="form-select"><option>1995</option></select>
                         </div>
                     </div>
 
@@ -88,9 +90,11 @@ export default function ProfileForm() {
                 {/* --- CỘT PHẢI: AVATAR --- */}
                 <div className="form-avatar">
                     <div className="avatar-preview">
+                        {/* Hiển thị avatar theo chữ cái đầu của tên nếu không có ảnh */}
                         <img
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVtVnJ7sN3GqGudC85JCaTEv_fYLDD9WKlmBah5pGd7U-LnXU_DaeZ2M5ra_aTK0sKXVnC7fTvC-QAJgs3wbfK2NcWD1OCGo7axCGgCmRNkOvAVRonoPxAI7_p6w2PK23m4wprKix2UMAp8kRkclFZsXAujmDsfwkclyPpTr9El5v9cGjtuAG_uQv0uvedSxvsQoSZzth2sMGU6xVcV_Rxk6potw_ktZNUVpJybW2jlIpCzvTPTXnuigph5sb7zsHPnvmkgbtEsOAK"
-                            alt="Current Avatar"/>
+                            src={`https://ui-avatars.com/api/?name=${encodeURIComponent(user.fullName)}&background=ee4d2d&color=fff`}
+                            alt="Current Avatar"
+                        />
                     </div>
                     <Button
                         variant="text"

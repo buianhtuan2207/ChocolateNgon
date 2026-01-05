@@ -38,6 +38,39 @@
       color: white;
     }
   }
+  &--danger {
+    background: #d35400;
+    color: white;
+
+    &:hover {
+      background: var(--bg-dard);
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+    }
+  }
+
+  &--text {
+    background: transparent;
+    color: #3e2723;
+    padding-left: 0;
+    padding-right: 0;
+    text-transform: none;
+
+    &:hover {
+      color: #d35400;
+      background: transparent;
+    }
+  }
+
+  &--secondary {
+    background: #3e2723;
+    color: white;
+
+    &:hover {
+      background: var(--bg-dard);
+      transform: scale(1.05);
+    }
+  }
 
   &--small { padding: 10px 15px; font-size: 13px; }
   &--medium { padding: 14px 32px; font-size: 16px; }

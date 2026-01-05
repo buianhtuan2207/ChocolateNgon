@@ -1,0 +1,93 @@
+.promotion-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+.promotion-card:hover {
+  transform: translateY(-5px);
+}
+.promotion-card__header {
+  position: relative;
+  height: 200px;
+}
+.promotion-card__header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.7));
+}
+.promotion-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.promotion-card__tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 2;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+.promotion-card__tag--hot {
+  background: #e67e22;
+}
+.promotion-card__tag--freeship {
+  background: #3498db;
+}
+.promotion-card__tag--gift {
+  background: #f1c40f;
+}
+.promotion-card__title {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  z-index: 2;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+.promotion-card__body {
+  padding: 20px;
+}
+.promotion-card__desc {
+  font-size: 14px;
+  color: #666;
+  height: 40px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.promotion-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+.promotion-card__date {
+  font-size: 13px;
+  color: #999;
+}
+.promotion-card__btn {
+  background: none;
+  border: none;
+  color: #d35400;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.promotion-card__btn:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=promotionCard.css.map */

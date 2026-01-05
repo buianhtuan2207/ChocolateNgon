@@ -27,7 +27,7 @@ const Wishlist: React.FC = () => {
                 <CardProduct
                     data={wishlist}
                     buttonText="Mua ngay"
-                    buttonLink="/cart"
+                    buttonLink="/card"
                 />
             ) : (
                 <p>Bạn chưa có sản phẩm yêu thích nào.</p>

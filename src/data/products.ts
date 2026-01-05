@@ -1,4 +1,3 @@
-
 export interface ProductFeature {
     icon: string;
     title: string;
@@ -11,6 +10,7 @@ export interface Product {
     subtitle?: string; // Mới thêm từ detail
     description: string;
     price: number;
+    discountPrice?: number;
     image: string; // Ảnh đại diện chính
     images?: string[]; // Album ảnh (Mới thêm từ detail)
     category: 'dark' | 'milk' | 'nut' | 'fruit';
@@ -18,7 +18,6 @@ export interface Product {
     features?: ProductFeature[]; // Mới thêm từ detail
 }
 
-// Helper để tạo features mặc định cho nhanh
 const defaultFeatures: ProductFeature[] = [
     { icon: "🌿", title: "100% Tự nhiên", desc: "Không chất bảo quản" },
     { icon: "🇻🇳", title: "Xuất xứ Việt Nam", desc: "Hạt cacao Tiền Giang" },
@@ -33,6 +32,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Signature Edition",
         description: "Hương vị đậm đà, nguyên chất từ cacao thượng hạng.",
         price: 1200000,
+        discountPrice: 950000, // Đang giảm giá
         image: "/assets/img/category/ML.png",
         images: ["/assets/img/category/ML.png", "/assets/img/products/socola-vien.png"],
         category: "dark",
@@ -56,6 +56,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Crunchy Nut",
         description: "Sự kết hợp hoàn hảo giữa socola đen và hạnh nhân giòn rụm.",
         price: 1500000,
+        discountPrice: 1200000, // Đang giảm giá
         image: "/assets/img/products/socola-hop.png",
         category: "nut",
         isHot: true,
@@ -78,6 +79,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Macadamia Deluxe",
         description: "Hạt mắc ca béo ngậy phủ lớp socola sữa ngọt ngào.",
         price: 1350000,
+        discountPrice: 1100000, // Đang giảm giá
         image: "/assets/img/category/NBC.png",
         category: "nut",
         features: defaultFeatures
@@ -100,6 +102,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Tropical Fruits",
         description: "Nhân xoài và chanh dây chua ngọt kích thích vị giác.",
         price: 1250000,
+        discountPrice: 899000, // Đang giảm giá mạnh
         image: "/assets/img/category/classic.png",
         category: "fruit",
         isHot: true,
@@ -131,6 +134,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Rum & Raisin",
         description: "Hương vị nồng nàn của rượu Rum và nho khô.",
         price: 1600000,
+        discountPrice: 1450000, // Đang giảm giá
         image: "/assets/img/products/socola-hop.png",
         category: "fruit",
         isHot: true,
@@ -152,6 +156,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Limited Edition",
         description: "Thiết kế trái tim, tổng hợp 12 vị socola ngon nhất.",
         price: 2500000,
+        discountPrice: 1990000, // Đang giảm giá
         image: "/assets/img/products/socola-hop-2.png",
         category: "dark",
         isHot: true,
@@ -185,6 +190,7 @@ export const PRODUCTS: Product[] = [
         subtitle: "Sea Salt Caramel",
         description: "Vị mặn nhẹ của muối biển làm nổi bật vị ngọt caramel.",
         price: 1150000,
+        discountPrice: 920000, // Đang giảm giá
         image: "/assets/img/category/ML.png",
         category: "milk",
         isHot: true,

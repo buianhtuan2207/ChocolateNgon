@@ -1,0 +1,67 @@
+.flash-sale-container {
+  background-color: #3e2723; // Màu nâu đậm đặc trưng
+  border-radius: 16px;
+  margin: 20px 0;
+
+  .header-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+  }
+
+  .countdown-timer {
+    align-items: center;
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.2); // Nền mờ cho ô thời gian
+      color: #fff;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+
+      small {
+        font-size: 0.55rem;
+        opacity: 0.8;
+        margin-top: -2px;
+      }
+
+      &:last-child {
+        color: #ff9800; // Giây hiện màu cam nổi bật
+      }
+    }
+
+    .separator {
+      color: white;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Tùy chỉnh nhẹ CardProduct khi nằm trong Flash Sale */
+  .product-card {
+    background: #fff;
+
+    .sale-badge {
+      background: #e74c3c;
+      height: 22px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .price-container {
+      .price {
+        color: #d35400; // Màu giá mới đồng bộ tông màu nâu/cam
+      }
+    }
+
+    // Đảm bảo nút Button danger của bạn luôn nổi bật
+    .c-btn--danger {
+      box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+    }
+  }
+}
