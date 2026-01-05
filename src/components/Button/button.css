@@ -34,6 +34,34 @@
   background: #d35400;
   color: white;
 }
+.c-btn--danger {
+  background: #e74c3c;
+  color: white;
+}
+.c-btn--danger:hover {
+  background: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+.c-btn--text {
+  background: transparent;
+  color: #3e2723;
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+}
+.c-btn--text:hover {
+  color: #d35400;
+  background: transparent;
+}
+.c-btn--secondary {
+  background: #3e2723;
+  color: white;
+}
+.c-btn--secondary:hover {
+  background: #1b0000;
+  transform: scale(1.05);
+}
 .c-btn--small {
   padding: 10px 15px;
   font-size: 13px;
