@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.flash-sale-container {
+  background-color: #3e2723;
+  border-radius: 16px;
+  margin: 20px 0;
+}
+.flash-sale-container .header-wrapper {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+}
+.flash-sale-container .countdown-timer {
+  align-items: center;
+}
+.flash-sale-container .countdown-timer .time-box {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.flash-sale-container .countdown-timer .time-box small {
+  font-size: 0.55rem;
+  opacity: 0.8;
+  margin-top: -2px;
+}
+.flash-sale-container .countdown-timer .time-box:last-child {
+  color: #ff9800;
+}
+.flash-sale-container .countdown-timer .separator {
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.flash-sale-container {
+  /* Tùy chỉnh nhẹ CardProduct khi nằm trong Flash Sale */
+}
+.flash-sale-container .product-card {
+  background: #fff;
+}
+.flash-sale-container .product-card .sale-badge {
+  background: #e74c3c;
+  height: 22px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.flash-sale-container .product-card .price-container .price {
+  color: #d35400;
+}
+.flash-sale-container .product-card .c-btn--danger {
+  box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+/*# sourceMappingURL=flashSale.css.map */

@@ -23,7 +23,7 @@ export default function Header() {
                 <nav className="menu d-none d-lg-flex">
                     <NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Trang chủ</NavLink>
                     <NavLink to="/product" className={({ isActive }) => isActive ? "active-link" : ""}>Sản phẩm</NavLink>
-                    <NavLink to="/promotions" className={({ isActive }) => isActive ? "active-link" : ""}>Khuyến mại</NavLink>
+                    <NavLink to="/promotion" className={({ isActive }) => isActive ? "active-link" : ""}>Khuyến mại</NavLink>
                     <NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>Giới thiệu</NavLink>
                 </nav>
 

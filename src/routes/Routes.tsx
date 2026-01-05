@@ -7,6 +7,7 @@ import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
 import {Navigate} from "react-router-dom";
 import {useAuth} from "../context/AuthContext";
+import Promotion from "../pages/Promotion/promotion";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -36,6 +37,7 @@ const publicRoutes: AppRoute[] = [
     {path: "/product", component: Products },
     {path: "/product/:id", component: ProductDetailPage },
     {path: "/profile", component: Profile },
+    {path: "/promotion", component: Promotion },
 ];
 
 const privateRoutes: AppRoute[] = [];

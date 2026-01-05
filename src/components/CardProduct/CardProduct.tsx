@@ -10,12 +10,14 @@ import { useAuth } from "../../context/AuthContext";
 interface CardProductProps {
     data: Product[];
     buttonText?: string;
+    buttonLink?: string;
     showSaleBadge?: boolean; // Bật cái này ở trang Khuyến mãi
 }
 
 export default function CardProduct({
                                         data,
                                         buttonText = "Mua ngay",
+                                        buttonLink,
                                         showSaleBadge = false
                                     }: CardProductProps) {
 
@@ -103,7 +105,7 @@ export default function CardProduct({
                                 <Button
                                     variant={hasDiscount ? "danger" : "primary"}
                                     size="small"
-                                    href={`/product/${p.id}`}
+                                    href={buttonLink || `/product/${p.id}`}
                                 >
                                     {buttonText}
                                 </Button>
