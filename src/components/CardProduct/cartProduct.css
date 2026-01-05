@@ -125,9 +125,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.product-card {
-  /* ===== 2. FOOTER & PRICE (CẬP NHẬT) ===== */
-}
 .product-card .card-footer {
   padding: 12px 15px;
   display: flex;

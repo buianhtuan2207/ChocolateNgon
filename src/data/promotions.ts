@@ -37,7 +37,7 @@ export const PROMOTIONS: PromotionItem[] = [
         id: 3,
         tag: "GIFT",
         tagType: "gift",
-        title: "Ưu đãi thành viên mới",
+        title: "Quà tặng đặc biệt",
         description: "Tặng kèm bộ thiệp chúc mừng và túi xách cao cấp cho mọi đơn hàng Signature Edition..",
         expiryDate: "Dài hạn",
         image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800&auto=format&fit=crop",

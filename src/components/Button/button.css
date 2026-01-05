@@ -35,11 +35,11 @@
   color: white;
 }
 .c-btn--danger {
-  background: #e74c3c;
+  background: #d35400;
   color: white;
 }
 .c-btn--danger:hover {
-  background: #c0392b;
+  background: var(--bg-dard);
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
 }
@@ -59,7 +59,7 @@
   color: white;
 }
 .c-btn--secondary:hover {
-  background: #1b0000;
+  background: var(--bg-dard);
   transform: scale(1.05);
 }
 .c-btn--small {

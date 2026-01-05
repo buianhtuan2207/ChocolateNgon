@@ -1,12 +1,13 @@
-import {PRODUCTS} from "../../data/products";
+import { PRODUCTS } from "../../data/products";
+import { PROMOTIONS } from "../../data/promotions"; // Thêm dòng này
 import FlashSale from "../../components/FlashSale/FlashSale";
 import Banner from "../../components/Banner/Banner";
-import "./promotion.scss"
-
+import PromotionCard from "../../components/PromotionCard/PromotionCard";
+import "./promotion.scss";
 
 export default function Promotion() {
+    const saleItems = PRODUCTS.filter(p => p.discountPrice).slice(0, 12);
 
-    const saleItems = PRODUCTS.filter(p => p.discountPrice).slice(0, 4);
     return (
         <div className="promotion-page">
             <Banner
@@ -16,11 +17,25 @@ export default function Promotion() {
                 description="Giảm tới 30% cho bộ sưu tập Signature Dark Chocolate. Hương vị tinh tế cho những khoảnh khắc đáng nhớ."
                 buttonText="Khám phá ngay"
                 buttonLink="/product"
-                image="https://lh3.googleusercontent.com/aida-public/AB6AXuDadsy0aROr3mIXk7__fqfsxDMelUGeAZ-B0XY5x397hpG07UolPrRECS7JkojYQvrW3_br9S1uQKrT-y4_tap0ppGtrRzGGPuXYXdQsmeQ93sR65FwAX0A9pXpfvgAlfzdic3WW1rBVgPla5XhN3X4F2EInRirntPEqp9zisqGAUKYfEvbpbDlwHQCx4reBNqPFIMdTBRrWlgfiDpuVLaKNUG2eSVT8ZMDd8E1Z7jhnWPDrY-3BKN-YM3foPhG2akQVSAXqFAml_iq"
+                image="https://images.unsplash.com/photo-1511381939415-e44015466834?q=80&w=2000"
             />
-            <div className="container mt-5">
-                <FlashSale data={saleItems} />
+
+            <div className="container">
+                <div className="mt-5">
+                    <FlashSale data={saleItems} />
+                </div>
+
+                <div className="promotion-list-section mt-5 pb-5">
+                    <h2 className="promotion-section-title">Đang diễn ra</h2>
+                    <div className="row g-4 mt-2">
+                        {PROMOTIONS.map((item) => (
+                            <div className="col-lg-4 col-md-6" key={item.id}>
+                                <PromotionCard {...item} />
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
-    )
+    );
 }
