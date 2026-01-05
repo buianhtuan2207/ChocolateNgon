@@ -77,40 +77,88 @@ body {
   font-size: 20px;
 }
 .banner--promo {
-  height: 300px;
+  position: relative;
+  width: 100%;
+  min-height: 500px;
   display: flex;
   align-items: center;
-  background: linear-gradient(rgba(62, 39, 35, 0.9), rgba(62, 39, 35, 0.9));
-  color: white;
-  padding: 0;
-}
-.banner--promo .banner__container {
-  height: 100%;
-  flex-direction: row;
-  align-items: center;
-  gap: 60px;
-}
-.banner--promo .banner__content {
-  max-width: 520px;
-}
-.banner--promo .banner__title {
-  font-size: 48px;
-  color: white;
-}
-.banner--promo .banner__title span {
-  color: #ffcc80;
-}
-.banner--promo .banner__desc {
-  color: #fff;
-  font-size: 18px;
-  opacity: 0.95;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #3e2723;
+  /* ĐƯA ẢNH RA PHỦ TOÀN BỘ NỀN */
 }
 .banner--promo .banner__img {
-  text-align: right;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  text-align: center;
 }
 .banner--promo .banner__img img {
-  max-height: 360px;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+}
+.banner--promo .banner__img img:hover {
+  transform: none;
+}
+.banner--promo .banner__img {
+  /* LỚP PHỦ NÂU ĐẬM (OVERLAY) ĐỂ NỔI BẬT CHỮ */
+}
+.banner--promo .banner__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(44, 24, 16, 0.7);
+  z-index: 2;
+}
+.banner--promo {
+  /* ĐƯA NỘI DUNG VÀO GIỮA VÀ NẰM TRÊN ẢNH */
+}
+.banner--promo .banner__container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.banner--promo .banner__content {
+  max-width: 100%;
+}
+.banner--promo .banner__subtitle {
+  background: transparent;
+  color: #d35400;
+  padding: 0;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.banner--promo .banner__title {
+  font-size: 64px;
+  color: #fff;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.banner--promo .banner__title span {
+  color: #fff;
+}
+.banner--promo .banner__desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 600px;
+}
+.banner--promo .banner__action .c-btn--primary {
+  background: #d35400;
+  padding: 16px 40px;
+  font-size: 16px;
 }
 .banner--small {
   width: 500px;
