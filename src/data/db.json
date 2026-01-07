@@ -53,6 +53,7 @@
       "subtitle": "Sweet & Creamy",
       "description": "Ngọt nhẹ, mịn màng và thơm béo mùi sữa tươi.",
       "price": 950000,
+      "discountPrice": null,
       "image": "/assets/img/products/socola-vien.png",
       "images": ["/assets/img/products/socola-vien.png", "/assets/img/category/ML.png"],
       "category": "milk",
@@ -84,6 +85,7 @@
       "subtitle": "Zero Sugar",
       "description": "Vị đắng mạnh mẽ dành cho người sành ăn, không đường.",
       "price": 1800000,
+      "discountPrice": null,
       "image": "/assets/img/products/socola-hop-2.png",
       "category": "dark",
       "isHot": true,
@@ -114,6 +116,7 @@
       "subtitle": "Japanese Style",
       "description": "Hương vị thanh mát từ bột Matcha Nhật Bản cao cấp.",
       "price": 1100000,
+      "discountPrice": null,
       "image": "/assets/img/category/PTP.png",
       "category": "milk",
       "features": [
@@ -144,6 +147,7 @@
       "subtitle": "Intense Dark",
       "description": "Ít ngọt, tốt cho sức khỏe tim mạch.",
       "price": 1400000,
+      "discountPrice": null,
       "image": "/assets/img/category/ML.png",
       "category": "dark",
       "features": [
@@ -158,6 +162,7 @@
       "subtitle": "Hazelnut Cream",
       "description": "Nhân kem hạt dẻ béo ngậy tan chảy.",
       "price": 980000,
+      "discountPrice": null,
       "image": "/assets/img/products/socola-vien.png",
       "category": "nut",
       "features": [
@@ -188,6 +193,7 @@
       "subtitle": "White Vanilla",
       "description": "Ngọt ngào, thơm lừng hương Vani tự nhiên.",
       "price": 900000,
+      "discountPrice": null,
       "image": "/assets/img/category/NBC.png",
       "category": "milk",
       "features": [
@@ -218,6 +224,7 @@
       "subtitle": "Cool Mint",
       "description": "Sảng khoái với lớp nhân bạc hà mát lạnh.",
       "price": 1050000,
+      "discountPrice": null,
       "image": "/assets/img/category/PTP.png",
       "category": "milk",
       "features": [
@@ -232,6 +239,7 @@
       "subtitle": "Orange Dark",
       "description": "Vỏ cam sấy dẻo nhúng socola đen đắng nhẹ.",
       "price": 1300000,
+      "discountPrice": null,
       "image": "/assets/img/category/classic.png",
       "category": "fruit",
       "features": [
@@ -262,6 +270,7 @@
       "subtitle": "Energy Bar",
       "description": "Giàu Protein, thích hợp cho người tập gym.",
       "price": 850000,
+      "discountPrice": null,
       "image": "/assets/img/category/NBC.png",
       "category": "nut",
       "features": [
