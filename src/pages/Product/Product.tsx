@@ -6,12 +6,16 @@ import SortBar from '../../components/SortBar/SortBar';
 import Pagination from '../../components/Pagination/Pagination';
 import CardProduct from '../../components/CardProduct/CardProduct';
 
-import { PRODUCTS } from '../../data/products';
-import { CATEGORIES, FLAVORS, SHAPES } from '../../data/filters'; // Import data gốc để map
+import { Product } from '../../data/products';
+import { CATEGORIES, FLAVORS, SHAPES } from '../../data/filters';
 
 const ITEMS_PER_PAGE = 8;
 
 export default function Products() {
+    // 1. Khai báo state để lưu toàn bộ sản phẩm từ API
+    const [allProducts, setAllProducts] = useState<Product[]>([]);
+    const [loading, setLoading] = useState(true);
+
     const [filters, setFilters] = useState({
         category: 'all',
         flavor: 'all',
@@ -21,51 +25,63 @@ export default function Products() {
     const [sortBy, setSortBy] = useState('default');
     const [currentPage, setCurrentPage] = useState(1);
 
+    // 2. Gọi API để lấy dữ liệu ngay khi mount trang
+    useEffect(() => {
+        fetch("http://localhost:5000/products")
+            .then(res => res.json())
+            .then(data => {
+                setAllProducts(data);
+                setLoading(false);
+            })
+            .catch(err => {
+                console.error("Lỗi fetch products:", err);
+                setLoading(false);
+            });
+    }, []);
+
     useEffect(() => {
         setCurrentPage(1);
     }, [filters, sortBy]);
 
-    // --- TÍNH TOÁN SỐ LƯỢNG CHO SIDEBAR ---
-    // Logic: Duyệt qua từng item của bộ lọc gốc, đếm xem trong PRODUCTS có bao nhiêu item thỏa mãn
+    // --- TÍNH TOÁN SỐ LƯỢNG CHO SIDEBAR (Dựa trên allProducts thay vì PRODUCTS) ---
     const categoriesWithCount = useMemo(() => {
         return CATEGORIES.map(cat => {
             let count = 0;
-            if (cat.value === 'all') count = PRODUCTS.length;
-            else if (cat.value === 'hot') count = PRODUCTS.filter(p => p.isHot).length;
-            else if (cat.value === 'best-seller') count = PRODUCTS.filter(p => p.isHot).length; // Giả định
-            else count = PRODUCTS.filter(p => p.category === cat.value).length;
-
+            if (cat.value === 'all') count = allProducts.length;
+            else if (cat.value === 'hot') count = allProducts.filter(p => p.isHot).length;
+            else if (cat.value === 'best-seller') count = allProducts.filter(p => p.isHot).length;
+            else count = allProducts.filter(p => p.category === cat.value).length;
             return { ...cat, count };
         });
-    }, []); // Chỉ tính 1 lần khi mount vì PRODUCTS tĩnh
+    }, [allProducts]); // Cập nhật khi allProducts có dữ liệu
 
     const flavorsWithCount = useMemo(() => {
         return FLAVORS.map(flav => {
             let count = 0;
-            if (flav.id === 'all') count = PRODUCTS.length;
-            else count = PRODUCTS.filter(p => p.category === flav.id).length;
+            if (flav.id === 'all') count = allProducts.length;
+            else count = allProducts.filter(p => p.category === flav.id).length;
             return { ...flav, count };
         });
-    }, []);
+    }, [allProducts]);
 
     const shapesWithCount = useMemo(() => {
         return SHAPES.map(shape => {
             let count = 0;
-            if (shape.value === 'all') count = PRODUCTS.length;
+            if (shape.value === 'all') count = allProducts.length;
             else {
                 const keyword = shape.value === 'bar' ? 'thanh' : (shape.value === 'box' ? 'hộp' : 'viên');
-                count = PRODUCTS.filter(p =>
+                count = allProducts.filter(p =>
                     p.title.toLowerCase().includes(keyword) ||
                     p.description.toLowerCase().includes(keyword)
                 ).length;
             }
             return { ...shape, count };
         });
-    }, []);
+    }, [allProducts]);
 
     // --- LOGIC LỌC SẢN PHẨM ---
     const processedProducts = useMemo(() => {
-        let result = [...PRODUCTS];
+        let result = [...allProducts];
 
         if (filters.category !== 'all') {
             if (filters.category === 'hot') result = result.filter(p => p.isHot);
@@ -89,10 +105,10 @@ export default function Products() {
 
         if (sortBy === 'price-asc') result.sort((a, b) => a.price - b.price);
         else if (sortBy === 'price-desc') result.sort((a, b) => b.price - a.price);
-        else result.sort((a, b) => b.id - a.id);
+        else result.sort((a, b) => Number(b.id) - Number(a.id));
 
         return result;
-    }, [filters, sortBy]);
+    }, [allProducts, filters, sortBy]);
 
     // --- PHÂN TRANG ---
     const totalItems = processedProducts.length;
@@ -105,12 +121,13 @@ export default function Products() {
         setFilters(prev => ({ ...prev, [type]: value }));
     };
 
+    if (loading) return <div className="container py-5 text-center">Đang tải sản phẩm...</div>;
+
     return (
         <div className="products-page">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 mb-4">
-                        {/* Truyền dữ liệu đã tính count xuống sidebar */}
                         <SidebarFilter
                             categories={categoriesWithCount}
                             flavors={flavorsWithCount}
