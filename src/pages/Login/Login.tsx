@@ -6,7 +6,7 @@ import Button from "../../components/Button/Button";
 import "./login.scss";
 import Icon from "../../components/Icons/Icon";
 import { useAuth } from "../../context/AuthContext"; // Import hook
-import { fakeLoginApi } from "../../services/authService"; // Giả sử bạn để fakeApi ở đây
+import { loginApi} from "../../services/authService";
 
 export default function Login() {
     const [form, setForm] = useState({
@@ -35,20 +35,16 @@ export default function Login() {
 
         setLoading(true);
         try {
-            // Gọi API giả lập
-            const response = await fakeLoginApi(form.email, form.password);
+            // Gọi API thật từ json-server
+            const response = await loginApi(form.email, form.password);
 
-            // Cập nhật vào Context (bao gồm user và token)
             login(response);
-
-            console.log("Login thành công:", response.user);
-
-            // Chuyển hướng trang dùng navigate để không reload web
             navigate("/");
         } catch (err: any) {
-            setError(err || "Email hoặc mật khẩu không đúng");
-        } finally {
-            setLoading(false);
+            const message = typeof err === 'string' ? err : (err?.message || "Email hoặc mật khẩu không đúng");
+            setError(message);
+        }finally {
+            setLoading(false); //tắt loading dù thành công hay thất bại
         }
     };
 
