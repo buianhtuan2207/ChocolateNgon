@@ -13,7 +13,7 @@ export default function Header() {
 
     return (
         <header className="header shadow-sm">
-            <div className="container header-inner">
+            <div className="header-container header-inner">
                 {/* Logo -> Về trang chủ */}
                 <Link to="/" className="logo-link">
                     <h2 className="logo">SocolaShop</h2>

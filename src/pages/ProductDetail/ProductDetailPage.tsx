@@ -18,24 +18,25 @@ const ProductDetailPage: React.FC = () => {
     // 2. Fetch dữ liệu sản phẩm theo ID
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/products/${id}`)
-            .then((res) => {
-                if (!res.ok) throw new Error("Sản phẩm không tồn tại");
-                return res.json();
-            })
-            .then((data: Product) => {
-                setProduct(data);
-                // Thiết lập ảnh chính ngay sau khi có dữ liệu
-                if (data.images && data.images.length > 0) {
-                    setMainImage(data.images[0]);
+        fetch(`http://localhost:5000/products?id=${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                // Vì fetch theo query sẽ trả về một MẢNG, ta lấy phần tử đầu tiên
+                if (data && data.length > 0) {
+                    const item = data[0];
+                    setProduct(item);
+                    if (item.images && item.images.length > 0) {
+                        setMainImage(item.images[0]);
+                    } else {
+                        setMainImage(item.image);
+                    }
                 } else {
-                    setMainImage(data.image);
+                    setProduct(null);
                 }
                 setLoading(false);
             })
             .catch((err) => {
                 console.error(err);
-                setProduct(null);
                 setLoading(false);
             });
     }, [id]); // Chạy lại mỗi khi ID trên URL thay đổi (khi bấm vào sản phẩm liên quan)

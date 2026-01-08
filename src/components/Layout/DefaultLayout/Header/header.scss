@@ -15,18 +15,18 @@ $primary: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    flex-wrap: nowrap;
+    gap: 15px;
     width: 100%;
   }
 
-  /* Sửa lỗi logo bị gạch chân xanh */
   .logo-link {
     text-decoration: none !important;
     .logo {
       color: $primary;
-      font-size: 36px;
+      font-size: 32px;
       font-weight: 900;
-      margin: 0;
+      margin-left: 80px;
       transition: 0.3s;
       &:hover { color: $hover; }
     }
@@ -35,7 +35,8 @@ $primary: #fff;
   /* Menu căn chỉnh lại khoảng cách */
   .menu {
     display: flex;
-    gap: 24px;
+    gap: 20px;
+
     a {
       color: $primary;
       text-decoration: none;
@@ -81,6 +82,7 @@ $primary: #fff;
     display: flex;
     align-items: center;
     gap: 15px;
+    margin-right: 80px;
 
     .user-icon-only{
       color: $primary;

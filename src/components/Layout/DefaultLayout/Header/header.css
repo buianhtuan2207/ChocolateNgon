@@ -12,20 +12,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  flex-wrap: nowrap;
+  gap: 15px;
   width: 100%;
-}
-.header {
-  /* Sửa lỗi logo bị gạch chân xanh */
 }
 .header .logo-link {
   text-decoration: none !important;
 }
 .header .logo-link .logo {
   color: #fff;
-  font-size: 36px;
+  font-size: 32px;
   font-weight: 900;
-  margin: 0;
+  margin-left: 80px;
   transition: 0.3s;
 }
 .header .logo-link .logo:hover {
@@ -36,7 +34,7 @@
 }
 .header .menu {
   display: flex;
-  gap: 24px;
+  gap: 20px;
 }
 .header .menu a {
   color: #fff;
@@ -86,6 +84,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  margin-right: 80px;
 }
 .header .icon-group .user-icon-only {
   color: #fff;

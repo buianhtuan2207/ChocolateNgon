@@ -90,92 +90,105 @@ body{
 
   // PROMO BANNER
   &--promo {
-    position: relative;
     width: 100%;
-    min-height: 600px; // Độ cao banner
+    height: 300px; // Cố định chiều cao theo ý bạn
+    background-color: #2c1810; // Màu nâu tối
     display: flex;
     align-items: center;
-    justify-content: center;
     overflow: hidden;
-    background-color: $dark;
 
-    /* ĐƯA ẢNH RA PHỦ TOÀN BỘ NỀN */
-    .banner__img {
-      position: absolute;
-      inset: 0; // Phủ kín 4 góc
-      z-index: 1;
-      text-align: center; // Reset text-align
+    .banner__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      gap: 30px;
+    }
+
+    // Phần chữ bên trái
+    .banner__content {
+      flex: 1;
+      text-align: left; // Chữ căn trái
+      z-index: 2;
+      padding-right: 20px;
+
+      .banner__subtitle {
+        color: #e67e22; // Màu cam primary
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+      }
+
+      .banner__title {
+        color: #ffffff;
+        font-size: 42px; // Giảm nhẹ size để vừa với 400px
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 15px;
+      }
+
+      .banner__desc {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        max-width: 500px;
+      }
+    }
+
+    // Phần hình bên phải
+    .banner__image-box {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
 
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover; // Ảnh không bị méo, phủ kín khung
-        border-radius: 0; // Bỏ border radius nếu có
-        box-shadow: none;
-        transform: none;
-
-        &:hover { transform: none; }
+        object-fit: cover; // Ảnh phủ kín phần bên phải
+        clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%); // Tạo hiệu ứng vát chéo đẹp mắt
       }
-
-      /* LỚP PHỦ NÂU ĐẬM (OVERLAY) ĐỂ NỔI BẬT CHỮ */
-      &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(44, 24, 16, 0.7); // Màu nâu chocolate tối
-        z-index: 2;
-      }
-    }
-
-    /* ĐƯA NỘI DUNG VÀO GIỮA VÀ NẰM TRÊN ẢNH */
-    .banner__container {
-      position: relative;
-      z-index: 3; // Nằm trên overlay và img
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      max-width: 800px; // Giới hạn chiều rộng nội dung
-      padding: 0 20px;
-    }
-
-    .banner__content {
-      max-width: 100%;
-    }
-
-    .banner__subtitle {
-      background: transparent; // Để chữ màu cam như ảnh
-      color: $primary;
-      padding: 0;
-      font-size: 16px;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .banner__title {
-      font-size: 64px; // Chữ lớn
-      color: #fff;
-      font-weight: 800;
-      line-height: 1.2;
-      margin-bottom: 20px;
-
-      span { color: #fff; } // Đồng bộ màu trắng cho title
-    }
-
-    .banner__desc {
-      color: rgba(255, 255, 255, 0.9);
-      font-size: 18px;
-      margin-bottom: 40px;
-      max-width: 600px;
     }
 
     .banner__action {
       .c-btn--primary {
-        background: $primary;
-        padding: 16px 40px;
-        font-size: 16px;
-        // Thêm các style nút bấm của bạn ở đây
+        background: #e67e22;
+        color: #fff;
+        padding: 12px 35px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: bold;
+        display: inline-block;
+        transition: 0.3s;
+
+        &:hover {
+          background: #d35400;
+          transform: translateY(-2px);
+        }
+      }
+    }
+
+    /* Responsive cho mobile */
+    @media (max-width: 768px) {
+      height: auto;
+      padding: 40px 0;
+
+      .banner__wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .banner__content {
+        text-align: center;
+        padding-right: 0;
+      }
+
+      .banner__image-box {
+        display: none; // Ẩn ảnh trên mobile để tập trung vào chữ
       }
     }
   }
