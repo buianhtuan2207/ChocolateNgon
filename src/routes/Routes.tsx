@@ -9,7 +9,7 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import Promotion from "../pages/Promotion/promotion";
 import Cart from "../pages/Cart/Cart";
-import Checkout from "../pages/Checkout/Checkout"; // ← THÊM DÒNG NÀY
+import Checkout from "../pages/Checkout/Checkout";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -32,6 +32,8 @@ const publicRoutes: AppRoute[] = [
     { path: "/product/:id", component: ProductDetailPage },
     { path: "/promotion", component: Promotion },
     { path: "/cart", component: Cart },
+    // THÊM ROUTE CHECKOUT VÀO PUBLIC (không cần login)
+    { path: "/checkout", component: Checkout },
 ];
 
 const privateRoutes: AppRoute[] = [
@@ -51,15 +53,7 @@ const privateRoutes: AppRoute[] = [
             </ProtectedRoute>
         ),
     },
-    // THÊM ROUTE CHECKOUT VÀO ĐÂY (private, yêu cầu login)
-    {
-        path: "/checkout",
-        component: () => (
-            <ProtectedRoute>
-                <Checkout />
-            </ProtectedRoute>
-        ),
-    },
+    // KHÔNG CÒN CHECKOUT Ở ĐÂY NỮA
 ];
 
 export { publicRoutes, privateRoutes };
