@@ -2,12 +2,12 @@ import React, { JSX } from "react";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Wishlist from "../pages/Wishlist/Wishlist";
-import ProductDetailPage from "../pages/ProductDetail/ProductDetailPage";
+import ProductDetail from "../pages/ProductDetail/ProductDetail";
 import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
-import Promotion from "../pages/Promotion/promotion";
+import Promotion from "../pages/Promotion/Promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
 
@@ -29,10 +29,9 @@ const publicRoutes: AppRoute[] = [
     { path: "/", component: Home },
     { path: "/login", component: Login, layout: null },
     { path: "/product", component: Products },
-    { path: "/product/:id", component: ProductDetailPage },
+    { path: "/product/:id", component: ProductDetail },
     { path: "/promotion", component: Promotion },
     { path: "/cart", component: Cart },
-    // THÊM ROUTE CHECKOUT VÀO PUBLIC (không cần login)
     { path: "/checkout", component: Checkout },
 ];
 

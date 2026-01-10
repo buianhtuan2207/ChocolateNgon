@@ -1,4 +1,5 @@
-import {PublicUser, User} from "../data/user";
+import { PublicUser, User } from "../data/user";
+import Data from "../data/db.json";
 
 export interface LoginResponse {
     user: PublicUser;
@@ -9,22 +10,26 @@ export const loginApi = async (
     email: string,
     password: string
 ): Promise<LoginResponse> => {
-    // Gọi tới json-server
-    const response = await fetch(`http://localhost:5000/users?email=${email}&password=${password}`);
-    const users: User[] = await response.json();
-
+    // Giả lập độ trễ server 1 giây
     return new Promise((resolve, reject) => {
-        // json-server trả về một mảng, nếu đúng email/pass thì mảng có 1 phần tử
-        if (users.length > 0) {
-            const user = users[0];
-            const { password: _, ...publicUser } = user;
+        setTimeout(() => {
+            // Lấy danh sách users từ file json
+            const users = Data.users as User[];
 
-            resolve({
-                user: publicUser,
-                token: "real-fake-jwt-token-" + Math.random().toString(36).substr(2),
-            });
-        } else {
-            reject("Email hoặc mật khẩu không đúng");
-        }
+            // Tìm user có email và password khớp
+            const foundUser = users.find(u => u.email === email && u.password === password);
+
+            if (foundUser) {
+                // Tách password ra khỏi object trả về để bảo mật
+                const { password: _, ...publicUser } = foundUser;
+
+                resolve({
+                    user: publicUser,
+                    token: "real-fake-jwt-token-" + Math.random().toString(36).substr(2),
+                });
+            } else {
+                reject("Email hoặc mật khẩu không đúng");
+            }
+        }, 1000);
     });
 };

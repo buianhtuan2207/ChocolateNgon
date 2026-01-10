@@ -4,8 +4,6 @@ import Button from "../../components/Button/Button";
 import "./wishlist.scss"
 import {useWishlist} from "../../context/WishlistContext";
 
-
-
 const Wishlist: React.FC = () => {
     const { wishlist } = useWishlist();
 

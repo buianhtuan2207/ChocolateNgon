@@ -4,44 +4,43 @@ import { Product } from "../../data/products";
 import Button from "../../components/Button/Button";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import FeatureItem from "../../components/FeatureItem/FeatureItem";
+import Data from "../../data/db.json";
 import "./productDetails.scss";
 
-const ProductDetailPage: React.FC = () => {
+const ProductDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
 
-    // 1. Khai báo State để lưu sản phẩm tải về từ API
     const [product, setProduct] = useState<Product | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
     const [quantity, setQuantity] = useState(1);
     const [mainImage, setMainImage] = useState<string>("");
 
-    // 2. Fetch dữ liệu sản phẩm theo ID
     useEffect(() => {
         setLoading(true);
-        fetch(`http://localhost:5000/products?id=${id}`)
-            .then((res) => res.json())
-            .then((data) => {
-                // Vì fetch theo query sẽ trả về một MẢNG, ta lấy phần tử đầu tiên
-                if (data && data.length > 0) {
-                    const item = data[0];
-                    setProduct(item);
-                    if (item.images && item.images.length > 0) {
-                        setMainImage(item.images[0]);
-                    } else {
-                        setMainImage(item.image);
-                    }
-                } else {
-                    setProduct(null);
-                }
-                setLoading(false);
-            })
-            .catch((err) => {
-                console.error(err);
-                setLoading(false);
-            });
-    }, [id]); // Chạy lại mỗi khi ID trên URL thay đổi (khi bấm vào sản phẩm liên quan)
 
-    // 3. Xử lý trạng thái Loading và Lỗi
+        // Giả lập call API
+        const timer = setTimeout(() => {
+            const allProducts = Data.products as unknown as Product[];
+
+            // Tìm sản phẩm trùng ID (Lưu ý: id từ URL là string, id trong DB là number)
+            const foundProduct = allProducts.find(p => p.id === Number(id));
+
+            if (foundProduct) {
+                setProduct(foundProduct);
+                if (foundProduct.images && foundProduct.images.length > 0) {
+                    setMainImage(foundProduct.images[0]);
+                } else {
+                    setMainImage(foundProduct.image);
+                }
+            } else {
+                setProduct(null);
+            }
+            setLoading(false);
+        }, 800);
+
+        return () => clearTimeout(timer);
+    }, [id]);
+
     if (loading) {
         return <div className="text-center py-32 text-2xl">Đang tải thông tin sản phẩm...</div>;
     }
@@ -50,7 +49,6 @@ const ProductDetailPage: React.FC = () => {
         return <div className="text-center py-32 text-2xl text-gray-600">Không tìm thấy sản phẩm</div>;
     }
 
-    // 4. Giải nén dữ liệu từ product đã tải về
     const {
         title,
         description,
@@ -62,6 +60,7 @@ const ProductDetailPage: React.FC = () => {
 
     const handleAddToCart = () => {
         console.log(`Đã thêm ${quantity} x "${title}" vào giỏ hàng`);
+        alert("Đã thêm vào giỏ hàng thành công!");
     };
 
     return (
@@ -157,4 +156,4 @@ const ProductDetailPage: React.FC = () => {
     );
 };
 
-export default ProductDetailPage;
+export default ProductDetail;
