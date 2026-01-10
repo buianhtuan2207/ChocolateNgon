@@ -1,0 +1,22 @@
+/* src/pages/Checkout/checkout.scss */
+/* Style chung cho trang Checkout */
+.checkout-page {
+  background-color: #221810; /* dark background */
+  color: white;
+  min-height: 100vh;
+}
+
+.payment-option {
+  background-color: #2a1e16;
+  border-color: #483423;
+  transition: all 0.3s;
+}
+.payment-option:hover {
+  border-color: #bd600f;
+}
+
+.icon-box {
+  background-color: #332519;
+}
+
+/*# sourceMappingURL=checkout.css.map */

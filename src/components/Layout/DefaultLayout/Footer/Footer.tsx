@@ -1,6 +1,5 @@
 import React from 'react';
 import './footer.scss';
-import Icon from '../../../Icons/Icon';
 import Icons from "../../../Icons/Icon";
 
 export default function Footer() {

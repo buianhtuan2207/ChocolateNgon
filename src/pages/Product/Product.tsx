@@ -5,14 +5,14 @@ import SidebarFilter from '../../components/SidebarFilter/SidebarFilter';
 import SortBar from '../../components/SortBar/SortBar';
 import Pagination from '../../components/Pagination/Pagination';
 import CardProduct from '../../components/CardProduct/CardProduct';
-
 import { Product } from '../../data/products';
 import { CATEGORIES, FLAVORS, SHAPES } from '../../data/filters';
+import Data from '../../data/db.json';
 
 const ITEMS_PER_PAGE = 8;
 
 export default function Products() {
-    // 1. Khai báo state để lưu toàn bộ sản phẩm từ API
+    // 1. Khai báo state
     const [allProducts, setAllProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
 
@@ -25,25 +25,28 @@ export default function Products() {
     const [sortBy, setSortBy] = useState('default');
     const [currentPage, setCurrentPage] = useState(1);
 
-    // 2. Gọi API để lấy dữ liệu ngay khi mount trang
+    // 2. Load dữ liệu từ file JSON (Giả lập bất đồng bộ)
     useEffect(() => {
-        fetch("http://localhost:5000/products")
-            .then(res => res.json())
-            .then(data => {
-                setAllProducts(data);
-                setLoading(false);
-            })
-            .catch(err => {
-                console.error("Lỗi fetch products:", err);
-                setLoading(false);
-            });
-    }, []);
+        try {
+            // Lấy mảng products từ db.json
+            // Ép kiểu 'as unknown as Product[]' để TypeScript nhận diện đúng cấu trúc
+            const data = Data.products as unknown as Product[];
+
+            setAllProducts(data);
+            setLoading(false);
+        } catch (err) {
+            console.error("Lỗi load data từ json:", err);
+            setLoading(false);
+        }
+    },[])
 
     useEffect(() => {
         setCurrentPage(1);
     }, [filters, sortBy]);
 
-    // --- TÍNH TOÁN SỐ LƯỢNG CHO SIDEBAR (Dựa trên allProducts thay vì PRODUCTS) ---
+    // --- CÁC PHẦN DƯỚI GIỮ NGUYÊN ---
+
+    // Tính toán số lượng cho Sidebar
     const categoriesWithCount = useMemo(() => {
         return CATEGORIES.map(cat => {
             let count = 0;
@@ -53,7 +56,7 @@ export default function Products() {
             else count = allProducts.filter(p => p.category === cat.value).length;
             return { ...cat, count };
         });
-    }, [allProducts]); // Cập nhật khi allProducts có dữ liệu
+    }, [allProducts]);
 
     const flavorsWithCount = useMemo(() => {
         return FLAVORS.map(flav => {
@@ -79,7 +82,7 @@ export default function Products() {
         });
     }, [allProducts]);
 
-    // --- LOGIC LỌC SẢN PHẨM ---
+    // Logic lọc sản phẩm
     const processedProducts = useMemo(() => {
         let result = [...allProducts];
 
@@ -110,7 +113,7 @@ export default function Products() {
         return result;
     }, [allProducts, filters, sortBy]);
 
-    // --- PHÂN TRANG ---
+    // Phân trang
     const totalItems = processedProducts.length;
     const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
     const indexOfLastItem = currentPage * ITEMS_PER_PAGE;

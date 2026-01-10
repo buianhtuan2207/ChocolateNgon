@@ -1,4 +1,3 @@
-
 export const CATEGORIES = [
     { label: "Tất cả sản phẩm", value: "all", count: 42 },
     { label: "Nổi bật", value: "hot", count: 8 },
