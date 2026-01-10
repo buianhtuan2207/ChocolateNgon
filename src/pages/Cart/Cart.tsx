@@ -1,53 +1,27 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useMemo } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Icon from '../../components/Icons/Icon';
 import CartItem from '../../components/CartItem/CartItem';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
-import { CartItemType } from '../../data/cart';
-import Data from '../../data/db.json';
 import './cart.scss';
+import { useCart } from '../../context/CartContext';
 
 export default function Cart() {
     const navigate = useNavigate();
-    const [cartItems, setCartItems] = useState<CartItemType[]>([]);
 
-    // Load data từ db.json giả lập async
-    useEffect(() => {
-        setTimeout(() => {
-            // Ép kiểu dữ liệu cart trong db.json sang CartItemType
-            const data = Data.cart as unknown as CartItemType[];
-            setCartItems(data);
-        }, 200);
-    }, []);
+    // 1. Lấy toggleItemSelection từ Context
+    const {
+        cartItems,
+        removeFromCart,
+        updateQuantity,
+        clearCart,
+        toggleItemSelection
+    } = useCart();
 
-    const handleUpdateQuantity = (id: number, newQty: number) => {
-        if (newQty < 1) return;
-        setCartItems(prev => prev.map(item =>
-            item.id === id ? { ...item, quantity: newQty } : item
-        ));
-    };
-
-    const handleRemove = (id: number) => {
-        if (window.confirm("Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?")) {
-            setCartItems(prev => prev.filter(item => item.id !== id));
-        }
-    };
-
-    const handleToggleSelect = (id: number) => {
-        setCartItems(prev => prev.map(item =>
-            item.id === id ? { ...item, isSelected: !item.isSelected } : item
-        ));
-    };
-
-    const handleClearAll = () => {
-        if (window.confirm("Bạn có chắc muốn xóa toàn bộ giỏ hàng?")) {
-            setCartItems([]);
-        }
-    };
-
+    // 2. Cập nhật logic tính toán: Chỉ tính những món ĐƯỢC CHỌN (isSelected === true)
     const { subtotal, count } = useMemo(() => {
         return cartItems.reduce((acc, item) => {
-            if (item.isSelected) {
+            if (item.isSelected) { // Kiểm tra điều kiện chọn
                 acc.subtotal += item.price * item.quantity;
                 acc.count += item.quantity;
             }
@@ -56,11 +30,22 @@ export default function Cart() {
     }, [cartItems]);
 
     const handleCheckout = () => {
+        // Kiểm tra count (số lượng sp được chọn) thay vì cartItems.length
         if (count === 0) {
-            alert("Vui lòng chọn ít nhất 1 sản phẩm để thanh toán");
+            alert("Vui lòng chọn ít nhất 1 sản phẩm để thanh toán!");
             return;
         }
         navigate('/checkout');
+    };
+
+    const handleRemove = (id: number) => {
+        if (window.confirm("Bạn có chắc muốn xóa sản phẩm này?")) {
+            removeFromCart(id);
+        }
+    };
+
+    const handleClearAll = () => {
+        if (window.confirm("Bạn muốn xóa toàn bộ giỏ hàng?")) clearCart();
     };
 
     return (
@@ -69,7 +54,8 @@ export default function Cart() {
                 <div className="page-header">
                     <h1 className="page-title">Giỏ hàng</h1>
                     <p className="page-subtitle">
-                        Bạn đang có <span className="text-highlight">{cartItems.length} sản phẩm</span> trong giỏ hàng
+                        {/* Hiển thị số lượng sản phẩm ĐANG ĐƯỢC CHỌN */}
+                        Bạn đang chọn <span className="text-highlight">{count} sản phẩm</span> để thanh toán
                     </p>
                 </div>
 
@@ -92,9 +78,10 @@ export default function Cart() {
                                         <CartItem
                                             key={item.id}
                                             item={item}
-                                            onUpdateQuantity={handleUpdateQuantity}
+                                            onUpdateQuantity={updateQuantity}
                                             onRemove={handleRemove}
-                                            onToggleSelect={handleToggleSelect}
+                                            // 3. Truyền hàm xử lý vào đây
+                                            onToggleSelect={toggleItemSelection}
                                         />
                                     ))
                                 ) : (
