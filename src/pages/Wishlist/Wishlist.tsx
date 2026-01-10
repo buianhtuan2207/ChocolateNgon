@@ -35,8 +35,9 @@ const Wishlist: React.FC = () => {
             <div className="wishlist-footer text-center">
                 <Button
                     className="continue-btn"
+                    href="/product"
                 >
-                     TIẾP TỤC MUA SẮM
+                    TIẾP TỤC MUA SẮM
                 </Button>
             </div>
         </div>

@@ -1,0 +1,99 @@
+.order-summary-wrapper .widget-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #3e2723;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.order-summary-wrapper .widget-title svg {
+  color: #d35400;
+}
+.order-summary-wrapper .coupon-widget, .order-summary-wrapper .summary-widget {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  margin-bottom: 20px;
+}
+.order-summary-wrapper .coupon-input-group {
+  display: flex;
+  gap: 10px;
+}
+.order-summary-wrapper .coupon-input-group input {
+  flex: 1;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+.order-summary-wrapper .coupon-input-group input:focus {
+  border-color: #d35400;
+  background: white;
+}
+.order-summary-wrapper .coupon-input-group .btn-apply {
+  background: #3e2723 !important;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.order-summary-wrapper .summary-widget .summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #555;
+}
+.order-summary-wrapper .summary-widget .summary-row.discount {
+  color: #27ae60;
+}
+.order-summary-wrapper .summary-widget .summary-row.total {
+  margin-top: 15px;
+  align-items: flex-start;
+}
+.order-summary-wrapper .summary-widget .summary-row.total span:first-child {
+  font-weight: 700;
+  color: #3e2723;
+  font-size: 16px;
+}
+.order-summary-wrapper .summary-widget .summary-row.total .total-price {
+  display: block;
+  font-size: 24px;
+  font-weight: 800;
+  color: #d35400;
+  line-height: 1;
+}
+.order-summary-wrapper .summary-widget .summary-row.total .vat-note {
+  font-size: 11px;
+  color: #999;
+}
+.order-summary-wrapper .summary-widget .divider {
+  height: 1px;
+  background: repeating-linear-gradient(to right, #ddd 0, #ddd 5px, transparent 5px, transparent 8px);
+  margin: 15px 0;
+}
+.order-summary-wrapper .summary-widget .security-note {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 15px;
+}
+.order-summary-wrapper .summary-widget .payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.order-summary-wrapper .summary-widget .payment-icons .card-icon {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  color: #777;
+}
+
+/*# sourceMappingURL=orderSummary.css.map */
