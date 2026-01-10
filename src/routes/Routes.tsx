@@ -1,14 +1,15 @@
-import React, {JSX} from "react";
+import React, { JSX } from "react";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Wishlist from "../pages/Wishlist/Wishlist";
 import ProductDetailPage from "../pages/ProductDetail/ProductDetailPage";
 import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
-import {Navigate} from "react-router-dom";
-import {useAuth} from "../context/AuthContext";
+import { Navigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import Promotion from "../pages/Promotion/promotion";
 import Cart from "../pages/Cart/Cart";
+import Checkout from "../pages/Checkout/Checkout";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -25,8 +26,17 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
 
 /* Gán type cho routes */
 const publicRoutes: AppRoute[] = [
-    {path: "/", component: Home},
-    {path: "/login", component: Login, layout: null},
+    { path: "/", component: Home },
+    { path: "/login", component: Login, layout: null },
+    { path: "/product", component: Products },
+    { path: "/product/:id", component: ProductDetailPage },
+    { path: "/promotion", component: Promotion },
+    { path: "/cart", component: Cart },
+    // THÊM ROUTE CHECKOUT VÀO PUBLIC (không cần login)
+    { path: "/checkout", component: Checkout },
+];
+
+const privateRoutes: AppRoute[] = [
     {
         path: "/wishlist",
         component: () => (
@@ -35,13 +45,15 @@ const publicRoutes: AppRoute[] = [
             </ProtectedRoute>
         ),
     },
-    {path: "/product", component: Products },
-    {path: "/product/:id", component: ProductDetailPage },
-    {path: "/profile", component: Profile },
-    {path: "/promotion", component: Promotion },
-    {path: "/cart" , component: Cart},
+    {
+        path: "/profile",
+        component: () => (
+            <ProtectedRoute>
+                <Profile />
+            </ProtectedRoute>
+        ),
+    },
+    // KHÔNG CÒN CHECKOUT Ở ĐÂY NỮA
 ];
-
-const privateRoutes: AppRoute[] = [];
 
 export { publicRoutes, privateRoutes };
