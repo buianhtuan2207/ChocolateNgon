@@ -1,12 +1,12 @@
-import React, { JSX } from "react";
+import React, {JSX} from "react";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Wishlist from "../pages/Wishlist/Wishlist";
-import ProductDetail from "../pages/ProductDetail/ProductDetail";
+import ProductDetailPage from "../pages/ProductDetail/ProductDetail";
 import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
-import { Navigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import {Navigate} from "react-router-dom";
+import {useAuth} from "../context/AuthContext";
 import Promotion from "../pages/Promotion/Promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
@@ -26,16 +26,8 @@ const ProtectedRoute = ({ children }: { children: JSX.Element }) => {
 
 /* Gán type cho routes */
 const publicRoutes: AppRoute[] = [
-    { path: "/", component: Home },
-    { path: "/login", component: Login, layout: null },
-    { path: "/product", component: Products },
-    { path: "/product/:id", component: ProductDetail },
-    { path: "/promotion", component: Promotion },
-    { path: "/cart", component: Cart },
-    { path: "/checkout", component: Checkout },
-];
-
-const privateRoutes: AppRoute[] = [
+    {path: "/", component: Home},
+    {path: "/login", component: Login, layout: null},
     {
         path: "/wishlist",
         component: () => (
@@ -52,7 +44,20 @@ const privateRoutes: AppRoute[] = [
             </ProtectedRoute>
         ),
     },
-    // KHÔNG CÒN CHECKOUT Ở ĐÂY NỮA
+    {
+        path: "/cart",
+        component: () => (
+            <ProtectedRoute>
+                <Cart />
+            </ProtectedRoute>
+        ),
+    },
+    {path: "/product", component: Products },
+    {path: "/product/:id", component: ProductDetailPage },
+    {path: "/promotion", component: Promotion },
+    {path: "/checkout" , component: Checkout},
 ];
+
+const privateRoutes: AppRoute[] = [];
 
 export { publicRoutes, privateRoutes };
