@@ -1,0 +1,320 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "anhtuan",
+      "email": "tuan@gmail.com",
+      "password": "123456",
+      "fullName": "Bùi Anh Tuấn",
+      "phone": "0362 345 578",
+      "address": "Linh Trung, Thủ Đức, TP. Hồ Chí Minh"
+    },
+    {
+      "id": 2,
+      "name": "vanan",
+      "email": "an@gmail.com",
+      "password": "123456",
+      "fullName": "Nguyễn Văn An",
+      "phone": "0892 654 139",
+      "address": "Linh Xuân, Thủ Đức, TP. Hồ Chí Minh"
+    },
+    {
+      "id": 3,
+      "name": "nhattruong",
+      "email": "nhattruong@gmail.com",
+      "password": "123456",
+      "fullName": "Trần Nhật Trường",
+      "phone": "0987 123 578",
+      "address": "Linh Trung, Thủ Đức, TP. Hồ Chí Minh"
+    }
+  ],
+
+  "products": [
+    {
+      "id": 1,
+      "title": "Socola Đắng 70%",
+      "subtitle": "Signature Edition",
+      "description": "Hương vị đậm đà, nguyên chất từ cacao thượng hạng.",
+      "price": 1200000,
+      "discountPrice": 950000,
+      "image": "/assets/img/category/ML.png",
+      "images": ["/assets/img/category/ML.png", "/assets/img/products/socola-vien.png"],
+      "category": "dark",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Socola Sữa Truyền Thống",
+      "subtitle": "Sweet & Creamy",
+      "description": "Ngọt nhẹ, mịn màng và thơm béo mùi sữa tươi.",
+      "price": 950000,
+      "discountPrice": null,
+      "image": "/assets/img/products/socola-vien.png",
+      "images": ["/assets/img/products/socola-vien.png", "/assets/img/category/ML.png"],
+      "category": "milk",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Socola Hạnh Nhân Rang",
+      "subtitle": "Crunchy Nut",
+      "description": "Sự kết hợp hoàn hảo giữa socola đen và hạnh nhân giòn rụm.",
+      "price": 1500000,
+      "discountPrice": 1200000,
+      "image": "/assets/img/products/socola-hop.png",
+      "category": "nut",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Socola Đen 100% Nguyên Chất",
+      "subtitle": "Zero Sugar",
+      "description": "Vị đắng mạnh mẽ dành cho người sành ăn, không đường.",
+      "price": 1800000,
+      "discountPrice": null,
+      "image": "/assets/img/products/socola-hop-2.png",
+      "category": "dark",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Socola Nhân Mắc Ca",
+      "subtitle": "Macadamia Deluxe",
+      "description": "Hạt mắc ca béo ngậy phủ lớp socola sữa ngọt ngào.",
+      "price": 1350000,
+      "discountPrice": 1100000,
+      "image": "/assets/img/category/NBC.png",
+      "category": "nut",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Socola Trà Xanh Matcha",
+      "subtitle": "Japanese Style",
+      "description": "Hương vị thanh mát từ bột Matcha Nhật Bản cao cấp.",
+      "price": 1100000,
+      "discountPrice": null,
+      "image": "/assets/img/category/PTP.png",
+      "category": "milk",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Socola Trái Cây Nhiệt Đới",
+      "subtitle": "Tropical Fruits",
+      "description": "Nhân xoài và chanh dây chua ngọt kích thích vị giác.",
+      "price": 1250000,
+      "discountPrice": 899000,
+      "image": "/assets/img/category/classic.png",
+      "category": "fruit",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Socola Đắng 85%",
+      "subtitle": "Intense Dark",
+      "description": "Ít ngọt, tốt cho sức khỏe tim mạch.",
+      "price": 1400000,
+      "discountPrice": null,
+      "image": "/assets/img/category/ML.png",
+      "category": "dark",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Socola Sữa Hạt Dẻ",
+      "subtitle": "Hazelnut Cream",
+      "description": "Nhân kem hạt dẻ béo ngậy tan chảy.",
+      "price": 980000,
+      "discountPrice": null,
+      "image": "/assets/img/products/socola-vien.png",
+      "category": "nut",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Socola Rượu Rum",
+      "subtitle": "Rum & Raisin",
+      "description": "Hương vị nồng nàn của rượu Rum và nho khô.",
+      "price": 1600000,
+      "discountPrice": 1450000,
+      "image": "/assets/img/products/socola-hop.png",
+      "category": "fruit",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 11,
+      "title": "Socola Trắng Vani",
+      "subtitle": "White Vanilla",
+      "description": "Ngọt ngào, thơm lừng hương Vani tự nhiên.",
+      "price": 900000,
+      "discountPrice": null,
+      "image": "/assets/img/category/NBC.png",
+      "category": "milk",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Hộp Quà Valentine",
+      "subtitle": "Limited Edition",
+      "description": "Thiết kế trái tim, tổng hợp 12 vị socola ngon nhất.",
+      "price": 2500000,
+      "discountPrice": 1990000,
+      "image": "/assets/img/products/socola-hop-2.png",
+      "category": "dark",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 13,
+      "title": "Socola Bạc Hà",
+      "subtitle": "Cool Mint",
+      "description": "Sảng khoái với lớp nhân bạc hà mát lạnh.",
+      "price": 1050000,
+      "discountPrice": null,
+      "image": "/assets/img/category/PTP.png",
+      "category": "milk",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 14,
+      "title": "Socola Cam Tươi",
+      "subtitle": "Orange Dark",
+      "description": "Vỏ cam sấy dẻo nhúng socola đen đắng nhẹ.",
+      "price": 1300000,
+      "discountPrice": null,
+      "image": "/assets/img/category/classic.png",
+      "category": "fruit",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Socola Muối Biển",
+      "subtitle": "Sea Salt Caramel",
+      "description": "Vị mặn nhẹ của muối biển làm nổi bật vị ngọt caramel.",
+      "price": 1150000,
+      "discountPrice": 920000,
+      "image": "/assets/img/category/ML.png",
+      "category": "milk",
+      "isHot": true,
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Thanh Năng Lượng Cacao",
+      "subtitle": "Energy Bar",
+      "description": "Giàu Protein, thích hợp cho người tập gym.",
+      "price": 850000,
+      "discountPrice": null,
+      "image": "/assets/img/category/NBC.png",
+      "category": "nut",
+      "features": [
+        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
+        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+      ]
+    }
+  ],
+
+  "promotions": [
+    {
+      "id": 1,
+      "tag": "HOT",
+      "tagType": "hot",
+      "title": "Mua 1 Tặng 1",
+      "description": "Áp dụng cho dòng sản phẩm Valentine Heart Box. Món quà ngọt ngào dành tặng người thương.",
+      "expiryDate": "15/02",
+      "image": "https://images.unsplash.com/photo-1549007994-cb92caebd54b?q=80&w=800&auto=format&fit=crop",
+      "buttonText": "CHI TIẾT",
+      "buttonLink": "/promotion/mua-1-tang-1"
+    },
+    {
+      "id": 2,
+      "tag": "FREESHIP",
+      "tagType": "freeship",
+      "title": "Miễn phí vận chuyển",
+      "description": "Freeship toàn quốc cho đơn hàng từ 500k. Nhập mã: CHOCOSHIP",
+      "expiryDate": "30/03",
+      "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=800&auto=format&fit=crop",
+      "buttonText": "Lưu mã",
+      "buttonLink": "#"
+    },
+    {
+      "id": 3,
+      "tag": "GIFT",
+      "tagType": "gift",
+      "title": "Quà tặng đặc biệt",
+      "description": "Tặng kèm bộ thiệp chúc mừng và túi xách cao cấp cho mọi đơn hàng Signature Edition..",
+      "expiryDate": "Dài hạn",
+      "image": "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?q=80&w=800&auto=format&fit=crop",
+      "buttonText": "NHẬP QUÀ NGAY",
+      "buttonLink": "/promotion/gift"
+    }
+  ]
+}
+

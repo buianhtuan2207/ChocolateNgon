@@ -29,7 +29,7 @@ export default function Home() {
                         title="Giảm giá <span>30%</span> Socola"
                         description={false}
                         buttonText="Xem ưu đãi"
-                        buttonLink="/sale"
+                        buttonLink="/promotion"
                         image="/assets/img/category/classic.png"
                     />
                     <div className="feature col2">
@@ -46,7 +46,7 @@ export default function Home() {
                             description={false}
                             buttonText="Xem ngay"
                             buttonLink="/category/dark"
-                            image="/assets/img/category/classic.png"
+                            image="https://bariachocolate.com.vn/wp-content/uploads/2023/05/Socola-den-72-50g-01-1-600x600.jpg"
                         />
                         <Banner
                             type="small"
@@ -55,7 +55,7 @@ export default function Home() {
                             description={false}
                             buttonText="Xem ngay"
                             buttonLink="/category/dark"
-                            image="/assets/img/category/classic.png"
+                            image="https://kingfoodmart.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fsc_pcm_product%2Fprod%2F2025%2F7%2F23%2F629113-7622210816665.webp&w=1920&q=75"
                         />
                         <Banner
                             type="small"
@@ -64,7 +64,7 @@ export default function Home() {
                             description={false}
                             buttonText="Xem ngay"
                             buttonLink="/category/dark"
-                            image="/assets/img/category/classic.png"
+                            image="https://anh.quatructuyen.com/media/catalog/product/cache/1/image/480x480/9df78eab33525d08d6e5fb8d27136e95/s/o/socola_valentine_7_17.jpg"
                         />
                     </div>
                 </div>

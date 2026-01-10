@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { PRODUCTS } from "../../data/products";
-// Đã xóa import PRODUCT_DETAILS
+import { Product } from "../../data/products";
 import Button from "../../components/Button/Button";
 import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
 import FeatureItem from "../../components/FeatureItem/FeatureItem";
@@ -9,35 +8,56 @@ import "./productDetails.scss";
 
 const ProductDetailPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
-    const productId = Number(id);
 
-    // Tìm sản phẩm trong danh sách duy nhất
-    const product = PRODUCTS.find(p => p.id === productId);
-
+    // 1. Khai báo State để lưu sản phẩm tải về từ API
+    const [product, setProduct] = useState<Product | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
     const [quantity, setQuantity] = useState(1);
     const [mainImage, setMainImage] = useState<string>("");
 
+    // 2. Fetch dữ liệu sản phẩm theo ID
     useEffect(() => {
-        // Nếu có danh sách ảnh phụ thì lấy ảnh đầu tiên, không thì lấy ảnh chính
-        if (product?.images && product.images.length > 0) {
-            setMainImage(product.images[0]);
-        } else if (product?.image) {
-            setMainImage(product.image);
-        }
-    }, [product]);
+        setLoading(true);
+        fetch(`http://localhost:5000/products?id=${id}`)
+            .then((res) => res.json())
+            .then((data) => {
+                // Vì fetch theo query sẽ trả về một MẢNG, ta lấy phần tử đầu tiên
+                if (data && data.length > 0) {
+                    const item = data[0];
+                    setProduct(item);
+                    if (item.images && item.images.length > 0) {
+                        setMainImage(item.images[0]);
+                    } else {
+                        setMainImage(item.image);
+                    }
+                } else {
+                    setProduct(null);
+                }
+                setLoading(false);
+            })
+            .catch((err) => {
+                console.error(err);
+                setLoading(false);
+            });
+    }, [id]); // Chạy lại mỗi khi ID trên URL thay đổi (khi bấm vào sản phẩm liên quan)
+
+    // 3. Xử lý trạng thái Loading và Lỗi
+    if (loading) {
+        return <div className="text-center py-32 text-2xl">Đang tải thông tin sản phẩm...</div>;
+    }
 
     if (!product) {
         return <div className="text-center py-32 text-2xl text-gray-600">Không tìm thấy sản phẩm</div>;
     }
 
-    // Lấy dữ liệu trực tiếp từ product
+    // 4. Giải nén dữ liệu từ product đã tải về
     const {
         title,
         description,
         price,
         subtitle,
-        features = [], // Mặc định là mảng rỗng nếu không có
-        images = [product.image] // Nếu không có album thì dùng ảnh chính làm album
+        features = [],
+        images = [product.image]
     } = product;
 
     const handleAddToCart = () => {
@@ -47,13 +67,11 @@ const ProductDetailPage: React.FC = () => {
     return (
         <div className="product-detail-page">
             <div className="product-detail-container">
-                {/* Breadcrumb */}
                 <div className="breadcrumb">
                     <span>Trang chủ</span> / <span>Sản phẩm</span> / <span className="current">{title}</span>
                 </div>
 
                 <div className="product-detail-main">
-                    {/* Left: Gallery */}
                     <div className="product-gallery">
                         <div className="main-image-wrapper">
                             <img src={mainImage} alt={title} className="main-image" />
@@ -73,7 +91,6 @@ const ProductDetailPage: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Right: Info */}
                     <div className="product-info">
                         <h1 className="product-title">
                             {title} {subtitle && <span className="subtitle">{subtitle}</span>}
@@ -81,7 +98,7 @@ const ProductDetailPage: React.FC = () => {
 
                         <div className="product-rating">
                             <span>★★★★★</span> <span className="review-count">Đánh giá tốt</span>
-                            <span className="category-tag">{product.category.toUpperCase()}</span>
+                            <span className="category-tag">{product.category?.toUpperCase()}</span>
                         </div>
 
                         <p className="product-description">{description}</p>
@@ -109,7 +126,6 @@ const ProductDetailPage: React.FC = () => {
                             </Button>
                         </div>
 
-                        {/* Our Promise */}
                         {features.length > 0 && (
                             <div className="our-promise">
                                 <h2 className="promise-title">Our Promise</h2>
@@ -128,7 +144,7 @@ const ProductDetailPage: React.FC = () => {
                         )}
                     </div>
                 </div>
-                {/* Sản phẩm liên quan */}
+
                 <section className="related-section">
                     <FeaturedProducts
                         title="Có thể bạn sẽ thích"
