@@ -8,6 +8,7 @@ import CardProduct from '../../components/CardProduct/CardProduct';
 import { Product } from '../../data/products';
 import { CATEGORIES, FLAVORS, SHAPES } from '../../data/filters';
 import Data from '../../data/db.json';
+import { useLocation } from 'react-router-dom';
 
 const ITEMS_PER_PAGE = 8;
 
@@ -15,7 +16,7 @@ export default function Products() {
     // 1. Khai báo state
     const [allProducts, setAllProducts] = useState<Product[]>([]);
     const [loading, setLoading] = useState(true);
-
+    const location = useLocation();
     const [filters, setFilters] = useState({
         category: 'all',
         flavor: 'all',
@@ -42,7 +43,7 @@ export default function Products() {
 
     useEffect(() => {
         setCurrentPage(1);
-    }, [filters, sortBy]);
+    }, [filters, sortBy, location.search]);
 
     // --- CÁC PHẦN DƯỚI GIỮ NGUYÊN ---
 
@@ -86,6 +87,16 @@ export default function Products() {
     const processedProducts = useMemo(() => {
         let result = [...allProducts];
 
+        const queryParams = new URLSearchParams(location.search);
+        const searchKeyword = queryParams.get('search')?.toLowerCase() || '';
+
+        if (searchKeyword) {
+            result = result.filter(p =>
+                p.title.toLowerCase().includes(searchKeyword) ||
+                p.description.toLowerCase().includes(searchKeyword)
+            );
+        }
+
         if (filters.category !== 'all') {
             if (filters.category === 'hot') result = result.filter(p => p.isHot);
             else if (filters.category === 'best-seller') result = result.filter(p => p.isHot);
@@ -111,7 +122,7 @@ export default function Products() {
         else result.sort((a, b) => Number(b.id) - Number(a.id));
 
         return result;
-    }, [allProducts, filters, sortBy]);
+    }, [allProducts, filters, sortBy, location.search]);
 
     // Phân trang
     const totalItems = processedProducts.length;
@@ -123,6 +134,9 @@ export default function Products() {
     const handleFilterChange = (type: 'category' | 'flavor' | 'shape', value: string) => {
         setFilters(prev => ({ ...prev, [type]: value }));
     };
+
+    const queryParams = new URLSearchParams(location.search);
+    const searchKeyword = queryParams.get('search');
 
     if (loading) return <div className="container py-5 text-center">Đang tải sản phẩm...</div>;
 
@@ -142,7 +156,7 @@ export default function Products() {
 
                     <div className="col-lg-9">
                         <SortBar
-                            title="Tất cả sản phẩm"
+                            title={searchKeyword ? `Kết quả cho: "${searchKeyword}"` : "Tất cả sản phẩm"}
                             sortValue={sortBy}
                             onSortChange={setSortBy}
                         />
