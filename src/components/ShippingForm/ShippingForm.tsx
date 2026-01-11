@@ -31,14 +31,6 @@ export default function ShippingForm({ formData, onChange }: Props) {
                     <InputField label="Địa chỉ chi tiết" name="address" placeholder="Số nhà, tên đường, tòa nhà"
                                 value={formData.address} onChange={onChange} icon={undefined} error={undefined} />
                 </div>
-                <div className="col-md-6">
-                    <InputField label="Tỉnh / Thành phố" name="province" placeholder="Chọn tỉnh/thành"
-                                value={formData.province} onChange={onChange} icon={undefined} error={undefined} />
-                </div>
-                <div className="col-md-6">
-                    <InputField label="Quận / Huyện" name="district" placeholder="Chọn quận/huyện"
-                                value={formData.district} onChange={onChange} icon={undefined} error={undefined} />
-                </div>
                 <div className="col-12">
                     <InputField label="Ghi chú giao hàng (Tùy chọn)" name="note"
                                 placeholder="ghi ..." value={formData.note} onChange={onChange}
