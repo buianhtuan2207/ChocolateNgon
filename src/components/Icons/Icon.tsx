@@ -15,6 +15,7 @@ import {
     faEnvelope,
     faMapMarkerAlt,
     faTruck,
+    faTruckFast,
     faCreditCard,
     faCheck,
     faChevronDown,
@@ -25,6 +26,8 @@ import {
     faPercent,
     faArrowRight,
     faHome,
+    faQrcode,
+    faBuildingColumns,
 } from '@fortawesome/free-solid-svg-icons';
 
 import {
@@ -49,6 +52,8 @@ library.add(
     faEnvelope,
     faMapMarkerAlt,
     faTruck,
+    faTruckFast,
+    faQrcode,
     faCreditCard,
     faCheck,
     faChevronDown,
@@ -64,6 +69,7 @@ library.add(
     faYoutube,
     faTiktok,
     faGoogle,
+    faBuildingColumns,
 );
 
 export default FontAwesomeIcon;
