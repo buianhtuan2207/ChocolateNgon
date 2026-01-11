@@ -1,13 +1,9 @@
-// src/pages/Checkout.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
-import InputField from '../../components/InputField/inputField';
-import Button from '../../components/Button/Button';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
 import Icon from '../../components/Icons/Icon';
-
 import './checkout.scss';
+import ShippingForm from "../../components/ShippingForm/ShippingForm";
 
 export default function Checkout() {
     const [paymentMethod, setPaymentMethod] = useState<'cod' | 'qr' | 'card'>('cod');
@@ -50,93 +46,7 @@ export default function Checkout() {
                 <div className="row g-5">
                     <div className="col-lg-8">
                         {/* 1. Thông tin giao hàng */}
-                        <div className="mb-5">
-                            <h2 className="h3 mb-4 d-flex align-items-center gap-3">
-                                <span className="badge bg-primary rounded-pill">1</span>
-                                Thông tin giao hàng
-                            </h2>
-
-                            <div className="row g-4">
-                                <div className="col-md-6">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Họ và tên"
-                                        name="fullName"
-                                        placeholder="Nguyễn Văn A"
-                                        value={formData.fullName}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-md-6">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Số điện thoại"
-                                        name="phone"
-                                        type="tel"
-                                        placeholder="0901234567"
-                                        value={formData.phone}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-12">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Email (để nhận hóa đơn)"
-                                        name="email"
-                                        type="email"
-                                        placeholder="email@example.com"
-                                        value={formData.email}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-12">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Địa chỉ chi tiết"
-                                        name="address"
-                                        placeholder="Số nhà, tên đường, tòa nhà"
-                                        value={formData.address}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-md-6">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Tỉnh / Thành phố"
-                                        name="province"
-                                        placeholder="Chọn tỉnh/thành"
-                                        value={formData.province}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-md-6">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Quận / Huyện"
-                                        name="district"
-                                        placeholder="Chọn quận/huyện"
-                                        value={formData.district}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-
-                                <div className="col-12">
-                                    {/* @ts-ignore */}
-                                    <InputField
-                                        label="Ghi chú giao hàng (Tùy chọn)"
-                                        name="note"
-                                        placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao..."
-                                        value={formData.note}
-                                        onChange={handleInputChange}
-                                    />
-                                </div>
-                            </div>
-                        </div>
+                        <ShippingForm formData={formData} onChange={handleInputChange} />
 
                         {/* 2. Phương thức thanh toán */}
                         <div className="pt-5 border-top">
