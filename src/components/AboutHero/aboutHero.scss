@@ -1,0 +1,37 @@
+.about-hero {
+  min-height: 50vh;
+  background-color: #fffaf5;
+  color: #5d4037;
+  padding: 3rem 0; // Giảm padding trên dưới
+
+  .est-badge {
+    display: block;
+    color: #d35400;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    line-height: 1.2;
+    .text-primary-custom { color: #d35400; font-family: 'Playfair Display', serif; }
+  }
+
+  .hero-desc {
+    max-width: 550px;
+    font-weight: 400;
+    font-size: 1rem; // Font chữ tiêu chuẩn (16px)
+    opacity: 0.8;
+    line-height: 1.6;
+  }
+
+  .vertical-divider {
+    width: 1px;
+    height: 60px;
+    background-color: rgba(93, 64, 55, 0.2);
+  }
+}

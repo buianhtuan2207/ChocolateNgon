@@ -1,0 +1,40 @@
+.process-steps-section {
+  background-color: #fdfdfd;
+  color: #5d4037;
+
+  .sticky-title-wrapper {
+    position: sticky;
+    top: 100px;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+    font-size: 2rem;
+    .text-primary-custom { color: #d35400; }
+  }
+
+  .step-item {
+    .step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      color: #d35400;
+      opacity: 0.6;
+      min-width: 30px;
+    }
+    .step-title {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .step-desc {
+      font-weight: 300;
+      opacity: 0.8;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    &:last-child { margin-bottom: 0 !important; }
+  }
+}

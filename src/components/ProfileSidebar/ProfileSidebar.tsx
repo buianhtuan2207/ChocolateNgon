@@ -38,8 +38,8 @@ export default function ProfileSidebar() {
                 <Link to="/profile" className={`menu-item ${isActive('/profile')}`}>
                     <span className="icon"><Icon icon="user" /></span> Thông tin cá nhân
                 </Link>
-                <Link to="/profile/orders" className={`menu-item ${isActive('/profile/orders')}`}>
-                    <span className="icon"><Icon icon="shopping-cart" /></span> Đơn hàng của tôi
+                <Link to="/order-history" className={`menu-item ${isActive('/profile/orders')}`}>
+                    <span className="icon"><Icon icon="shopping-cart" /></span> Lịch sử đơn hàng
                 </Link>
                 <Link to="/profile/password" className={`menu-item ${isActive('/profile/password')}`}>
                     <span className="icon"><Icon icon="lock" /></span> Đổi mật khẩu

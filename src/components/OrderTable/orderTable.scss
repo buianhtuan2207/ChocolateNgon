@@ -1,0 +1,86 @@
+.order-table-wrapper {
+  width: 100%;
+  color: #5d4037;
+
+  // Grid Column Size (Dùng Flex basis để chia cột)
+  .col-id { flex: 2; }
+  .col-date { flex: 2; }
+  .col-status { flex: 2; }
+  .col-total { flex: 2; font-weight: bold; font-family: 'Playfair Display', serif; }
+  .col-action { flex: 2; }
+
+  .order-header {
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(93, 64, 55, 0.1);
+    margin-bottom: 15px;
+
+    .col-head {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #999;
+    }
+  }
+
+  .order-row {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(93, 64, 55, 0.05);
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #fffaf5; // Hover màu kem nhạt
+    }
+
+    .text-id {
+      font-weight: 500;
+      color: #5d4037;
+    }
+
+    .btn-view-detail {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      color: #5d4037;
+      font-weight: 500;
+      transition: color 0.2s;
+
+      .small-icon { font-size: 0.7em; }
+
+      &:hover {
+        color: #d35400; // Hover cam
+      }
+    }
+  }
+
+  // Responsive Mobile
+  @media (max-width: 768px) {
+    .order-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+
+      .col-cell {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .mobile-label {
+        font-weight: 600;
+        color: #999;
+        font-size: 0.8rem;
+      }
+
+      .col-action {
+        margin-top: 10px;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
