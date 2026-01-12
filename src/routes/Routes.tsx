@@ -11,6 +11,7 @@ import Promotion from "../pages/Promotion/Promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
 import About from "../pages/About/About";
+import OrderHistory from "../pages/OrderHistory/OrderHistory";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -58,6 +59,7 @@ const publicRoutes: AppRoute[] = [
     {path: "/promotion", component: Promotion },
     {path: "/checkout" , component: Checkout},
     {path: "/about" , component: About },
+    {path: "/order-history" , component: OrderHistory},
 ];
 
 const privateRoutes: AppRoute[] = [];
