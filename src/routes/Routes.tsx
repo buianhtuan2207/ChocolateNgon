@@ -7,7 +7,7 @@ import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
 import {Navigate} from "react-router-dom";
 import {useAuth} from "../context/AuthContext";
-import Promotion from "../pages/Promotion/Promotion";
+import Promotion from "../pages/Promotion/promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
 

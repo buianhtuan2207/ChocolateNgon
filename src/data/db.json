@@ -348,6 +348,26 @@
       "quantity": 1,
       "isSelected": true
     }
+  ],
+  "paymentMethods": [
+    {
+      "id": "cod",
+      "icon": "truck-fast",
+      "title": "Thanh toán khi nhận hàng (COD)",
+      "description": "Thanh toán bằng tiền mặt khi shipper giao tới nhà bạn."
+    },
+    {
+      "id": "qr",
+      "icon": "qrcode",
+      "title": "Chuyển khoản ngân hàng (QR Code)",
+      "description": "Quét mã QR để thanh toán nhanh chóng qua mọi ứng dụng ngân hàng."
+    },
+    {
+      "id": "card",
+      "icon": "credit-card",
+      "title": "Thẻ tín dụng / Ghi nợ quốc tế",
+      "description": "Hỗ trợ Visa, Mastercard, JCB với bảo mật cao."
+    }
   ]
 }
 

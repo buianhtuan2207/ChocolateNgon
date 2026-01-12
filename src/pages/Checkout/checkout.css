@@ -1,8 +1,8 @@
 /* src/pages/Checkout/checkout.scss */
 /* Style chung cho trang Checkout */
 .checkout-page {
-  background-color: #221810; /* dark background */
-  color: white;
+  background-color: #fffaf5;
+  color: #000;
   min-height: 100vh;
 }
 
