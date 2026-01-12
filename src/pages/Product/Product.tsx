@@ -25,7 +25,7 @@ export default function Products() {
     const [sortBy, setSortBy] = useState('default');
     const [currentPage, setCurrentPage] = useState(1);
 
-    // 2. Load dữ liệu từ file JSON (Giả lập bất đồng bộ)
+    // 2. Load dữ liệu từ file JSON
     useEffect(() => {
         try {
             // Lấy mảng products từ db.json
@@ -43,8 +43,6 @@ export default function Products() {
     useEffect(() => {
         setCurrentPage(1);
     }, [filters, sortBy]);
-
-    // --- CÁC PHẦN DƯỚI GIỮ NGUYÊN ---
 
     // Tính toán số lượng cho Sidebar
     const categoriesWithCount = useMemo(() => {
