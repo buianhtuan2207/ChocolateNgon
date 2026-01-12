@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
-// 1. Import các icon từ gói Solid (Nét đặc/đậm)
+// Import các icon từ gói Solid (Nét đặc/đậm)
 import {
     faUser,
     faShoppingCart,
@@ -19,6 +19,7 @@ import {
     faEnvelope,
     faMapMarkerAlt,
     faTruck,
+    faTruckFast,
     faCreditCard,
     faCheck,
     faChevronDown,
@@ -30,6 +31,8 @@ import {
     faArrowRight,
     faArrowLeft,
     faHome,
+    faQrcode,
+    faBuildingColumns,
     faLeaf,
     faTools,
     faSpa,
@@ -38,7 +41,7 @@ import {
     faLock,
 } from '@fortawesome/free-solid-svg-icons';
 
-// 2. Import các icon từ gói Brands (Logo thương hiệu)
+// Import các icon từ gói Brands (Logo thương hiệu)
 import {
     faFacebookF,
     faInstagram,
@@ -47,7 +50,7 @@ import {
     faGoogle,
 } from '@fortawesome/free-brands-svg-icons';
 
-// 3. Thêm tất cả vào thư viện
+// Thêm tất cả vào thư viện
 library.add(
     faUser,
     faShoppingCart,
@@ -63,6 +66,8 @@ library.add(
     faEnvelope,
     faMapMarkerAlt,
     faTruck,
+    faTruckFast,
+    faQrcode,
     faCreditCard,
     faCheck,
     faChevronDown,
@@ -84,7 +89,8 @@ library.add(
     faInstagram,
     faYoutube,
     faTiktok,
-    faGoogle
+    faGoogle,
+    faBuildingColumns,
 );
 
 // 4. Định nghĩa Props cho Component Icon
