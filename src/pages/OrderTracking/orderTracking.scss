@@ -28,6 +28,55 @@
         display: flex;
         gap: 50px;
       }
+      .tracking-col {
+        background: #ffffff;
+        padding: 30px 40px;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        margin-top: 25px;
+        width: 700px;
+
+        h3 {
+          font-family: 'Playfair Display', serif;
+          font-size: 22px;
+          color: #4a3731;
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+
+        .history-list {
+          position: relative;
+
+          .view-all-btn {
+            display: block;
+            margin: 20px 0 0 10px;
+            background: none;
+            border: none;
+            color: #d46b08;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            padding-left: 25px;
+
+            &::before {
+              content: '+';
+              position: absolute;
+              left: 0;
+              font-size: 14px;
+              top: -2px;
+            }
+
+            &:hover {
+              color: #4a3731;
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
     }
   }
 }

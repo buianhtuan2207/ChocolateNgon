@@ -1,0 +1,96 @@
+.history-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 10px; // Tạo khoảng trống cho đường kẻ dọc
+
+  .history-item {
+    position: relative;
+    padding-left: 30px; // Khoảng cách từ nội dung đến đường kẻ
+    padding-bottom: 30px; // Khoảng cách giữa các trạm
+    border-left: 1px solid #eeeeee; // Đường kẻ dọc mặc định
+    transition: all 0.3s ease;
+
+    // Điểm nút (nút tròn)
+    &::before {
+      content: '';
+      position: absolute;
+      left: -6px; // Căn giữa trên đường kẻ 1px (-6px + 1px/2)
+      top: 5px;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      z-index: 1;
+      transition: all 0.3s ease;
+    }
+
+    // Trạng thái trạm cuối cùng (mục dưới cùng của danh sách)
+    &:last-of-type {
+      padding-bottom: 10px;
+    }
+
+    // Nội dung bên trong
+    .history-content {
+      .history-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .title {
+          font-size: 14px;
+          font-weight: 600;
+          color: #4a3731;
+          line-height: 1.4;
+          float: left;
+        }
+
+        .time {
+          font-size: 12px;
+          color: #999999;
+          white-space: nowrap;
+          margin-left: 15px;
+        }
+      }
+
+      .desc {
+        font-size: 13px;
+        color: #7a7a7a;
+        line-height: 1.6;
+        margin: 0;
+        float: left;
+      }
+    }
+
+    // Modifier khi trạm đang active (trạng thái mới nhất)
+    &.active {
+      border-left: 1px solid #ffd8bf; // Màu cam nhạt cho đường kẻ
+
+      &::before {
+        background: #d46b08; // Màu cam thương hiệu
+        border-color: #ffd8bf;
+        box-shadow: 0 0 0 4px rgba(212, 107, 8, 0.1); // Hiệu ứng tỏa sáng nhẹ
+      }
+
+      .title {
+        color: #d46b08;
+      }
+    }
+  }
+
+  // Style cho nút xem thêm
+  .view-all-btn {
+    align-self: flex-start;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px;
+    color: #d46b08 !important;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #4a3731 !important;
+      background: transparent !important;
+    }
+  }
+}
