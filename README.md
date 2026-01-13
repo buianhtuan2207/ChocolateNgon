@@ -98,6 +98,8 @@ npm install
 
 npm start
 
+---
+
 ## 📌 Ghi chú
 
 - Dự án sử dụng **mock data**, chưa kết nối backend
