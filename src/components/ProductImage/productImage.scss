@@ -1,0 +1,84 @@
+$primary: #d35400; // Màu cam cháy
+$chocolate: #5d4037; // Màu nâu
+
+.product-image-component {
+  // Ảnh chính
+  .main-img-wrapper {
+    // Giữ nguyên tỉ lệ khung hình để chiếm đủ không gian cột 50%
+    aspect-ratio: 5/4;
+
+    // Tăng padding để ép hình ảnh bên trong nhỏ lại
+    padding: 50px;
+
+    // Căn giữa ảnh
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    //background-color: #fff;
+    border-radius: 8px;
+
+    img {
+      // Ảnh sẽ tự co giãn theo padding của cha, giữ nguyên tỉ lệ
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.5s ease;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.1));
+    }
+
+    &:hover img {
+      transform: scale(1.1); // Zoom nhẹ khi hover
+    }
+  }
+
+  // Grid Thumbnails
+  .thumb-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); // Chia 4 cột đều nhau
+    gap: 15px; // Khoảng cách giữa các ô
+  }
+
+  .thumb-item {
+    aspect-ratio: 1/1; // Hình vuông
+    cursor: pointer;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    background-color: #f0f3f2; // Màu nền xám xanh nhạt cho các thumb chưa active (như số 2 trong hình)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent; // Viền trong suốt mặc định
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: multiply; // Hòa trộn để mất nền trắng của ảnh (nếu có)
+      opacity: 0.7;
+      transition: opacity 0.3s;
+    }
+
+    // --- Style đặc biệt cho trạng thái Active (Giống ô màu vàng DETAIL 1) ---
+    &.active {
+      border-color: $primary; // Viền cam đậm
+      background-color: #f5c058; // Nền vàng cam đặc trưng
+
+      img {
+        opacity: 1;
+        transform: scale(0.9); // Thu nhỏ ảnh lại chút để lọt lòng
+      }
+
+      // Nếu bạn muốn mô phỏng chữ "DETAIL 1" hoặc số "2" đè lên,
+      // có thể dùng pseudo-element ở đây hoặc render trong JSX
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+  }
+}
