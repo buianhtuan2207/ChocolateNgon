@@ -3,6 +3,7 @@ import "./orderTracking.scss"
 import StatusCard from "../../components/StatusCard/StatusCard";
 import OrderStepper from "../../components/OrderStepper/OrderStepper";
 import OrderHistory from "../../components/OrderHistory/OrderHistory";
+import OrderProductList from "../../components/OrderProductList/OrderProductList";
 
 const OrderTracking = () => {
     return (
@@ -27,7 +28,9 @@ const OrderTracking = () => {
                             <OrderHistory/>
                         </div>
                     </div>
-
+                    <div className="order-product-list">
+                        <OrderProductList/>
+                    </div>
                 </div>
                 <div className="right">
 

@@ -44,7 +44,7 @@
 }
 .orderTracking-page .order-tracking .left .tracking-col .history-list .view-all-btn {
   display: block;
-  margin: 20px 0 0 10px;
+  margin-top: 10px;
   background: none;
   border: none;
   color: #d46b08;
@@ -53,7 +53,6 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease;
   position: relative;
   padding-left: 25px;
 }
@@ -62,11 +61,13 @@
   position: absolute;
   left: 0;
   font-size: 14px;
-  top: -2px;
 }
 .orderTracking-page .order-tracking .left .tracking-col .history-list .view-all-btn:hover {
   color: #4a3731;
   transform: translateX(5px);
+}
+.orderTracking-page .order-tracking .left .order-product-list {
+  width: 700px;
 }
 
 /*# sourceMappingURL=orderTracking.css.map */
