@@ -1,12 +1,13 @@
 .orderTracking-page{
   background-color: #fffaf5;
+
   .order-tracking-header {
     text-align: center;
     margin-bottom: 40px;
 
     h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 32px;
+      font-size: 36px;
       color: #d35400;
       margin-bottom: 8px;
       padding-top: 40px;
@@ -23,6 +24,11 @@
     }
   }
   .order-tracking{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 0 auto;
+
     .left{
       .status-col{
         display: flex;
@@ -78,6 +84,12 @@
       .order-product-list{
         width: 700px;
       }
+    }
+    .right {
+      width: 380px;           // Thiết lập độ rộng cố định theo yêu cầu
+      flex-shrink: 0;         // Ngăn không cho cột phải bị co lại khi màn hình nhỏ
+      position: sticky;       // Tùy chọn: Giữ cột phải luôn hiển thị khi cuộn trang
+      top: 20px;
     }
   }
 }

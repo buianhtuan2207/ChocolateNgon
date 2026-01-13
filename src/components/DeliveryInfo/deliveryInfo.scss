@@ -1,0 +1,129 @@
+.right-column-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .info-card {
+    background: #fff;
+    padding: 24px;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #4a3731;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f5f5f5;
+      position: relative;
+
+      // Đường kẻ nhấn dưới tiêu đề
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 40px;
+        height: 1px;
+        background: #d46b08;
+      }
+    }
+
+    .info-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 10px;
+        font-weight: 700;
+        color: #bcbcbc;
+        letter-spacing: 2px;
+        margin-bottom: 6px;
+      }
+
+      p {
+        font-size: 14px;
+        color: #4a3731;
+        line-height: 1.6;
+        margin: 0;
+
+        &.name {
+          font-weight: 700;
+          font-size: 16px;
+          text-transform: uppercase;
+        }
+
+        &.phone {
+          color: #888;
+        }
+
+        &.note {
+          font-style: italic;
+          color: #7a7a7a;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .btn-primary-luxury {
+      background: #d46b08;
+      color: #fff;
+      border: none;
+      padding: 15px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      box-shadow: 0 4px 12px rgba(212, 107, 8, 0.2);
+
+      &:hover { background: #b35a06; }
+    }
+
+    .btn-outline-luxury {
+      background: #fff;
+      color: #4a3731;
+      border: 1px solid #e0e0e0;
+      padding: 15px;
+      font-weight: 700;
+
+      &:hover { border-color: #4a3731; background: #f9f9f9; }
+    }
+  }
+
+  .insurance-box {
+    background: #fff;
+    padding: 25px;
+    border: 1px dashed #e0e0e0;
+    text-align: center;
+
+    .label {
+      display: block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #bcbcbc;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 12px;
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+
+    .policy-link {
+      font-size: 11px;
+      font-weight: 700;
+      color: #d46b08;
+      text-decoration: underline;
+
+      &:hover { color: #4a3731; }
+    }
+  }
+}
