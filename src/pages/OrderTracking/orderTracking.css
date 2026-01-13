@@ -1,0 +1,28 @@
+.orderTracking-page {
+  background-color: #fffaf5;
+}
+.orderTracking-page .order-tracking-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.orderTracking-page .order-tracking-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #d35400;
+  margin-bottom: 8px;
+  padding-top: 40px;
+}
+.orderTracking-page .order-tracking-header .order-meta {
+  font-size: 14px;
+  color: #7a7a7a;
+}
+.orderTracking-page .order-tracking-header .order-meta strong {
+  color: #33241d;
+  font-weight: 600;
+}
+.orderTracking-page .order-tracking .left .status-col {
+  display: flex;
+  gap: 50px;
+}
+
+/*# sourceMappingURL=orderTracking.css.map */

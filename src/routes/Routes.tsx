@@ -10,6 +10,7 @@ import {useAuth} from "../context/AuthContext";
 import Promotion from "../pages/Promotion/promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
+import OrderTracking from "../pages/OrderTracking/OrderTracking";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -56,6 +57,7 @@ const publicRoutes: AppRoute[] = [
     {path: "/product/:id", component: ProductDetailPage },
     {path: "/promotion", component: Promotion },
     {path: "/checkout" , component: Checkout},
+    {path: "/orderTracking" , component: OrderTracking},
 ];
 
 const privateRoutes: AppRoute[] = [];

@@ -1,0 +1,36 @@
+.status-card {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  min-width: 200px;
+}
+.status-card__label {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #9ca3af;
+  font-weight: 500;
+}
+.status-card__content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.status-card__icon {
+  color: #4b5563;
+}
+.status-card__value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1f2937;
+}
+.status-card--active .status-card__icon,
+.status-card--active .status-card__value {
+  color: #d46b08;
+}
+
+/*# sourceMappingURL=statusCard.css.map */

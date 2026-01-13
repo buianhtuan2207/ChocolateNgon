@@ -1,0 +1,33 @@
+.orderTracking-page{
+  background-color: #fffaf5;
+  .order-tracking-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      color: #d35400;
+      margin-bottom: 8px;
+      padding-top: 40px;
+    }
+
+    .order-meta {
+      font-size: 14px;
+      color: #7a7a7a;
+
+      strong {
+        color: #33241d;
+        font-weight: 600;
+      }
+    }
+  }
+  .order-tracking{
+    .left{
+      .status-col{
+        display: flex;
+        gap: 50px;
+      }
+    }
+  }
+}
