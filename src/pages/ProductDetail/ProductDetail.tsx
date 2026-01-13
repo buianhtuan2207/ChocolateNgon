@@ -1,159 +1,63 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { Product } from "../../data/products";
-import Button from "../../components/Button/Button";
-import FeaturedProducts from "../../components/FeatureProducts/FeaturedProducts";
-import FeatureItem from "../../components/FeatureItem/FeatureItem";
-import Data from "../../data/db.json";
-import "./productDetails.scss";
+import React from 'react';
 
-const ProductDetail: React.FC = () => {
-    const { id } = useParams<{ id: string }>();
+import ProductImage from '../../components/ProductImage/ProductImage';
+import ProductInfo from '../../components/ProductInfo/ProductInfo';
+import ProductHighlights from '../../components/ProductHighlights/ProductHighlights';
+import ProductSpecs from '../../components/ProductSpecs/ProductSpecs';
+import FeaturedProducts from '../../components/FeatureProducts/FeaturedProducts';
+import { useCart } from '../../context/CartContext';
 
-    const [product, setProduct] = useState<Product | null>(null);
-    const [loading, setLoading] = useState<boolean>(true);
-    const [quantity, setQuantity] = useState(1);
-    const [mainImage, setMainImage] = useState<string>("");
+import './productDetail.scss';
 
-    useEffect(() => {
-        setLoading(true);
+export default function ProductDetail() {
+    const { addToCart } = useCart();
 
-        // Giả lập call API
-        const timer = setTimeout(() => {
-            const allProducts = Data.products as unknown as Product[];
-
-            // Tìm sản phẩm trùng ID (Lưu ý: id từ URL là string, id trong DB là number)
-            const foundProduct = allProducts.find(p => p.id === Number(id));
-
-            if (foundProduct) {
-                setProduct(foundProduct);
-                if (foundProduct.images && foundProduct.images.length > 0) {
-                    setMainImage(foundProduct.images[0]);
-                } else {
-                    setMainImage(foundProduct.image);
-                }
-            } else {
-                setProduct(null);
-            }
-            setLoading(false);
-        }, 800);
-
-        return () => clearTimeout(timer);
-    }, [id]);
-
-    if (loading) {
-        return <div className="text-center py-32 text-2xl">Đang tải thông tin sản phẩm...</div>;
-    }
-
-    if (!product) {
-        return <div className="text-center py-32 text-2xl text-gray-600">Không tìm thấy sản phẩm</div>;
-    }
-
-    const {
-        title,
-        description,
-        price,
-        subtitle,
-        features = [],
-        images = [product.image]
-    } = product;
-
-    const handleAddToCart = () => {
-        console.log(`Đã thêm ${quantity} x "${title}" vào giỏ hàng`);
-        alert("Đã thêm vào giỏ hàng thành công!");
+    const product = {
+        id: 1,
+        title: "Socola Đen Nghệ Thuật - 70% Cacao",
+        price: 450000,
+        oldPrice: 650000,
+        description: "Trải nghiệm hương vị tinh tế từ những hạt cacao Việt Nam chất lượng nhất. Socola đắng 70% mang đến sự cân bằng hoàn hảo giữa vị đắng nhẹ và hậu vị ngọt thanh.",
+        reviewCount: 156,
+        images: [
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuCMUZOA0hEFpCjQDmfRsFsHiWvCTih0zSHJWIpoJ8tw4Lfin9jat8ee0EoOt159RLyQQJ85KH1a3jPWpcH46uU_cVJ1y4M8N7Y2LDIaZfWXBqwbWqelqtpCs3U7YvBTFuxVklcjw_GWX8Eq-WzCVIlv_yF4bnHpZj5vJxZFuGaFt8bqlJYkU8zQ2pIA_y6JUPoTovHe0ioU90Q8MpJM6Cvz9ivLFPy8I6FNUiMEiy6iv5fvT3ISXIYQ4voNsfHtMUF9YNkP1GRRimYQ",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E",
+            "https://lh3.googleusercontent.com/aida-public/AB6AXuA08q2oMdp5R9OG10VegV-E488-h-MBEY5-FRI2zjhp9-r9kuI6sVsVlosPgRazuz5Z8lRJd0iKIDQjJUPdrCvx9_EKgs7kSKvZ3mM3ahGhvnexdofE9bYIU9n51oJPKYsuW2jBagJXAw-Pm3DCGygYvQ4KCNXp4QyA5ACxHPT7N6l0igF5bCDvWHUxeABFZu1jS8cmrRNwnbilrnwJygHtSIxeZZeB9N77S41RFDLqNFzhl8UYVMXleeiHEUT8DEq2oJcsUC1faaGM",
+        ]
     };
 
     return (
-        <div className="product-detail-page">
-            <div className="product-detail-container">
-                <div className="breadcrumb">
-                    <span>Trang chủ</span> / <span>Sản phẩm</span> / <span className="current">{title}</span>
-                </div>
+        <div className="product-detail-page bg-cream">
+            <div className="container py-4">
 
-                <div className="product-detail-main">
-                    <div className="product-gallery">
-                        <div className="main-image-wrapper">
-                            <img src={mainImage} alt={title} className="main-image" />
-                            {product.isHot && <div className="collection-badge">Best Seller</div>}
-                        </div>
-
-                        <div className="thumbnail-list">
-                            {images.map((img, idx) => (
-                                <div
-                                    key={idx}
-                                    className={`thumbnail-item ${mainImage === img ? "active" : ""}`}
-                                    onClick={() => setMainImage(img)}
-                                >
-                                    <img src={img} alt={`Thumbnail ${idx + 1}`} />
-                                </div>
-                            ))}
-                        </div>
+                {/* Top Section */}
+                <div className="row g-5 mb-5 align-items-stretch top-section" >
+                    <div className="col-lg-6">
+                        <ProductImage images={product.images} />
                     </div>
-
-                    <div className="product-info">
-                        <h1 className="product-title">
-                            {title} {subtitle && <span className="subtitle">{subtitle}</span>}
-                        </h1>
-
-                        <div className="product-rating">
-                            <span>★★★★★</span> <span className="review-count">Đánh giá tốt</span>
-                            <span className="category-tag">{product.category?.toUpperCase()}</span>
-                        </div>
-
-                        <p className="product-description">{description}</p>
-
-                        <div className="product-price-section">
-                            <div className="price-wrapper">
-                                <span className="current-price">{price.toLocaleString("vi-VN")}đ</span>
-                            </div>
-                        </div>
-
-                        <div className="purchase-section">
-                            <div className="quantity-wrapper">
-                                <button onClick={() => setQuantity(Math.max(1, quantity - 1))} className="quantity-btn">-</button>
-                                <span className="quantity">{quantity}</span>
-                                <button onClick={() => setQuantity(quantity + 1)} className="quantity-btn">+</button>
-                            </div>
-
-                            <Button
-                                className="add-to-cart-btn"
-                                variant="large"
-                                size="large"
-                                onClick={handleAddToCart}
-                            >
-                                Thêm vào giỏ hàng
-                            </Button>
-                        </div>
-
-                        {features.length > 0 && (
-                            <div className="our-promise">
-                                <h2 className="promise-title">Our Promise</h2>
-                                <h3 className="promise-subtitle">Đặc điểm nổi bật</h3>
-                                <div className="promise-features">
-                                    {features.map((feat, idx) => (
-                                        <FeatureItem
-                                            key={idx}
-                                            icon={feat.icon}
-                                            title={feat.title}
-                                            desc={feat.desc}
-                                        />
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                    <div className="col-lg-6">
+                        <ProductInfo
+                            product={product}
+                            onAddToCart={(qty) => addToCart({ ...product, quantity: qty } as any)}
+                        />
                     </div>
                 </div>
+            </div>
 
-                <section className="related-section">
-                    <FeaturedProducts
-                        title="Có thể bạn sẽ thích"
-                        limit={4}
-                        centerTitle={true}
-                    />
-                </section>
+            {/* Middle Section */}
+            <ProductHighlights />
+            <ProductSpecs />
+
+            {/* Related Products */}
+            <div className="bg-white py-5">
+                <div className="container">
+                    <h2 className="text-center mb-4" style={{fontFamily: 'Playfair Display, serif', color: '#5d4037', fontSize: '1.5rem'}}>
+                        Có thể bạn sẽ thích
+                    </h2>
+                    <FeaturedProducts limit={4} centerTitle={false} title="" />
+                </div>
             </div>
         </div>
     );
-};
-
-export default ProductDetail;
+}

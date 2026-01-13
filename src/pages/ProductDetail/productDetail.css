@@ -1,0 +1,11 @@
+.product-detail-page.bg-cream {
+  background-color: #fffaf5;
+}
+.product-detail-page .hover-primary:hover {
+  color: #d35400 !important;
+}
+.product-detail-page .container .top-section {
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=productDetail.css.map */
