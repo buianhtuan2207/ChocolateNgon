@@ -1,0 +1,178 @@
+// Variables
+$primary: #d35400; // Cam cháy
+$chocolate: #5d4037; // Nâu đậm
+$serif-font: 'Playfair Display', serif;
+$body-font: 'Manrope', sans-serif;
+
+.product-info-component {
+  color: $chocolate;
+  font-family: $body-font;
+  padding-left: 20px;
+
+  // 1. Badge & Title
+  .badge-bestseller {
+    color: #d86c27;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 0.8rem;
+  }
+
+  .product-title {
+    font-family: $serif-font;
+    color: $chocolate;
+    font-size: 2.8rem; // Font to, sang trọng
+    line-height: 1.1;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+
+  // 2. Rating & Review
+  .rating-wrapper {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+
+    .text-star { color: #d35400; font-size: 0.9rem; }
+    .text-review { color: #888; font-weight: 400; }
+    .text-status { color: #27ae60; font-weight: 600; }
+  }
+
+  // 3. Price
+  .price-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+
+    .current-price {
+      font-size: 2rem;
+      color: #d35400;
+      font-weight: 700;
+      font-family: $body-font;
+    }
+    .old-price {
+      font-size: 1.1rem;
+      text-decoration: line-through;
+      color: #aaa;
+      font-weight: 400;
+    }
+    .discount-badge {
+      background-color: #fcece6; // Nền cam nhạt
+      color: #d35400;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+  }
+
+  // 4. Description
+  .description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: rgba($chocolate, 0.8);
+    margin-bottom: 2.5rem;
+    font-weight: 400;
+  }
+
+  // 5. Action Controls (Quan trọng: Layout hàng ngang)
+  .action-controls {
+    display: flex;
+    align-items: stretch; // Kéo dãn chiều cao bằng nhau
+    gap: 15px;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+
+    // Custom lại QuantitySelector cho giống hình (khung trắng, nút nhỏ)
+    .quantity-wrapper {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      width: 120px;
+      height: 50px; // Chiều cao cố định cho đẹp
+
+      button {
+        width: 35px;
+        height: 100%;
+        border: none;
+        background: transparent;
+        color: $chocolate;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: color 0.2s;
+        &:hover { color: $primary; }
+      }
+
+      span {
+        flex: 1;
+        text-align: center;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+    }
+
+    // Tinh chỉnh Button component
+    .btn-action {
+      height: 50px; // Bằng chiều cao ô số lượng
+      padding: 0 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      flex-grow: 1; // Giãn đều
+      white-space: nowrap;
+
+      &.btn-cart {
+        background-color: $primary;
+        border-color: $primary;
+        color: #fff;
+        &:hover { background-color: darken($primary, 5%); }
+      }
+
+      &.btn-buy {
+        background-color: #5d4037; // Màu nâu
+        border-color: #5d4037;
+        color: #fff;
+        &:hover { background-color: lighten(#5d4037, 5%); }
+      }
+    }
+  }
+
+  // 6. Policy Icons
+  .policy-list {
+    .policy-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      color: rgba($chocolate, 0.9);
+      font-weight: 500;
+
+      .icon { color: $primary; font-size: 1.2rem; }
+    }
+  }
+}
+
+// Responsive Mobile
+@media (max-width: 991px) {
+  .product-info-component {
+    padding-left: 0;
+    .product-title { font-size: 2.2rem; }
+    .action-controls {
+      .btn-action { width: 100%; flex-grow: 1; } // Full width trên mobile
+    }
+  }
+}

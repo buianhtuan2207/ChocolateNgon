@@ -1,0 +1,168 @@
+.product-info-component {
+  color: #5d4037;
+  font-family: "Manrope", sans-serif;
+  padding-left: 20px;
+}
+.product-info-component .badge-bestseller {
+  color: #d86c27;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.product-info-component .product-title {
+  font-family: "Playfair Display", serif;
+  color: #5d4037;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.product-info-component .rating-wrapper {
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+.product-info-component .rating-wrapper .text-star {
+  color: #d35400;
+  font-size: 0.9rem;
+}
+.product-info-component .rating-wrapper .text-review {
+  color: #888;
+  font-weight: 400;
+}
+.product-info-component .rating-wrapper .text-status {
+  color: #27ae60;
+  font-weight: 600;
+}
+.product-info-component .price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1.5rem;
+}
+.product-info-component .price-wrapper .current-price {
+  font-size: 2rem;
+  color: #d35400;
+  font-weight: 700;
+  font-family: "Manrope", sans-serif;
+}
+.product-info-component .price-wrapper .old-price {
+  font-size: 1.1rem;
+  text-decoration: line-through;
+  color: #aaa;
+  font-weight: 400;
+}
+.product-info-component .price-wrapper .discount-badge {
+  background-color: #fcece6;
+  color: #d35400;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+.product-info-component .description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(93, 64, 55, 0.8);
+  margin-bottom: 2.5rem;
+  font-weight: 400;
+}
+.product-info-component .action-controls {
+  display: flex;
+  align-items: stretch;
+  gap: 15px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+.product-info-component .action-controls .quantity-wrapper {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: 120px;
+  height: 50px;
+}
+.product-info-component .action-controls .quantity-wrapper button {
+  width: 35px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  color: #5d4037;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.product-info-component .action-controls .quantity-wrapper button:hover {
+  color: #d35400;
+}
+.product-info-component .action-controls .quantity-wrapper span {
+  flex: 1;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.product-info-component .action-controls .btn-action {
+  height: 50px;
+  padding: 0 30px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-grow: 1;
+  white-space: nowrap;
+}
+.product-info-component .action-controls .btn-action.btn-cart {
+  background-color: #d35400;
+  border-color: #d35400;
+  color: #fff;
+}
+.product-info-component .action-controls .btn-action.btn-cart:hover {
+  background-color: rgb(185.5, 73.8483412322, 0);
+}
+.product-info-component .action-controls .btn-action.btn-buy {
+  background-color: #5d4037;
+  border-color: #5d4037;
+  color: #fff;
+}
+.product-info-component .action-controls .btn-action.btn-buy:hover {
+  background-color: rgb(109.0236486486, 75.027027027, 64.4763513514);
+}
+.product-info-component .policy-list .policy-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: rgba(93, 64, 55, 0.9);
+  font-weight: 500;
+}
+.product-info-component .policy-list .policy-item .icon {
+  color: #d35400;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .product-info-component {
+    padding-left: 0;
+  }
+  .product-info-component .product-title {
+    font-size: 2.2rem;
+  }
+  .product-info-component .action-controls .btn-action {
+    width: 100%;
+    flex-grow: 1;
+  }
+}
+
+/*# sourceMappingURL=productInfo.css.map */
