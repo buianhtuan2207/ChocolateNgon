@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# 🍫 SocolaShop – Website Thương Mại Điện Tử Socola Cao Cấp
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Chào mừng bạn đến với **SocolaShop** – dự án website thương mại điện tử chuyên cung cấp các dòng **socola cao cấp, nguyên chất và nhập khẩu**.  
+Dự án được xây dựng với mục tiêu mang lại **trải nghiệm mua sắm ngọt ngào**, giao diện **hiện đại**, **thân thiện** và dễ mở rộng trong tương lai.
 
-## Available Scripts
+> *“Mỗi thanh chocolate là một tác phẩm nghệ thuật – làm thủ công, nguyên chất 100%.”*
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🌟 Giới thiệu
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**SocolaShop** không chỉ đơn thuần là một website bán hàng, mà còn là nơi tôn vinh **nghệ thuật chế tác socola**.  
+Ứng dụng tập trung mạnh vào trải nghiệm người dùng (UX/UI) với:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Tìm kiếm sản phẩm nhanh chóng
+- Bộ lọc chi tiết và trực quan
+- Giao diện responsive, hiển thị đẹp trên mọi thiết bị
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Công nghệ sử dụng (Tech Stack)
 
-### `npm run build`
+Dự án được xây dựng bằng các công nghệ Frontend hiện đại:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Core:** React 19 + TypeScript  
+- **Build Tool:** Create React App (CRA)  
+- **Styling:**
+  - Bootstrap 5 (Layout & Components)
+  - SASS / SCSS (Custom Styling)
+- **Routing:** React Router DOM v7  
+- **Icons:**
+  - FontAwesome
+  - Lucide React
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Tính năng chính
 
-### `npm run eject`
+- **Trang chủ (Home):**
+  - Banner khuyến mãi nổi bật
+  - Hiển thị sản phẩm tiêu biểu
+  - Giới thiệu các điểm mạnh của thương hiệu
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **Trang danh sách sản phẩm (Products Page):**
+  - Hiển thị sản phẩm dạng lưới (grid)
+  - Thông tin đầy đủ: hình ảnh, giá, đánh giá
+  - **Bộ lọc nâng cao (Sidebar Filter):**
+    - Danh mục sản phẩm
+    - Hương vị (Socola đen, sữa, matcha…)
+    - Hình thức (Thanh, hộp quà, viên)
+  - **Sắp xếp:** Giá tăng/giảm, sản phẩm mới nhất
+  - **Phân trang:** Dễ dàng điều hướng giữa các trang
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Tìm kiếm nhanh:** Thanh tìm kiếm đặt ngay trên Header
+- **Responsive Design:** Tương thích Desktop, Tablet và Mobile
+- **UI Components tái sử dụng:**
+  - Button, CardProduct, InputField, Modal…
+  - Thiết kế theo tư duy **Atomic Design** giúp dễ bảo trì và mở rộng
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Cấu trúc thư mục
 
-## Learn More
+src/
+├── components/        # Các UI component tái sử dụng
+│   ├── Banner/        # Banner quảng cáo
+│   ├── Button/        # Các loại nút bấm
+│   ├── CardProduct/   # Thẻ hiển thị sản phẩm
+│   ├── FilterWidget/  # Bộ lọc sản phẩm
+│   ├── Layout/        # Layout chung (Header, Footer)
+│   └── ...
+├── data/              # Dữ liệu mẫu (Mock data)
+│   └── products.ts
+├── pages/             # Các trang chính
+│   ├── Home/
+│   └── Product/
+├── routes/            # Cấu hình định tuyến
+├── App.tsx            # Component gốc
+└── index.tsx          # Điểm khởi chạy ứng dụng
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 Cài đặt & Chạy Dự Án
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🔧 Yêu cầu
+- **Node.js** (khuyến nghị phiên bản **LTS**)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 1️⃣ Clone dự án
 
-### Analyzing the Bundle Size
+git clone https://github.com/username/chocolate-ngon.git
+cd chocolate-ngon
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 2️⃣ Cài đặt dependencies
 
-### Making a Progressive Web App
+npm install
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### 3️⃣ Chạy ở chế độ phát triển (Development)
 
-### Advanced Configuration
+npm start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📌 Ghi chú
 
-### Deployment
+- Dự án sử dụng **mock data**, chưa kết nối backend
+- Phù hợp làm **đồ án Frontend / React / UI-UX**
+- Dễ dàng mở rộng để tích hợp **API** và **thanh toán trực tuyến** trong tương lai
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+✨ **Cảm ơn bạn đã ghé thăm SocolaShop!**  
+Nếu thấy dự án hữu ích, đừng quên ⭐ repository nhé!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
