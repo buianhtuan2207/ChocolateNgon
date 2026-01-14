@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Button from '../Button/Button'; // Tái sử dụng Button có sẵn
+import React, { useState, useEffect } from 'react';
+import Button from '../Button/Button';
 import Icon from '../Icons/Icon';
 import './productInfo.scss';
 
@@ -12,22 +12,25 @@ export default function ProductInfo({ product, onAddToCart }: ProductInfoProps) 
     const [quantity, setQuantity] = useState(1);
     const formatVND = (price: number) => price.toLocaleString('vi-VN') + 'đ';
 
+    // Reset số lượng về 1 khi sản phẩm thay đổi (dựa vào product.id)
+    useEffect(() => {
+        setQuantity(1);
+    }, [product.id]);
+
     const handleDecrease = () => setQuantity(q => Math.max(1, q - 1));
     const handleIncrease = () => setQuantity(q => q + 1);
 
     return (
         <div className="product-info-component">
-            {/* Badge */}
-            <span className="badge-bestseller">BESTSELLER</span>
+            {/* ... (Giữ nguyên phần hiển thị thông tin bên dưới) ... */}
 
-            {/* Title */}
+            <span className="badge-bestseller">BESTSELLER</span>
             <h1 className="product-title">{product.title}</h1>
 
-            {/* Rating */}
             <div className="rating-wrapper">
                 <div className="d-flex text-star">
                     {[...Array(5)].map((_, i) => (
-                        <Icon key={i} icon="star" className={i < 4 ? "fas" : "far"} />
+                        <Icon key={i} icon="star" className={i < (product.rating || 5) ? "fas" : "far"} />
                     ))}
                 </div>
                 <span className="text-review ms-2">({product.reviewCount} đánh giá)</span>
@@ -35,55 +38,38 @@ export default function ProductInfo({ product, onAddToCart }: ProductInfoProps) 
                 <span className="text-status">Còn hàng</span>
             </div>
 
-            {/* Price */}
             <div className="price-wrapper">
                 <span className="current-price">{formatVND(product.price)}</span>
                 {product.oldPrice && (
                     <span className="old-price">{formatVND(product.oldPrice)}</span>
                 )}
-                <span className="discount-badge">-30%</span>
+                {product.discountPrice && <span className="discount-badge">-30%</span>}
             </div>
 
-            {/* Description */}
-            <p className="description">
-                {product.description}
-            </p>
+            <p className="description">{product.description}</p>
 
-            {/* Action Row: Quantity | Add Cart | Buy Now */}
             <div className="action-controls">
-                {/* 1. Quantity Selector (Custom trực tiếp để giống hình) */}
                 <div className="quantity-wrapper">
                     <button onClick={handleDecrease}>-</button>
                     <span>{quantity}</span>
                     <button onClick={handleIncrease}>+</button>
                 </div>
 
-                {/* 2. Add to Cart Button (Sử dụng Button component có sẵn + class custom) */}
-                <Button
-                    className="btn-action btn-cart"
-                    onClick={() => onAddToCart(quantity)}
-                >
+                <Button className="btn-action btn-cart" onClick={() => onAddToCart(quantity)}>
                     <Icon icon="shopping-cart" /> THÊM VÀO GIỎ HÀNG
                 </Button>
 
-                {/* 3. Buy Now Button */}
-                <Button
-                    className="btn-action btn-buy"
-                    href="/checkout"
-                >
+                <Button className="btn-action btn-buy" href="/checkout">
                     <Icon icon="credit-card" /> MUA NGAY
                 </Button>
             </div>
 
-            {/* Policy Info */}
             <div className="policy-list">
                 <div className="policy-item">
-                    <Icon icon="truck" className="icon" />
-                    <span>Chính sách giao hàng nhanh chóng</span>
+                    <Icon icon="truck" className="icon" /> <span>Chính sách giao hàng nhanh chóng</span>
                 </div>
                 <div className="policy-item">
-                    <Icon icon="check" className="icon" />
-                    <span>Cam kết chất lượng 100% tự nhiên</span>
+                    <Icon icon="check" className="icon" /> <span>Cam kết chất lượng 100% tự nhiên</span>
                 </div>
             </div>
         </div>
