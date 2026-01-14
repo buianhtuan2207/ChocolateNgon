@@ -87,7 +87,7 @@ src/
 
 ### 1️⃣ Clone dự án
 
-git clone https://github.com/username/chocolate-ngon.git
+git clone https://github.com/buianhtuan2207/ChocolateNgon.git
 cd chocolate-ngon
 
 ### 2️⃣ Cài đặt dependencies
