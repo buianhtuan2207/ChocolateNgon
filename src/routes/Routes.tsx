@@ -10,6 +10,7 @@ import {useAuth} from "../context/AuthContext";
 import Promotion from "../pages/Promotion/Promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
+import OrderTracking from "../pages/OrderTracking/OrderTracking";
 import About from "../pages/About/About";
 import OrderHistory from "../pages/OrderHistory/OrderHistory";
 
@@ -58,6 +59,7 @@ const publicRoutes: AppRoute[] = [
     {path: "/product/:id", component: ProductDetailPage },
     {path: "/promotion", component: Promotion },
     {path: "/checkout" , component: Checkout},
+    {path: "/orderTracking" , component: OrderTracking},
     {path: "/about" , component: About },
     {path: "/order-history" , component: OrderHistory},
 ];

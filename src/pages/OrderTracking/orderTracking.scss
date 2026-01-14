@@ -1,0 +1,95 @@
+.orderTracking-page{
+  background-color: #fffaf5;
+
+  .order-tracking-header {
+    text-align: center;
+    margin-bottom: 40px;
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      color: #d35400;
+      margin-bottom: 8px;
+      padding-top: 40px;
+    }
+
+    .order-meta {
+      font-size: 14px;
+      color: #7a7a7a;
+
+      strong {
+        color: #33241d;
+        font-weight: 600;
+      }
+    }
+  }
+  .order-tracking{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 0 auto;
+
+    .left{
+      .status-col{
+        display: flex;
+        gap: 50px;
+      }
+      .tracking-col {
+        background: #ffffff;
+        padding: 30px 40px;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        margin-top: 25px;
+        width: 700px;
+
+        h3 {
+          font-family: 'Playfair Display', serif;
+          font-size: 22px;
+          color: #4a3731;
+          margin-bottom: 0;
+          font-weight: 600;
+        }
+
+        .history-list {
+          position: relative;
+
+          .view-all-btn {
+            display: block;
+            margin-top: 10px;
+            background: none;
+            border: none;
+            color: #d46b08;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+
+            &::before {
+              content: '+';
+              position: absolute;
+              left: 0;
+              font-size: 14px;
+            }
+
+            &:hover {
+              color: #4a3731;
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+      .order-product-list{
+        width: 700px;
+      }
+    }
+    .right {
+      width: 380px;           // Thiết lập độ rộng cố định theo yêu cầu
+      flex-shrink: 0;         // Ngăn không cho cột phải bị co lại khi màn hình nhỏ
+      position: sticky;       // Tùy chọn: Giữ cột phải luôn hiển thị khi cuộn trang
+      top: 20px;
+    }
+  }
+}
