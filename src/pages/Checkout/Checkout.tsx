@@ -1,7 +1,6 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
-import Icon from '../../components/Icons/Icon';
 import './checkout.scss';
 import ShippingForm from "../../components/ShippingForm/ShippingForm";
 import PaymentMethods from "../../components/PaymentMethods/PaymentMethods";
@@ -90,14 +89,6 @@ export default function Checkout() {
                 </div>
             )}
             <div className="container py-5">
-                {/* Breadcrumbs */}
-                <div className="breadcrumbs mb-5">
-                    <Link to="/" className="text-muted">Trang chủ</Link>
-                    <Icon icon="chevron-right" className="mx-2 text-muted" />
-                    <Link to="/cart" className="text-muted">Giỏ hàng</Link>
-                    <Icon icon="chevron-right" className="mx-2 text-muted" />
-                    <span className="text-primary fw-bold">Thanh toán</span>
-                </div>
 
                 <div className="row g-5">
                     <div className="col-lg-8">

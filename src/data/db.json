@@ -496,5 +496,13 @@
       "title": "Thẻ tín dụng / Ghi nợ quốc tế",
       "description": "Hỗ trợ Visa, Mastercard, JCB với bảo mật cao."
     }
+  ],
+  "orders": [
+    { "id": "#ORD-2023-005", "date": "24/10/2023", "status": "processing", "statusLabel": "Đang xử lý", "total": 1250000, "userId": 1 },
+    { "id": "#ORD-2023-004", "date": "15/10/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 890000, "userId": 1 },
+    { "id": "#ORD-2023-003", "date": "01/10/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 2450000, "userId": 1 },
+    { "id": "#ORD-2023-002", "date": "28/09/2023", "status": "cancelled", "statusLabel": "Đã hủy", "total": 450000, "userId": 1 },
+    { "id": "#ORD-2023-001", "date": "10/09/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 1100000, "userId": 1 },
+    { "id": "#ORD-2023-000", "date": "05/09/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 320000, "userId": 1 }
   ]
 }
