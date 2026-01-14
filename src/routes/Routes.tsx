@@ -55,6 +55,14 @@ const publicRoutes: AppRoute[] = [
             </ProtectedRoute>
         ),
     },
+    {
+        path: "/order-history",
+        component: () => (
+            <ProtectedRoute>
+                <OrderHistory />
+            </ProtectedRoute>
+        ),
+    },
     {path: "/product", component: Products },
     {path: "/product/:id", component: ProductDetailPage },
     {path: "/promotion", component: Promotion },

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './productImage.scss';
 
 interface ProductImageProps {
@@ -6,7 +6,15 @@ interface ProductImageProps {
 }
 
 export default function ProductImage({ images }: ProductImageProps) {
+    // Khởi tạo state
     const [activeImg, setActiveImg] = useState(images[0]);
+
+    // Cập nhật activeImg khi props images thay đổi (khi chuyển sản phẩm khác)
+    useEffect(() => {
+        if (images && images.length > 0) {
+            setActiveImg(images[0]);
+        }
+    }, [images]);
 
     return (
         <div className="product-image-component">
@@ -20,14 +28,11 @@ export default function ProductImage({ images }: ProductImageProps) {
                 {images.map((img, index) => (
                     <div
                         key={index}
+                        // So sánh activeImg với img hiện tại để active đúng ô thumbnail
                         className={`thumb-item ${activeImg === img ? 'active' : ''}`}
                         onClick={() => setActiveImg(img)}
                     >
-                        {/* Render ảnh hoặc số thứ tự mô phỏng design */}
                         <img src={img} alt={`thumb-${index}`} />
-
-                        {/* (Tùy chọn) Thêm số đè lên để giống hệt design nếu ảnh là background */}
-                        {/* <span className="thumb-number">{index + 1}</span> */}
                     </div>
                 ))}
             </div>

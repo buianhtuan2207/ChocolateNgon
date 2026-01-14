@@ -28,259 +28,388 @@
       "address": "Linh Trung, Thủ Đức, TP. Hồ Chí Minh"
     }
   ],
-
   "products": [
     {
       "id": 1,
       "title": "Socola Đắng 70%",
       "subtitle": "Signature Edition",
-      "description": "Hương vị đậm đà, nguyên chất từ cacao thượng hạng.",
+      "description": "Hương vị đậm đà, nguyên chất từ cacao thượng hạng. Sự cân bằng hoàn hảo giữa vị đắng và hậu vị ngọt nhẹ.",
       "price": 1200000,
       "discountPrice": 950000,
       "image": "/assets/img/category/ML.png",
-      "images": ["/assets/img/category/ML.png", "/assets/img/products/socola-vien.png"],
+      "images": [
+        "/assets/img/category/ML.png",
+        "/assets/img/products/socola-vien.png",
+        "/assets/img/products/socola-hop.png",
+        "/assets/img/products/socola-hop-2.png"
+      ],
       "category": "dark",
       "isHot": true,
+      "rating": 5,
+      "reviewCount": 156,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Nghệ thuật rang hạt", "desc": "Hạt cacao tuyển chọn được rang chậm để giữ trọn hương vị gốc." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Đậm đà 70% Cacao", "desc": "Tỉ lệ vàng mang lại vị đắng tinh tế và lợi ích sức khỏe." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Mượt mà như nhung", "desc": "Cấu trúc siêu mịn tan chảy ngay lập tức." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "100% TỰ NHIÊN", "desc": "Không chất bảo quản" },
+        { "icon": "check", "title": "XUẤT XỨ VIỆT NAM", "desc": "Hạt cacao Tiền Giang" },
+        { "icon": "gift", "title": "THIẾT KẾ SANG TRỌNG", "desc": "Hộp quà cao cấp" }
       ]
     },
     {
       "id": 2,
       "title": "Socola Sữa Truyền Thống",
       "subtitle": "Sweet & Creamy",
-      "description": "Ngọt nhẹ, mịn màng và thơm béo mùi sữa tươi.",
+      "description": "Ngọt nhẹ, mịn màng và thơm béo mùi sữa tươi. Lựa chọn hoàn hảo cho những ai yêu thích sự ngọt ngào.",
       "price": 950000,
       "discountPrice": null,
       "image": "/assets/img/products/socola-vien.png",
       "images": ["/assets/img/products/socola-vien.png", "/assets/img/category/ML.png"],
       "category": "milk",
+      "rating": 4.8,
+      "reviewCount": 92,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Sữa tươi nguyên kem", "desc": "Sử dụng sữa bột nguyên kem nhập khẩu New Zealand." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Ngọt ngào tan chảy", "desc": "Vị ngọt dịu, không gắt, tan nhanh trong miệng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Hương vani tự nhiên", "desc": "Thơm lừng hương vani Madagasca." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "NGUYÊN LIỆU SẠCH", "desc": "Sữa tiệt trùng" },
+        { "icon": "check", "title": "VỊ NGỌT VỪA PHẢI", "desc": "Giảm 20% đường" },
+        { "icon": "tools", "title": "CÔNG THỨC GIA TRUYỀN", "desc": "Hơn 20 năm kinh nghiệm" }
       ]
     },
     {
       "id": 3,
       "title": "Socola Hạnh Nhân Rang",
       "subtitle": "Crunchy Nut",
-      "description": "Sự kết hợp hoàn hảo giữa socola đen và hạnh nhân giòn rụm.",
+      "description": "Sự kết hợp hoàn hảo giữa socola đen đắng nhẹ và hạnh nhân California giòn rụm bùi béo.",
       "price": 1500000,
       "discountPrice": 1200000,
       "image": "/assets/img/products/socola-hop.png",
+      "images": ["/assets/img/products/socola-hop.png", "/assets/img/category/ML.png"],
       "category": "nut",
       "isHot": true,
+      "rating": 4.9,
+      "reviewCount": 204,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Hạnh nhân California", "desc": "Hạt hạnh nhân nhập khẩu nguyên hạt, rang mộc giòn tan." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Giòn tan thú vị", "desc": "Lớp vỏ socola mềm mịn bao bọc hạt giòn rụm bên trong." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Dinh dưỡng cao", "desc": "Giàu Vitamin E và chất béo tốt cho tim mạch." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "HẠT NHẬP KHẨU", "desc": "Tiêu chuẩn Mỹ" },
+        { "icon": "ban", "title": "KHÔNG HƯƠNG LIỆU", "desc": "Mùi thơm tự nhiên" },
+        { "icon": "gift", "title": "QUÀ TẶNG SỨC KHỎE", "desc": "Tốt cho người lớn tuổi" }
       ]
     },
     {
       "id": 4,
       "title": "Socola Đen 100% Nguyên Chất",
       "subtitle": "Zero Sugar",
-      "description": "Vị đắng mạnh mẽ dành cho người sành ăn, không đường.",
+      "description": "Vị đắng mạnh mẽ dành cho người sành ăn, hoàn toàn không đường. Thích hợp cho người ăn kiêng.",
       "price": 1800000,
       "discountPrice": null,
       "image": "/assets/img/products/socola-hop-2.png",
+      "images": ["/assets/img/products/socola-hop-2.png", "/assets/img/category/ML.png"],
       "category": "dark",
       "isHot": true,
+      "rating": 5,
+      "reviewCount": 85,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Cacao nguyên bản", "desc": "100% cacao mass, không thêm bất kỳ phụ gia nào." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Vị đắng thuần khiết", "desc": "Trải nghiệm hương vị mạnh mẽ, sâu lắng nhất của socola." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Chuẩn Eat Clean", "desc": "Không đường, không sữa, thuần chay." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "100% CACAO", "desc": "Nguyên chất" },
+        { "icon": "ban", "title": "KHÔNG ĐƯỜNG", "desc": "Thích hợp ăn kiêng" },
+        { "icon": "check", "title": "THUẦN CHAY", "desc": "Vegan Friendly" }
       ]
     },
     {
       "id": 5,
       "title": "Socola Nhân Mắc Ca",
       "subtitle": "Macadamia Deluxe",
-      "description": "Hạt mắc ca béo ngậy phủ lớp socola sữa ngọt ngào.",
+      "description": "Hạt mắc ca 'nữ hoàng' béo ngậy phủ lớp socola sữa ngọt ngào, tạo nên hương vị sang trọng.",
       "price": 1350000,
       "discountPrice": 1100000,
       "image": "/assets/img/category/NBC.png",
+      "images": ["/assets/img/category/NBC.png", "/assets/img/products/socola-hop.png"],
       "category": "nut",
+      "rating": 4.7,
+      "reviewCount": 63,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Nữ hoàng hạt khô", "desc": "Nhân mắc ca size lớn, bùi béo đặc trưng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Lớp phủ hoàn hảo", "desc": "Socola sữa dày dặn bao phủ trọn vẹn hạt." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Béo ngậy khó cưỡng", "desc": "Sự hòa quyện giữa vị béo của hạt và vị ngọt của sữa." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "MẮC CA ĐÀ LẠT", "desc": "Tuyển chọn kỹ càng" },
+        { "icon": "tools", "title": "RANG MỘC", "desc": "Giữ nguyên dưỡng chất" },
+        { "icon": "gift", "title": "HỘP THIẾC", "desc": "Bảo quản tốt nhất" }
       ]
     },
     {
       "id": 6,
       "title": "Socola Trà Xanh Matcha",
       "subtitle": "Japanese Style",
-      "description": "Hương vị thanh mát từ bột Matcha Nhật Bản cao cấp.",
+      "description": "Hương vị thanh mát từ bột Matcha Nhật Bản cao cấp hòa quyện cùng socola trắng.",
       "price": 1100000,
       "discountPrice": null,
       "image": "/assets/img/category/PTP.png",
+      "images": ["/assets/img/category/PTP.png", "/assets/img/category/classic.png"],
       "category": "milk",
+      "rating": 4.8,
+      "reviewCount": 112,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Matcha Uji Nhật Bản", "desc": "Sử dụng bột matcha thượng hạng nhập khẩu từ Kyoto." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Thanh mát dịu nhẹ", "desc": "Vị chát nhẹ của trà cân bằng vị ngọt của socola trắng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Màu xanh tự nhiên", "desc": "Không phẩm màu, giữ nguyên màu xanh ngọc bích." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "TRÀ XANH NHẬT", "desc": "Nhập khẩu chính ngạch" },
+        { "icon": "check", "title": "VỊ NGỌT THANH", "desc": "Ít ngọt" },
+        { "icon": "gift", "title": "PHONG CÁCH NHẬT", "desc": "Tinh tế, tối giản" }
       ]
     },
     {
       "id": 7,
       "title": "Socola Trái Cây Nhiệt Đới",
       "subtitle": "Tropical Fruits",
-      "description": "Nhân xoài và chanh dây chua ngọt kích thích vị giác.",
+      "description": "Nhân mứt xoài và chanh dây chua ngọt dẻo thơm, kích thích vị giác.",
       "price": 1250000,
       "discountPrice": 899000,
       "image": "/assets/img/category/classic.png",
+      "images": ["/assets/img/category/classic.png", "/assets/img/products/socola-vien.png"],
       "category": "fruit",
       "isHot": true,
+      "rating": 4.6,
+      "reviewCount": 78,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Trái cây nhiệt đới", "desc": "Mứt xoài và chanh dây cô đặc tự nhiên." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Chua ngọt bùng nổ", "desc": "Vị chua thanh làm nổi bật nền socola đen." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Dẻo thơm lạ miệng", "desc": "Lớp nhân dẻo dai tạo cảm giác thú vị khi ăn." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "TRÁI CÂY TƯƠI", "desc": "Sấy lạnh công nghệ cao" },
+        { "icon": "ban", "title": "KHÔNG HƯƠNG LIỆU", "desc": "Mùi thơm trái cây thật" },
+        { "icon": "check", "title": "VỊ CHUA TỰ NHIÊN", "desc": "Kích thích vị giác" }
       ]
     },
     {
       "id": 8,
       "title": "Socola Đắng 85%",
       "subtitle": "Intense Dark",
-      "description": "Ít ngọt, tốt cho sức khỏe tim mạch.",
+      "description": "Hàm lượng cacao 85% mang lại vị đắng đậm, ít ngọt, rất tốt cho sức khỏe tim mạch.",
       "price": 1400000,
       "discountPrice": null,
       "image": "/assets/img/category/ML.png",
+      "images": ["/assets/img/category/ML.png", "/assets/img/products/socola-hop-2.png"],
       "category": "dark",
+      "rating": 4.9,
+      "reviewCount": 45,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Đậm chất 85%", "desc": "Dành cho tín đồ yêu thích vị đắng sâu lắng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Giàu chất chống oxy hóa", "desc": "Hàm lượng flavonoid cao tốt cho sức khỏe." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Hậu vị kéo dài", "desc": "Vị đắng lưu luyến trong vòm họng rất lâu." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "85% CACAO", "desc": "Nguyên chất" },
+        { "icon": "check", "title": "ÍT ĐƯỜNG", "desc": "Phù hợp ăn kiêng" },
+        { "icon": "tools", "title": "Ủ LÊN MEN", "desc": "Quy trình chuẩn quốc tế" }
       ]
     },
     {
       "id": 9,
       "title": "Socola Sữa Hạt Dẻ",
       "subtitle": "Hazelnut Cream",
-      "description": "Nhân kem hạt dẻ béo ngậy tan chảy.",
+      "description": "Nhân kem hạt dẻ (Hazelnut) béo ngậy tan chảy bên trong lớp vỏ socola sữa.",
       "price": 980000,
       "discountPrice": null,
       "image": "/assets/img/products/socola-vien.png",
+      "images": ["/assets/img/products/socola-vien.png", "/assets/img/category/NBC.png"],
       "category": "nut",
+      "rating": 4.8,
+      "reviewCount": 130,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Kem hạt dẻ Ý", "desc": "Sử dụng hạt dẻ Hazelnut cao cấp xay nhuyễn." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Tan chảy tức thì", "desc": "Lớp nhân kem mềm mịn tan ngay đầu lưỡi." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Hương thơm nồng nàn", "desc": "Mùi hạt dẻ nướng thơm lừng." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "HẠT DẺ NHẬP KHẨU", "desc": "Thổ Nhĩ Kỳ" },
+        { "icon": "tools", "title": "NGHIỀN MỊN", "desc": "Công nghệ Nano" },
+        { "icon": "gift", "title": "VỊ NGỌT BÉO", "desc": "Trẻ em yêu thích" }
       ]
     },
     {
       "id": 10,
-      "title": "Socola Rượu Rum",
+      "title": "Socola Rượu Rum Nho",
       "subtitle": "Rum & Raisin",
-      "description": "Hương vị nồng nàn của rượu Rum và nho khô.",
+      "description": "Hương vị nồng nàn quyến rũ của rượu Rum lâu năm kết hợp với nho khô ngọt ngào.",
       "price": 1600000,
       "discountPrice": 1450000,
       "image": "/assets/img/products/socola-hop.png",
+      "images": ["/assets/img/products/socola-hop.png", "/assets/img/category/classic.png"],
       "category": "fruit",
       "isHot": true,
+      "rating": 5,
+      "reviewCount": 99,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Rượu Rum hảo hạng", "desc": "Sử dụng rượu Rum ủ sồi lâu năm thơm nồng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Nho khô Mỹ", "desc": "Nho ngâm rượu căng mọng, nổ tanh tách khi ăn." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Vị ngon người lớn", "desc": "Sự kết hợp táo bạo và quyến rũ." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "RƯỢU CHÍNH HÃNG", "desc": "Nồng độ nhẹ < 5%" },
+        { "icon": "check", "title": "NHO KHÔNG HẠT", "desc": "Mềm dẻo" },
+        { "icon": "gift", "title": "SANG TRỌNG", "desc": "Quà tặng đẳng cấp" }
       ]
     },
     {
       "id": 11,
       "title": "Socola Trắng Vani",
       "subtitle": "White Vanilla",
-      "description": "Ngọt ngào, thơm lừng hương Vani tự nhiên.",
+      "description": "Ngọt ngào, thơm lừng hương Vani tự nhiên từ quả Vani nguyên chất.",
       "price": 900000,
       "discountPrice": null,
       "image": "/assets/img/category/NBC.png",
+      "images": ["/assets/img/category/NBC.png", "/assets/img/products/socola-vien.png"],
       "category": "milk",
+      "rating": 4.5,
+      "reviewCount": 42,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Bơ cacao nguyên chất", "desc": "Không pha trộn chất béo thực vật rẻ tiền." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Hương Vani Bourbon", "desc": "Sử dụng chiết xuất Vani tự nhiên đắt đỏ." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Trắng ngà tự nhiên", "desc": "Màu sắc tự nhiên của bơ cacao." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "BƠ CACAO", "desc": "Giàu dưỡng chất" },
+        { "icon": "ban", "title": "KHÔNG MÀU", "desc": "Màu trắng ngà tự nhiên" },
+        { "icon": "check", "title": "THƠM DỊU", "desc": "Vani Madagascar" }
       ]
     },
     {
       "id": 12,
       "title": "Hộp Quà Valentine",
       "subtitle": "Limited Edition",
-      "description": "Thiết kế trái tim, tổng hợp 12 vị socola ngon nhất.",
+      "description": "Thiết kế trái tim lãng mạn, tổng hợp 12 vị socola ngon nhất dành tặng người thương.",
       "price": 2500000,
       "discountPrice": 1990000,
       "image": "/assets/img/products/socola-hop-2.png",
+      "images": ["/assets/img/products/socola-hop-2.png", "/assets/img/products/socola-hop.png"],
       "category": "dark",
       "isHot": true,
+      "rating": 5,
+      "reviewCount": 320,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "12 Vị Tinh Túy", "desc": "Tổng hợp các vị Best Seller trong một hộp." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Thiết kế lãng mạn", "desc": "Hộp hình tim sang trọng, nơ lụa cao cấp." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Thông điệp yêu thương", "desc": "Kèm thiệp viết tay ý nghĩa." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "gift", "title": "LIMITED EDITION", "desc": "Số lượng có hạn" },
+        { "icon": "check", "title": "ĐA DẠNG VỊ", "desc": "Trải nghiệm phong phú" },
+        { "icon": "tools", "title": "GÓI QUÀ THỦ CÔNG", "desc": "Tỉ mỉ từng chi tiết" }
       ]
     },
     {
       "id": 13,
       "title": "Socola Bạc Hà",
       "subtitle": "Cool Mint",
-      "description": "Sảng khoái với lớp nhân bạc hà mát lạnh.",
+      "description": "Cảm giác sảng khoái bất tận với lớp nhân tinh dầu bạc hà mát lạnh bên trong.",
       "price": 1050000,
       "discountPrice": null,
       "image": "/assets/img/category/PTP.png",
+      "images": ["/assets/img/category/PTP.png", "/assets/img/products/socola-vien.png"],
       "category": "milk",
+      "rating": 4.6,
+      "reviewCount": 56,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Tinh dầu bạc hà", "desc": "Chiết xuất lá bạc hà tự nhiên the mát." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Mát lạnh sảng khoái", "desc": "Cảm giác mát lạnh lan tỏa ngay khi cắn." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Kết hợp độc đáo", "desc": "Vị the mát làm dịu vị ngọt của socola." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "LÁ BẠC HÀ", "desc": "Tươi mát" },
+        { "icon": "check", "title": "VỊ THE MÁT", "desc": "Sảng khoái" },
+        { "icon": "gift", "title": "MÀU XANH NGỌC", "desc": "Đẹp mắt" }
       ]
     },
     {
       "id": 14,
       "title": "Socola Cam Tươi",
       "subtitle": "Orange Dark",
-      "description": "Vỏ cam sấy dẻo nhúng socola đen đắng nhẹ.",
+      "description": "Vỏ cam vàng sấy dẻo nhúng socola đen đắng nhẹ. Hương thơm tinh dầu cam thư giãn.",
       "price": 1300000,
       "discountPrice": null,
       "image": "/assets/img/category/classic.png",
+      "images": ["/assets/img/category/classic.png", "/assets/img/products/socola-hop.png"],
       "category": "fruit",
+      "rating": 4.7,
+      "reviewCount": 67,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Vỏ cam vàng Navel", "desc": "Vỏ cam dày, nhiều tinh dầu thơm nồng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Sấy dẻo công nghệ cao", "desc": "Giữ nguyên độ dẻo và màu sắc tự nhiên." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Đắng ngọt hòa quyện", "desc": "Vị đắng socola và vị thơm của cam." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "CAM VÀNG", "desc": "Nhập khẩu Úc" },
+        { "icon": "check", "title": "GIÀU VITAMIN C", "desc": "Tăng đề kháng" },
+        { "icon": "tools", "title": "THỦ CÔNG", "desc": "Nhúng tay từng miếng" }
       ]
     },
     {
       "id": 15,
       "title": "Socola Muối Biển",
       "subtitle": "Sea Salt Caramel",
-      "description": "Vị mặn nhẹ của muối biển làm nổi bật vị ngọt caramel.",
+      "description": "Vị mặn nhẹ tinh tế của muối biển làm nổi bật vị ngọt ngào của caramel và socola.",
       "price": 1150000,
       "discountPrice": 920000,
       "image": "/assets/img/category/ML.png",
+      "images": ["/assets/img/category/ML.png", "/assets/img/products/socola-vien.png"],
       "category": "milk",
       "isHot": true,
+      "rating": 4.8,
+      "reviewCount": 142,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Muối biển tinh khiết", "desc": "Muối biển sạch được thu hoạch thủ công." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Kích thích vị giác", "desc": "Vị mặn làm nền cho vị ngọt tỏa sáng." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Caramel chảy", "desc": "Nhân caramel dẻo thơm bên trong." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "leaf", "title": "MUỐI BIỂN", "desc": "Khoáng chất tự nhiên" },
+        { "icon": "check", "title": "VỊ MẶN NGỌT", "desc": "Cân bằng hoàn hảo" },
+        { "icon": "gift", "title": "TRENDING", "desc": "Hương vị xu hướng" }
       ]
     },
     {
       "id": 16,
       "title": "Thanh Năng Lượng Cacao",
       "subtitle": "Energy Bar",
-      "description": "Giàu Protein, thích hợp cho người tập gym.",
+      "description": "Giàu Protein và các loại hạt, cung cấp năng lượng tức thì. Thích hợp cho người tập gym, vận động.",
       "price": 850000,
       "discountPrice": null,
       "image": "/assets/img/category/NBC.png",
+      "images": ["/assets/img/category/NBC.png", "/assets/img/products/socola-hop.png"],
       "category": "nut",
+      "rating": 4.9,
+      "reviewCount": 38,
+      "highlights": [
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyoBJjxXnRCm3F1UnTev_Rbbgp3FIk0UHjcTvZ9M57Y0QhVrNE7crPoEojkSWDjUG9x3tpJBT4SJysMgLJVSzTHBo4d-1ydlyIR8jeed8ou43yM5Wh61vXxn4HyxuF5qg7Y2sUmxEub64S6GoV7-idRFnZh4aSFhR8EVnjTk3e1NAJDyAJQE_5qYAyILh_rSRzxlrupTRDov0WtkrmV6AEAn2mh8wD5rDh6i7uGYyfVT6vbWbaRg7dIHM9etZBvSUULvMJyfVpXzyi", "title": "Siêu thực phẩm", "desc": "Kết hợp yến mạch, hạt điều, hạnh nhân." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuD-KkSNRSzqhrL5FAbKvnYw_Xa1F_qwd3LGoJ2ax74sae9Ob-Zs-oXLcqW7AUQKbgD3ZVLYdWS00-X4UJP_ZGhkZf7XcNIPdDj3QXaP3wlJ9BEEtpaSTAk06f3QPTTlli4nRkwWGjd-PsY5p9OPbich4YZ-RlawBSnyVbxsntKU1FvR3YNc-YqrYePpDV-bcwqW0simh8X6RV784EhMQ8TtncOty8PCc0wtxh5tQsrfEL_ula3doV90etjQKl2-B07acLsbUbgZuP3m", "title": "Năng lượng bền bỉ", "desc": "No lâu, cung cấp năng lượng sạch." },
+        { "img": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmYN-r895RrkKAUkA4QHXu_OHEVxQpcmNQyNSnaQIgqQAQASRZIjdfYJyRQJBqRca17LjcnVBOjoyJ4wZwlBpkexXez89FEsl9RDfIDicdKm1mdzpNzCloBJTSrAemCZoP7KVQYNRSLCJJYiirvG0-E0dAtsL6p208RTTCArmA-KFKL3GXZKrjaERForq09xTpwBWy2P2p8qhrSZJKwzZ-smvmEu787MDo6CoTTz7gsHzuH3D4EctZCECzXZYf2SRoizjxEfcsG_6E", "title": "Tiện lợi", "desc": "Dạng thanh nhỏ gọn dễ mang theo." }
+      ],
       "features": [
-        { "icon": "🌿", "title": "100% Tự nhiên", "desc": "Không chất bảo quản" },
-        { "icon": "🇻🇳", "title": "Xuất xứ Việt Nam", "desc": "Hạt cacao Tiền Giang" },
-        { "icon": "🎁", "title": "Thiết kế sang trọng", "desc": "Thích hợp làm quà tặng" }
+        { "icon": "tools", "title": "GIÀU PROTEIN", "desc": "Hỗ trợ cơ bắp" },
+        { "icon": "leaf", "title": "NGŨ CỐC", "desc": "Nguyên cám" },
+        { "icon": "check", "title": "HEALTHY", "desc": "Bữa phụ lành mạnh" }
       ]
     }
   ],
-
   "promotions": [
     {
       "id": 1,
@@ -316,7 +445,6 @@
       "buttonLink": "/promotion/gift"
     }
   ],
-
   "cart": [
     {
       "id": 1,
@@ -368,6 +496,13 @@
       "title": "Thẻ tín dụng / Ghi nợ quốc tế",
       "description": "Hỗ trợ Visa, Mastercard, JCB với bảo mật cao."
     }
+  ],
+  "orders": [
+    { "id": "#ORD-2023-005", "date": "24/10/2023", "status": "processing", "statusLabel": "Đang xử lý", "total": 1250000, "userId": 1 },
+    { "id": "#ORD-2023-004", "date": "15/10/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 890000, "userId": 1 },
+    { "id": "#ORD-2023-003", "date": "01/10/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 2450000, "userId": 1 },
+    { "id": "#ORD-2023-002", "date": "28/09/2023", "status": "cancelled", "statusLabel": "Đã hủy", "total": 450000, "userId": 1 },
+    { "id": "#ORD-2023-001", "date": "10/09/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 1100000, "userId": 1 },
+    { "id": "#ORD-2023-000", "date": "05/09/2023", "status": "delivered", "statusLabel": "Đã giao", "total": 320000, "userId": 1 }
   ]
 }
-

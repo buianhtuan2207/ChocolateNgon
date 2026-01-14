@@ -4,16 +4,26 @@ export interface ProductFeature {
     desc: string;
 }
 
+// 1. Thêm định nghĩa cho Highlight
+export interface ProductHighlight {
+    img: string;
+    title: string;
+    desc: string;
+}
+
 export interface Product {
     id: number;
     title: string;
-    subtitle?: string; // Mới thêm từ detail
+    subtitle?: string;
     description: string;
     price: number;
     discountPrice?: number;
-    image: string; // Ảnh đại diện chính
-    images?: string[]; // Album ảnh (Mới thêm từ detail)
+    image: string;
+    images?: string[];
     category: 'dark' | 'milk' | 'nut' | 'fruit';
     isHot?: boolean;
-    features?: ProductFeature[]; // Mới thêm từ detail
+    rating?: number;       // Thêm rating
+    reviewCount?: number;  // Thêm reviewCount
+    features?: ProductFeature[];
+    highlights?: ProductHighlight[]; // 2. Thêm trường highlights vào Product
 }

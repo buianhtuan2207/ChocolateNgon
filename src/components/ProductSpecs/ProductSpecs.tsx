@@ -2,41 +2,56 @@ import React from 'react';
 import Icon from '../Icons/Icon';
 import './productSpecs.scss';
 
-export default function ProductSpecs() {
+// Định nghĩa kiểu dữ liệu Feature khớp với db.json
+interface Feature {
+    icon: string;
+    title: string;
+    desc: string;
+}
+
+interface ProductSpecsProps {
+    features?: Feature[];
+}
+
+export default function ProductSpecs({ features }: ProductSpecsProps) {
+    // Dữ liệu mặc định nếu sản phẩm không có features riêng
+    const defaultFeatures = [
+        { icon: "leaf", title: "NGUYÊN LIỆU TỰ NHIÊN", desc: "100% cacao Đắk Lắk" },
+        { icon: "ban", title: "KHÔNG CHẤT BẢO QUẢN", desc: "Tươi mới, không phụ gia" },
+        { icon: "tools", title: "QUY TRÌNH THỦ CÔNG", desc: "Tỉ mỉ từng công đoạn" }
+    ];
+
+    const displayFeatures = features && features.length > 0 ? features : defaultFeatures;
+
+    const renderIcon = (iconStr: string) => {
+        // Nếu icon là tên FontAwesome (vd: "leaf") thì dùng component Icon
+        if (["leaf", "ban", "tools", "check", "truck", "gift"].includes(iconStr)) {
+            return <Icon icon={iconStr as any} />;
+        }
+        // Nếu là emoji hoặc string khác thì hiển thị text
+        return <span style={{ fontSize: '1.2rem' }}>{iconStr}</span>;
+    };
+
     return (
         <section className="product-specs py-5">
             <div className="container">
                 <h2 className="section-title text-center mb-5">Đặc điểm nổi bật</h2>
 
-                {/* 3 Badges */}
+                {/* 3 Badges Dynamic */}
                 <div className="row g-3 mb-4 justify-content-center">
-                    <div className="col-md-4 col-lg-3">
-                        <div className="spec-badge d-flex align-items-center gap-3 shadow-sm">
-                            <div className="icon-circle"><Icon icon="leaf" /></div>
-                            <div>
-                                <h3 className="badge-title">NGUYÊN LIỆU TỰ NHIÊN</h3>
-                                <p className="badge-desc">100% cacao Đắk Lắk</p>
+                    {displayFeatures.map((feat, index) => (
+                        <div className="col-md-4 col-lg-3" key={index}>
+                            <div className="spec-badge d-flex align-items-center gap-3 shadow-sm h-100">
+                                <div className="icon-circle">
+                                    {renderIcon(feat.icon)}
+                                </div>
+                                <div>
+                                    <h3 className="badge-title">{feat.title}</h3>
+                                    <p className="badge-desc">{feat.desc}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="col-md-4 col-lg-3">
-                        <div className="spec-badge d-flex align-items-center gap-3 shadow-sm">
-                            <div className="icon-circle"><Icon icon="ban" /></div>
-                            <div>
-                                <h3 className="badge-title">KHÔNG CHẤT BẢO QUẢN</h3>
-                                <p className="badge-desc">Tươi mới, không phụ gia</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-md-4 col-lg-3">
-                        <div className="spec-badge d-flex align-items-center gap-3 shadow-sm">
-                            <div className="icon-circle"><Icon icon="tools" /></div>
-                            <div>
-                                <h3 className="badge-title">QUY TRÌNH THỦ CÔNG</h3>
-                                <p className="badge-desc">Tỉ mỉ từng công đoạn</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
 
                 {/* Info Box */}

@@ -2,6 +2,11 @@
   color: #5d4037;
   font-family: "Manrope", sans-serif;
   padding-left: 20px;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .product-info-component .badge-bestseller {
   color: #d86c27;

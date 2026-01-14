@@ -41,10 +41,6 @@ export default function ProfileSidebar() {
                 <Link to="/order-history" className={`menu-item ${isActive('/profile/orders')}`}>
                     <span className="icon"><Icon icon="shopping-cart" /></span> Lịch sử đơn hàng
                 </Link>
-                <Link to="/profile/password" className={`menu-item ${isActive('/profile/password')}`}>
-                    <span className="icon"><Icon icon="lock" /></span> Đổi mật khẩu
-                </Link>
-                {/* Đổi thành div hoặc button để bắt sự kiện logout */}
                 <div onClick={handleLogoutClick} className="menu-item logout" style={{ cursor: 'pointer' }}>
                     <span className="icon"><Icon icon="arrow-right" /></span> Đăng xuất
                 </div>
