@@ -7,10 +7,12 @@ import Products from "../pages/Product/Product";
 import Profile from "../pages/Profile/Profile";
 import {Navigate} from "react-router-dom";
 import {useAuth} from "../context/AuthContext";
-import Promotion from "../pages/Promotion/promotion";
+import Promotion from "../pages/Promotion/Promotion";
 import Cart from "../pages/Cart/Cart";
 import Checkout from "../pages/Checkout/Checkout";
 import OrderTracking from "../pages/OrderTracking/OrderTracking";
+import About from "../pages/About/About";
+import OrderHistory from "../pages/OrderHistory/OrderHistory";
 
 /* Định nghĩa type cho route */
 export type AppRoute = {
@@ -58,6 +60,8 @@ const publicRoutes: AppRoute[] = [
     {path: "/promotion", component: Promotion },
     {path: "/checkout" , component: Checkout},
     {path: "/orderTracking" , component: OrderTracking},
+    {path: "/about" , component: About },
+    {path: "/order-history" , component: OrderHistory},
 ];
 
 const privateRoutes: AppRoute[] = [];

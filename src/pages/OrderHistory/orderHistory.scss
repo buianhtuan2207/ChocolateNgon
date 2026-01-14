@@ -1,0 +1,34 @@
+.order-history-page {
+  background-color: #fffaf5; // Nền kem toàn trang
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+
+  .content-card {
+    border-radius: 2px;
+    border: 1px solid rgba(93, 64, 55, 0.05); // Viền mờ tinh tế
+  }
+
+  .page-title {
+    font-family: 'Playfair Display', serif;
+    color: #5d4037;
+  }
+
+  .page-subtitle {
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    opacity: 0.6;
+  }
+
+  // Tinh chỉnh SortBar để khớp layout
+  .custom-sort-wrapper {
+    // Override style của SortBar để bỏ margin mặc định nếu có
+    .sort-bar {
+      margin-bottom: 0 !important;
+
+      // Ẩn title của SortBar vì ta đã tự viết Title ở bên trái rồi
+      .section-title {
+        display: none;
+      }
+    }
+  }
+}

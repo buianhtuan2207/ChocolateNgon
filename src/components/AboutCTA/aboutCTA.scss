@@ -1,0 +1,25 @@
+.about-cta-section {
+  background-color: #fdfdfd;
+  color: #5d4037;
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem; // Nhỏ hơn (cũ 2.5rem)
+    font-weight: 500;
+  }
+
+  .cta-desc {
+    font-weight: 300;
+    opacity: 0.8;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .cta-btn {
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 12px 35px; // Button gọn hơn
+    font-weight: 600;
+  }
+}

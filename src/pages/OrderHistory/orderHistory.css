@@ -1,0 +1,26 @@
+.order-history-page {
+  background-color: #fffaf5;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+.order-history-page .content-card {
+  border-radius: 2px;
+  border: 1px solid rgba(93, 64, 55, 0.05);
+}
+.order-history-page .page-title {
+  font-family: "Playfair Display", serif;
+  color: #5d4037;
+}
+.order-history-page .page-subtitle {
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  opacity: 0.6;
+}
+.order-history-page .custom-sort-wrapper .sort-bar {
+  margin-bottom: 0 !important;
+}
+.order-history-page .custom-sort-wrapper .sort-bar .section-title {
+  display: none;
+}
+
+/*# sourceMappingURL=orderHistory.css.map */

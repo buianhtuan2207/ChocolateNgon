@@ -1,0 +1,33 @@
+.order-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.order-status-badge .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ccc;
+}
+.order-status-badge.status-processing {
+  color: #d35400;
+}
+.order-status-badge.status-processing .dot {
+  background-color: #d35400;
+}
+.order-status-badge.status-delivered {
+  color: #27ae60;
+}
+.order-status-badge.status-delivered .dot {
+  background-color: #27ae60;
+}
+.order-status-badge.status-cancelled {
+  color: #c0392b;
+}
+.order-status-badge.status-cancelled .dot {
+  background-color: #c0392b;
+}
+
+/*# sourceMappingURL=orderStatusBadge.css.map */
