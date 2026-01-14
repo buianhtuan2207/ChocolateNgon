@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import { Link } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 import OrderSummary from '../../components/OrderSummary/OrderSummary';
 import Icon from '../../components/Icons/Icon';
 import './checkout.scss';
@@ -12,6 +12,7 @@ import Toast, { ToastType } from '../../components/Toast/Toast';
 export default function Checkout() {
     const [paymentMethod, setPaymentMethod] = useState<'cod' | 'qr' | 'card'>('cod');
     const { user } = useAuth();
+    const navigate = useNavigate();
     const { cartItems } = useCart();
     const [toast, setToast] = useState<{ message: string; type: ToastType } | null>(null);
     const [formData, setFormData] = useState({
@@ -69,8 +70,12 @@ export default function Checkout() {
 
         // 3. Xử lý đặt hàng thành công
         console.log('Order Data:', { ...formData, paymentMethod, total: subtotalValue });
-        setToast({ message: "Đặt hàng thành công! Socola đang trên đường tới bạn.", type: 'success' });
+        setToast({ message: "Đặt hàng thành công!.", type: 'success' });
 
+        setTimeout(() => {
+            // Chuyển hướng sang trang cảm ơn
+            navigate('/', { state: { orderData: formData } });
+        }, 1500);
     };
 
     return (

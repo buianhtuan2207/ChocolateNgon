@@ -1,0 +1,97 @@
+.order-products-card {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 30px;
+  margin-top: 25px;
+}
+.order-products-card .card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #f9f9f9;
+  padding-bottom: 15px;
+}
+.order-products-card .card-header h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  color: #4a3731;
+}
+.order-products-card .card-header .item-count {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: #aaa;
+  font-weight: 700;
+}
+.order-products-card .product-list .product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+.order-products-card .product-list .product-item .product-info {
+  display: flex;
+  gap: 20px;
+}
+.order-products-card .product-list .product-item .product-info img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.order-products-card .product-list .product-item .product-info .details h4 {
+  font-size: 15px;
+  color: #33241d;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.order-products-card .product-list .product-item .product-info .details .sub-name {
+  font-size: 10px;
+  color: #aaa;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 8px;
+}
+.order-products-card .product-list .product-item .product-info .details .qty {
+  font-size: 13px;
+  color: #7a7a7a;
+}
+.order-products-card .product-list .product-item .product-price {
+  font-weight: 700;
+  font-size: 16px;
+  color: #33241d;
+}
+.order-products-card .order-summary {
+  margin-top: 25px;
+}
+.order-products-card .order-summary .summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #888;
+}
+.order-products-card .order-summary .total-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #f9f9f9;
+}
+.order-products-card .order-summary .total-line span:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a3731;
+}
+.order-products-card .order-summary .total-line .total-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #d46b08;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/*# sourceMappingURL=orderProductList.css.map */

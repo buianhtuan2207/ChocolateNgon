@@ -1,10 +1,12 @@
-/* src/pages/Checkout/checkout.scss */
-
-/* Style chung cho trang Checkout */
 .checkout-page {
   background-color: #fffaf5;
   color: #000;
   min-height: 100vh;
+  .col-lg-4{
+    .sticky-top{
+      z-index: 9;
+    }
+  }
 }
 
 .payment-option {
